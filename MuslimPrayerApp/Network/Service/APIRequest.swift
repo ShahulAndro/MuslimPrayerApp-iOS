@@ -29,7 +29,7 @@ enum RequestType: String {
 }
 
 struct APIRequest {
-    
+
 
     static let baseUrl = "https://www.e-solat.gov.my"
     static let masjidImagesBaseUrl = "https://masjid.islam.gov.my/images/masjid/"
