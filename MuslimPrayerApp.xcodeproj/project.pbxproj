@@ -384,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				D782FC6027FC29AF00486774 /* AppDelegate.swift */,
+				D782FC6227FC29AF00486774 /* SceneDelegate.swift */,
 				D74F935128078C3E0018B537 /* PushService.swift */,
 			);
 			path = AppDelegate;
@@ -444,7 +445,6 @@
 				D782FC9427FC2D9800486774 /* View */,
 				D782FC9527FC2DA100486774 /* ViewModel */,
 				D782FC9627FC2DA800486774 /* Coordinator */,
-				D782FC6227FC29AF00486774 /* SceneDelegate.swift */,
 				D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */,
 				D782FC7127FC29B300486774 /* Info.plist */,
 				D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */,
