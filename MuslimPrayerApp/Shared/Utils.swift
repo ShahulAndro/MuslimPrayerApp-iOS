@@ -50,10 +50,6 @@ struct Utils {
                               "Maghrib" : "Maghrib",
                               "Isha" : "Isyak"]
     
-    static let baseUrl = "https://www.e-solat.gov.my"
-    
-    static let masjidImagesBaseUrl = "https://masjid.islam.gov.my/images/masjid/"
-    
     static func getHijriDate(_ date: String)-> String {
         let dateComponents = date.components(separatedBy: "-")
         return "\(dateComponents[2]) \(islamicCalendarMonths[dateComponents[1]] ?? "") \(dateComponents[0]) Hijri"

@@ -54,7 +54,7 @@ class ESolatViewModel {
 extension ESolatViewModel {
     
     func fetchSirimTime() {
-        let apiRequest = APIRequest(path: "SirimTime")
+        let apiRequest = APIRequest(path: APIRequest.pathSirimTime)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (serverTime: SirimTime) in
@@ -86,7 +86,7 @@ extension ESolatViewModel {
             queryParameterItems["date"] = date
         }
         
-        let apiRequest = APIRequest(path: "TakwimSolat", queryParameterItems: queryParameterItems)
+        let apiRequest = APIRequest(path: APIRequest.pathTakwimSolat, queryParameterItems: queryParameterItems)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (solatData: TakwimSolatData) in
@@ -119,7 +119,7 @@ extension ESolatViewModel {
         requestPayloadParameters["datestart"] = Utils.getDateFormatForApiFromddMMMyyyy(dateString: currentSelectePrayerTimeInTable, type: type)
         requestPayloadParameters["dateend"] = Utils.getDateFormatForApiFromddMMMyyyy(dateString: currentSelectePrayerTimeInTable, type: type)
         
-        let apiRequest = APIRequest(method: RequestType.POST, path: "TakwimSolat", queryParameterItems: queryParameterItems, requestPayload: requestPayloadParameters)
+        let apiRequest = APIRequest(method: RequestType.POST, path: APIRequest.pathTakwimSolat, queryParameterItems: queryParameterItems, requestPayload: requestPayloadParameters)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (solatData: TakwimSolatData) in
@@ -141,7 +141,7 @@ extension ESolatViewModel {
         var queryParameterItems = [String: String]()
         queryParameterItems["period"] = "today"
         queryParameterItems["datetype"] = "miladi"
-        let apiRequest = APIRequest(path: "tarikhtakwim", queryParameterItems: queryParameterItems)
+        let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (tarikhTakwim: TarikhTakwim) in
@@ -165,7 +165,7 @@ extension ESolatViewModel {
         queryParameterItems["period"] = "month"
         queryParameterItems["datetype"] = "hijri"
         queryParameterItems["hijri"] = "1443-09-01"
-        let apiRequest = APIRequest(path: "tarikhtakwim", queryParameterItems: queryParameterItems)
+        let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (tarikhTakwim: TarikhTakwim) in
@@ -187,7 +187,7 @@ extension ESolatViewModel {
     func fetchBGImageByPrayerTime(prayterType: String = "Zohor") {
         var queryParameterItems = [String: String]()
         queryParameterItems["praytime"] = prayterType
-        let apiRequest = APIRequest(path: "BgImageByPrayertime", queryParameterItems: queryParameterItems)
+        let apiRequest = APIRequest(path: APIRequest.pathBgImageByPrayertime, queryParameterItems: queryParameterItems)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (data: BGImageByPrayerTimeData) in
@@ -211,7 +211,7 @@ extension ESolatViewModel {
         queryParameterItems["lat"] = lat
         queryParameterItems["long"] = long
         queryParameterItems["dist"] = dist
-        let apiRequest = APIRequest(path: "nearestMosque", queryParameterItems: queryParameterItems)
+        let apiRequest = APIRequest(path: APIRequest.pathNearestMosque, queryParameterItems: queryParameterItems)
         
         rxApiService!.fetch(apiRequest: apiRequest).subscribe(
             onNext: { (mosqueLocations: MosqueLocations) in
@@ -326,23 +326,23 @@ extension ESolatViewModel {
     }
     
     func downloadImagesWithRx(data: BGImageByPrayerTimeData) {
-        if let bg_images1 = data.data?.bg_images1, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bg_images1)") {
+        if let bg_images1 = data.data?.bg_images1, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images1)") {
             self.imageLoader.loadImageWithRX(from: url)
         }
         
-        if let bg_images2 = data.data?.bg_images2, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bg_images2)") {
+        if let bg_images2 = data.data?.bg_images2, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images2)") {
             self.imageLoader.loadImageWithRX(from: url)
         }
         
-        if let bg_images3 = data.data?.bg_images3, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bg_images3)") {
+        if let bg_images3 = data.data?.bg_images3, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images3)") {
             self.imageLoader.loadImageWithRX(from: url)
         }
         
-        if let bg_images4 = data.data?.bg_images4, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bg_images4)") {
+        if let bg_images4 = data.data?.bg_images4, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images4)") {
             self.imageLoader.loadImageWithRX(from: url)
         }
         
-        if let bg_images5 = data.data?.bg_images5, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bg_images5)") {
+        if let bg_images5 = data.data?.bg_images5, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images5)") {
             self.imageLoader.loadImageWithRX(from: url)
         }
     }
@@ -373,23 +373,23 @@ extension ESolatViewModel {
     func requestURLs(data: BGImageByPrayerTimeData)-> [Observable<(response: HTTPURLResponse, data: Data)>] {
         var imageRequestObservables = [Observable<(response: HTTPURLResponse, data: Data)>]()
         
-        if let bgImage1 =  data.data?.bg_images1?.escapedStringForURL, !bgImage1.isEmpty, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bgImage1)") {
+        if let bgImage1 =  data.data?.bg_images1?.escapedStringForURL, !bgImage1.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage1)") {
             imageRequestObservables.append(URLSession.shared.rx.response(request: URLRequest(url: url)))
         }
         
-        if let bgImage2 =  data.data?.bg_images2?.escapedStringForURL, !bgImage2.isEmpty, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bgImage2)") {
+        if let bgImage2 =  data.data?.bg_images2?.escapedStringForURL, !bgImage2.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage2)") {
             imageRequestObservables.append(URLSession.shared.rx.response(request: URLRequest(url: url)))
         }
         
-        if let bgImage3 =  data.data?.bg_images3?.escapedStringForURL, !bgImage3.isEmpty, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bgImage3)") {
+        if let bgImage3 =  data.data?.bg_images3?.escapedStringForURL, !bgImage3.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage3)") {
             imageRequestObservables.append(URLSession.shared.rx.response(request: URLRequest(url: url)))
         }
         
-        if let bgImage4 =  data.data?.bg_images4?.escapedStringForURL, !bgImage4.isEmpty, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bgImage4)") {
+        if let bgImage4 =  data.data?.bg_images4?.escapedStringForURL, !bgImage4.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage4)") {
             imageRequestObservables.append(URLSession.shared.rx.response(request: URLRequest(url: url)))
         }
         
-        if let bgImage5 =  data.data?.bg_images5?.escapedStringForURL, !bgImage5.isEmpty, let url = URL(string: "\(String(describing: Utils.baseUrl))\(bgImage5)") {
+        if let bgImage5 =  data.data?.bg_images5?.escapedStringForURL, !bgImage5.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage5)") {
             imageRequestObservables.append(URLSession.shared.rx.response(request: URLRequest(url: url)))
         }
         

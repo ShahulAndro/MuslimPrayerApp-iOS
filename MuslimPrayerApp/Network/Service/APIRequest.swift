@@ -30,7 +30,15 @@ enum RequestType: String {
 
 struct APIRequest {
     
-    let apiURL = "https://www.e-solat.gov.my/index.php?r=esolatApi/"
+
+    static let baseUrl = "https://www.e-solat.gov.my"
+    static let masjidImagesBaseUrl = "https://masjid.islam.gov.my/images/masjid/"
+    static let apiURL = "https://www.e-solat.gov.my/index.php?r=esolatApi/"
+    static let pathSirimTime = "SirimTime"
+    static let pathTakwimSolat = "TakwimSolat"
+    static let pathTarikhTakwim = "tarikhtakwim"
+    static let pathBgImageByPrayertime = "BgImageByPrayertime"
+    static let pathNearestMosque = "nearestMosque"
     
     var parameters: [String: String] = [:]
     
@@ -81,7 +89,7 @@ struct APIRequest {
     }
     
     func request() -> URLRequest {
-        var urlString = "\(apiURL)\(path)"
+        var urlString = "\(APIRequest.apiURL)\(path)"
         //Append parameters if any
         queryParameterItems.forEach({key, value in
             urlString.append("&\(key)=\(value)")

@@ -277,7 +277,7 @@ extension PrayersViewController {
     private func loadBackGroundImagesForPrayer(bgImageData: BGImageByPrayerTimeData?) {
         if let bgImagesPrayerTime = bgImageData?.data {
             if let bg_images1 = bgImagesPrayerTime.bg_images1 {
-                let imagePath = "\(Utils.baseUrl)\(bg_images1)"
+                let imagePath = "\(APIRequest.baseUrl)\(bg_images1)"
                 print(imagePath)
                 self.prayerBGImageView.load(urlString: imagePath)
             } 

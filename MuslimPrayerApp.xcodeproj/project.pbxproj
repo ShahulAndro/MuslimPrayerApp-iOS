@@ -370,14 +370,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D74F934728078BDD0018B537 /* audio */ = {
+		D74F934728078BDD0018B537 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				D74F93572807AF6B0018B537 /* sample.wav */,
 				D74F934928078C000018B537 /* azan_short.mp3 */,
 				D74F934828078C000018B537 /* azan_full.mp3 */,
 			);
-			path = audio;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		D74F935028078C260018B537 /* AppDelegate */ = {
@@ -432,20 +432,20 @@
 		D782FC5F27FC29AF00486774 /* MuslimPrayerApp */ = {
 			isa = PBXGroup;
 			children = (
-				D76260192809789D00EE2702 /* Helper */,
 				D74F935028078C260018B537 /* AppDelegate */,
-				D74F934728078BDD0018B537 /* audio */,
+				D782FC9727FC2DCE00486774 /* Network */,
+				D76260192809789D00EE2702 /* Helper */,
+				D74F934728078BDD0018B537 /* Audio */,
 				D7E9D0AF2805914000EF2CCD /* Fonts */,
 				D7C983D72803D0B300C97886 /* Extensions */,
 				D7C983DC2803E48E00C97886 /* Cache */,
-				D70737AE27FD7655000188BB /* Assets.xcassets */,
 				D782FCB627FC46E500486774 /* Shared */,
-				D782FC9727FC2DCE00486774 /* Network */,
 				D782FC9327FC2D8E00486774 /* Model */,
 				D782FC9427FC2D9800486774 /* View */,
 				D782FC9527FC2DA100486774 /* ViewModel */,
 				D782FC9627FC2DA800486774 /* Coordinator */,
 				D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */,
+				D70737AE27FD7655000188BB /* Assets.xcassets */,
 				D782FC7127FC29B300486774 /* Info.plist */,
 				D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */,
 				D7626015280974B400EE2702 /* Settings.bundle */,

@@ -31,7 +31,7 @@ final class ImageLoader {
     private let disposeBag = DisposeBag()
     
     func loadImageWithURLSession(from urlPath: String, completionHandler: @escaping (UIImage?)-> Void) {
-        guard let url = URL(string: "\(Utils.baseUrl)\(urlPath)") else {
+        guard let url = URL(string: "\(APIRequest.baseUrl)\(urlPath)") else {
             completionHandler(nil)
             return
         }
