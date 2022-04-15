@@ -53,6 +53,9 @@
 		D762602428097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
 		D762602528097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
 		D762602628097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
+		D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
+		D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
+		D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76EF2A22804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
@@ -249,6 +252,7 @@
 		D762601A280978BB00EE2702 /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		D762601F28097AF600EE2702 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D762602028097AF600EE2702 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESolatViewModel+Extension.swift"; sourceTree = "<group>"; };
 		D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimPrayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782FC6027FC29AF00486774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -493,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				D782FCA927FC40A600486774 /* ESolatViewModel.swift */,
+				D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -995,6 +1000,7 @@
 				D700A18727FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
 				D782FCAA27FC40A600486774 /* ESolatViewModel.swift in Sources */,
 				D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
+				D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FC9E27FC315100486774 /* APIService.swift in Sources */,
 				D782FCB827FC46F200486774 /* Utils.swift in Sources */,
 				D7E9D0AC280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
@@ -1026,6 +1032,7 @@
 				D782FCA727FC3DF300486774 /* RXApiService.swift in Sources */,
 				D7C983DF2803E53200C97886 /* ImageCacheType.swift in Sources */,
 				D78D131A2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
+				D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
 				D782FCA327FC38C500486774 /* APIRequest.swift in Sources */,
 				D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
@@ -1071,6 +1078,7 @@
 				D7FE472B27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
 				D7FE472F27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
 				D7C983E02803E53200C97886 /* ImageCacheType.swift in Sources */,
+				D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FCBA27FC46F200486774 /* Utils.swift in Sources */,
 				D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */,
 				D782FCB127FC467B00486774 /* SirimTime.swift in Sources */,

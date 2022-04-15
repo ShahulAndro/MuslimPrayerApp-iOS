@@ -36,14 +36,16 @@ class ESolatViewModel {
     public let locationData : PublishSubject<[LocationData]> = PublishSubject()
     public let zoneTableDataPublish : PublishSubject<[ZoneSectionData]> = PublishSubject()
     
+    
+    private var useRxToDownloadImage = false
+    private var rxApiService: RXApiService?
+    private let disposeBag = DisposeBag()
+    
     var currentZone = "WLY01"
     var currentDisplayDate = ""
     var currentSelectePrayerTimeInTable = ""
-    private var useRxToDownloadImage = false
-    private var rxApiService: RXApiService?
-    private var images: [UIImage] = []
-    private let imageLoader = ImageLoader()
-    private let disposeBag = DisposeBag()
+    var images: [UIImage] = []
+    let imageLoader = ImageLoader()
     
     init(rxApiService: RXApiService = RXApiService()) {
         self.rxApiService = rxApiService
@@ -191,15 +193,7 @@ extension ESolatViewModel {
         
         rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (data: BGImageByPrayerTimeData) in
-//                self.bgImagePrayerData.onNext(data)
-                
-                if self.useRxToDownloadImage {
-                    self.downloadImagesWithRx(data: data)
-                } else {
-//                    self.loadAllImages(data: data)
-                    self.combineAllImagesRequestWithRxZip(data: data)
-                }
-                
+               self.combineAllImagesRequestWithRxZip(data: data)
             }, onError: { error in
                 print(error)
             })
@@ -229,6 +223,27 @@ extension ESolatViewModel {
             }).disposed(by: rxApiService!.disposeBag)
     }
     
+    func combineAllImagesRequestWithRxZip(data: BGImageByPrayerTimeData) {
+        let imageRequestObservables = requestURLs(data: data)
+        
+        Observable
+            .zip(imageRequestObservables)
+            .observe(on:MainScheduler.instance)
+            .subscribe(onNext: { (responseArray) in
+                var images = [UIImage]()
+                for response in responseArray {
+                    if let image = UIImage(data: response.data) {
+                        images.append(image)
+                    }
+                }
+                
+                if !images.isEmpty {
+                    self.bgImagePrayerImages.onNext(images)
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
     func fetchZoneTableData() {
         let sequences = Observable.just(ZonesTableData.zoneSections())
         sequences.subscribe(onNext: { [weak self] (data) in
@@ -250,124 +265,6 @@ extension ESolatViewModel {
         prayerList.append((PrayerType.Isha.rawValue, prayerTime.isha ?? ""))
         
         return prayerList
-    }
-    
-    func loadAllImages(data: BGImageByPrayerTimeData) {
-        
-        let dispatchQueue = DispatchQueue.global(qos: .utility)
-        let dispathGroup = DispatchGroup()
-        
-        dispathGroup.enter()
-        dispatchQueue.async(group: dispathGroup) {
-            if let bg_imagePath = data.data?.bg_images1 {
-                self.imageLoader.loadImageWithURLSession(from: bg_imagePath, completionHandler: { (image) in
-                    defer { dispathGroup.leave() }
-                    if let image = image {
-                        self.images.append(image)
-                    }
-                })
-            }
-        }
-        
-        dispathGroup.enter()
-        dispatchQueue.async(group: dispathGroup) {
-            if let bg_imagePath = data.data?.bg_images2 {
-                self.imageLoader.loadImageWithURLSession(from: bg_imagePath, completionHandler: { (image) in
-                    
-                    defer { dispathGroup.leave() }
-                    
-                    if let image = image {
-                        self.images.append(image)
-                    }
-                })
-            }
-        }
-        
-        dispathGroup.enter()
-        dispatchQueue.async(group: dispathGroup) {
-            if let bg_imagePath = data.data?.bg_images3 {
-                self.imageLoader.loadImageWithURLSession(from: bg_imagePath, completionHandler: { (image) in
-                    defer { dispathGroup.leave() }
-                    
-                    if let image = image {
-                        self.images.append(image)
-                    }
-                })
-            }
-        }
-        
-        dispathGroup.enter()
-        dispatchQueue.async(group: dispathGroup) {
-            if let bg_imagePath = data.data?.bg_images4 {
-                self.imageLoader.loadImageWithURLSession(from: bg_imagePath, completionHandler: { (image) in
-                    defer { dispathGroup.leave() }
-                    if let image = image {
-                        self.images.append(image)
-                    }
-                })
-            }
-        }
-        
-        dispathGroup.enter()
-        dispatchQueue.async(group: dispathGroup) {
-            if let bg_imagePath = data.data?.bg_images5 {
-                self.imageLoader.loadImageWithURLSession(from: bg_imagePath, completionHandler: { (image) in
-                    defer { dispathGroup.leave() }
-                    if let image = image {
-                        self.images.append(image)
-                    }
-                })
-            }
-        }
-        
-        dispathGroup.notify(queue: DispatchQueue.global()) {
-            self.bgImagePrayerImages.onNext(self.images)
-        }
-    }
-    
-    func downloadImagesWithRx(data: BGImageByPrayerTimeData) {
-        if let bg_images1 = data.data?.bg_images1, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images1)") {
-            self.imageLoader.loadImageWithRX(from: url)
-        }
-        
-        if let bg_images2 = data.data?.bg_images2, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images2)") {
-            self.imageLoader.loadImageWithRX(from: url)
-        }
-        
-        if let bg_images3 = data.data?.bg_images3, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images3)") {
-            self.imageLoader.loadImageWithRX(from: url)
-        }
-        
-        if let bg_images4 = data.data?.bg_images4, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images4)") {
-            self.imageLoader.loadImageWithRX(from: url)
-        }
-        
-        if let bg_images5 = data.data?.bg_images5, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bg_images5)") {
-            self.imageLoader.loadImageWithRX(from: url)
-        }
-    }
-    
-    func combineAllImagesRequestWithRxZip(data: BGImageByPrayerTimeData) {
-        let imageRequestObservables = requestURLs(data: data)
-        
-        Observable
-            .zip(imageRequestObservables)
-            .observe(on:MainScheduler.instance)
-            .subscribe(onNext: { (responseArray) in
-                var images = [UIImage]()
-                for response in responseArray {
-                    if let image = UIImage(data: response.data) {
-                        images.append(image)
-                    }
-                }
-                
-                if !images.isEmpty {
-                    self.bgImagePrayerImages.onNext(images)
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        
     }
     
     func requestURLs(data: BGImageByPrayerTimeData)-> [Observable<(response: HTTPURLResponse, data: Data)>] {
