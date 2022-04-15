@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZonesViewController" customModule="MuslimPrayerApp" customModuleProvider="target">
+            <connections>
+                <outlet property="chooseZonePlaceHolderLabel" destination="EYV-Zc-PKK" id="viX-Zf-oXQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="q4J-XD-vgP"/>
+                <outlet property="zoneTableView" destination="kIp-a4-llh" id="N9t-kY-jCe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Zone..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYV-Zc-PKK">
+                    <rect key="frame" x="20" y="64" width="258" height="31"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-MS-rcF">
+                    <rect key="frame" x="298" y="64" width="100" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" identifier="1:2" id="Ngf-qU-bfH"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                    <connections>
+                        <action selector="tapOnCancel:" destination="-1" eventType="touchUpInside" id="2mK-VV-zcX"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-a4-llh">
+                    <rect key="frame" x="20" y="105" width="374" height="757"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EYV-Zc-PKK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="5nQ-cI-JUh"/>
+                <constraint firstItem="EYV-Zc-PKK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SVb-MH-fmx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q4h-MS-rcF" secondAttribute="trailing" constant="16" id="UOB-IF-LIJ"/>
+                <constraint firstItem="kIp-a4-llh" firstAttribute="top" secondItem="Q4h-MS-rcF" secondAttribute="bottom" constant="10" id="Vwr-bd-Wjj"/>
+                <constraint firstItem="kIp-a4-llh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aQ0-ic-dMF"/>
+                <constraint firstItem="Q4h-MS-rcF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="azK-Is-QEl"/>
+                <constraint firstItem="kIp-a4-llh" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="bBz-Fm-gNp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kIp-a4-llh" secondAttribute="trailing" constant="20" id="kPE-jq-VyJ"/>
+                <constraint firstItem="Q4h-MS-rcF" firstAttribute="leading" secondItem="EYV-Zc-PKK" secondAttribute="trailing" constant="20" id="maW-eH-PRf"/>
+                <constraint firstItem="kIp-a4-llh" firstAttribute="top" secondItem="EYV-Zc-PKK" secondAttribute="bottom" constant="10" id="ub3-OO-BjB"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="45.535714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

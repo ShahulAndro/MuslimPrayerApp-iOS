@@ -1,0 +1,1440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		077089AA0943B5913954A74E /* Pods_MuslimPrayerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F00F2F1D5047EC2B12AE2E0 /* Pods_MuslimPrayerAppTests.framework */; };
+		0926637F996841E8BD0455B4 /* Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E984A1145D7B227408AF31D /* Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework */; };
+		819ABE6C9B31604E6E5FBA2A /* Pods_MuslimPrayerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCD77E36F61E190DC65A098 /* Pods_MuslimPrayerApp.framework */; };
+		D700A18727FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18627FC5242006BFF53 /* BGImageByPrayerTime.swift */; };
+		D700A18827FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18627FC5242006BFF53 /* BGImageByPrayerTime.swift */; };
+		D700A18927FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18627FC5242006BFF53 /* BGImageByPrayerTime.swift */; };
+		D700A18B27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18A27FC52D0006BFF53 /* TarikhTakwim.swift */; };
+		D700A18C27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18A27FC52D0006BFF53 /* TarikhTakwim.swift */; };
+		D700A18D27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700A18A27FC52D0006BFF53 /* TarikhTakwim.swift */; };
+		D70737AF27FD7655000188BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70737AE27FD7655000188BB /* Assets.xcassets */; };
+		D70737BF27FEA999000188BB /* ZoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */; };
+		D70737C027FEA999000188BB /* ZoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */; };
+		D70737C127FEA999000188BB /* ZoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */; };
+		D70737C227FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
+		D70737C327FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
+		D70737C427FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
+		D727D38628052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
+		D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
+		D727D38828052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
+		D727D38928052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */; };
+		D727D38A28052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */; };
+		D727D38B28052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */; };
+		D74F934A28078C000018B537 /* azan_full.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934828078C000018B537 /* azan_full.mp3 */; };
+		D74F934B28078C000018B537 /* azan_full.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934828078C000018B537 /* azan_full.mp3 */; };
+		D74F934C28078C000018B537 /* azan_full.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934828078C000018B537 /* azan_full.mp3 */; };
+		D74F934D28078C000018B537 /* azan_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934928078C000018B537 /* azan_short.mp3 */; };
+		D74F934E28078C000018B537 /* azan_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934928078C000018B537 /* azan_short.mp3 */; };
+		D74F934F28078C000018B537 /* azan_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D74F934928078C000018B537 /* azan_short.mp3 */; };
+		D74F935228078C3E0018B537 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F935128078C3E0018B537 /* PushService.swift */; };
+		D74F935328078C3E0018B537 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F935128078C3E0018B537 /* PushService.swift */; };
+		D74F935428078C3E0018B537 /* PushService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F935128078C3E0018B537 /* PushService.swift */; };
+		D74F93582807AF6B0018B537 /* sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74F93572807AF6B0018B537 /* sample.wav */; };
+		D74F93592807AF6B0018B537 /* sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74F93572807AF6B0018B537 /* sample.wav */; };
+		D74F935A2807AF6B0018B537 /* sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = D74F93572807AF6B0018B537 /* sample.wav */; };
+		D7626016280974B400EE2702 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7626015280974B400EE2702 /* Settings.bundle */; };
+		D7626017280974B400EE2702 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7626015280974B400EE2702 /* Settings.bundle */; };
+		D7626018280974B400EE2702 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7626015280974B400EE2702 /* Settings.bundle */; };
+		D762601B280978BB00EE2702 /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601A280978BB00EE2702 /* SettingsHelper.swift */; };
+		D762601C280978BB00EE2702 /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601A280978BB00EE2702 /* SettingsHelper.swift */; };
+		D762601D280978BB00EE2702 /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601A280978BB00EE2702 /* SettingsHelper.swift */; };
+		D762602128097AF600EE2702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601F28097AF600EE2702 /* SettingsViewController.swift */; };
+		D762602228097AF600EE2702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601F28097AF600EE2702 /* SettingsViewController.swift */; };
+		D762602328097AF600EE2702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762601F28097AF600EE2702 /* SettingsViewController.swift */; };
+		D762602428097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
+		D762602528097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
+		D762602628097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
+		D76EF2A22804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
+		D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
+		D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
+		D782FC6127FC29AF00486774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6027FC29AF00486774 /* AppDelegate.swift */; };
+		D782FC6327FC29AF00486774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
+		D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */; };
+		D782FC7027FC29B300486774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */; };
+		D782FC7B27FC29B400486774 /* MuslimPrayerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */; };
+		D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */; };
+		D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */; };
+		D782FC9E27FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
+		D782FC9F27FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
+		D782FCA027FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
+		D782FCA227FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
+		D782FCA327FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
+		D782FCA427FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
+		D782FCA627FC3DF300486774 /* RXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA527FC3DF300486774 /* RXApiService.swift */; };
+		D782FCA727FC3DF300486774 /* RXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA527FC3DF300486774 /* RXApiService.swift */; };
+		D782FCA827FC3DF300486774 /* RXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA527FC3DF300486774 /* RXApiService.swift */; };
+		D782FCAA27FC40A600486774 /* ESolatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA927FC40A600486774 /* ESolatViewModel.swift */; };
+		D782FCAB27FC40A600486774 /* ESolatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA927FC40A600486774 /* ESolatViewModel.swift */; };
+		D782FCAC27FC40A600486774 /* ESolatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA927FC40A600486774 /* ESolatViewModel.swift */; };
+		D782FCAF27FC467B00486774 /* SirimTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCAE27FC467B00486774 /* SirimTime.swift */; };
+		D782FCB027FC467B00486774 /* SirimTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCAE27FC467B00486774 /* SirimTime.swift */; };
+		D782FCB127FC467B00486774 /* SirimTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCAE27FC467B00486774 /* SirimTime.swift */; };
+		D782FCB327FC46C900486774 /* TakwimSolat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB227FC46C900486774 /* TakwimSolat.swift */; };
+		D782FCB427FC46C900486774 /* TakwimSolat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB227FC46C900486774 /* TakwimSolat.swift */; };
+		D782FCB527FC46C900486774 /* TakwimSolat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB227FC46C900486774 /* TakwimSolat.swift */; };
+		D782FCB827FC46F200486774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB727FC46F200486774 /* Utils.swift */; };
+		D782FCB927FC46F200486774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB727FC46F200486774 /* Utils.swift */; };
+		D782FCBA27FC46F200486774 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCB727FC46F200486774 /* Utils.swift */; };
+		D782FCBC27FC4D5600486774 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCBB27FC4D5600486774 /* LocationData.swift */; };
+		D782FCBD27FC4D5600486774 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCBB27FC4D5600486774 /* LocationData.swift */; };
+		D782FCBE27FC4D5600486774 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCBB27FC4D5600486774 /* LocationData.swift */; };
+		D78D13192805E3BC00CAD93F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */; };
+		D78D131A2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */; };
+		D78D131B2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */; };
+		D7900521280912D000AE5BCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900520280912D000AE5BCC /* UIView+Extension.swift */; };
+		D7900522280912D000AE5BCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900520280912D000AE5BCC /* UIView+Extension.swift */; };
+		D7900523280912D000AE5BCC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900520280912D000AE5BCC /* UIView+Extension.swift */; };
+		D7900525280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
+		D7900526280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
+		D7900527280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
+		D7BE9DF227FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
+		D7BE9DF327FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
+		D7BE9DF427FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
+		D7C983C8280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */; };
+		D7C983C9280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */; };
+		D7C983CA280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */; };
+		D7C983CC280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */; };
+		D7C983CD280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */; };
+		D7C983CE280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */; };
+		D7C983D12802869400C97886 /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983CF2802869400C97886 /* ZonesViewController.swift */; };
+		D7C983D22802869500C97886 /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983CF2802869400C97886 /* ZonesViewController.swift */; };
+		D7C983D32802869500C97886 /* ZonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983CF2802869400C97886 /* ZonesViewController.swift */; };
+		D7C983D42802869500C97886 /* ZonesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983D02802869400C97886 /* ZonesViewController.xib */; };
+		D7C983D52802869500C97886 /* ZonesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983D02802869400C97886 /* ZonesViewController.xib */; };
+		D7C983D62802869500C97886 /* ZonesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983D02802869400C97886 /* ZonesViewController.xib */; };
+		D7C983D92803D0D000C97886 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983D82803D0D000C97886 /* UIImageView+Extension.swift */; };
+		D7C983DA2803D0D000C97886 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983D82803D0D000C97886 /* UIImageView+Extension.swift */; };
+		D7C983DB2803D0D000C97886 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983D82803D0D000C97886 /* UIImageView+Extension.swift */; };
+		D7C983DE2803E53200C97886 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983DD2803E53200C97886 /* ImageCacheType.swift */; };
+		D7C983DF2803E53200C97886 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983DD2803E53200C97886 /* ImageCacheType.swift */; };
+		D7C983E02803E53200C97886 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983DD2803E53200C97886 /* ImageCacheType.swift */; };
+		D7C983E22803E5F400C97886 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E12803E5F400C97886 /* ImageCache.swift */; };
+		D7C983E32803E5F400C97886 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E12803E5F400C97886 /* ImageCache.swift */; };
+		D7C983E42803E5F400C97886 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E12803E5F400C97886 /* ImageCache.swift */; };
+		D7C983E62803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
+		D7C983E72803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
+		D7C983E82803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
+		D7C983EA2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
+		D7C983EB2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
+		D7C983EC2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
+		D7C983F528041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
+		D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
+		D7C983F728041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
+		D7C983F828041CB300C97886 /* PrayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */; };
+		D7C983F928041CB300C97886 /* PrayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */; };
+		D7C983FA28041CB300C97886 /* PrayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */; };
+		D7C983FC280429B200C97886 /* PrayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983FB280429B200C97886 /* PrayerType.swift */; };
+		D7C983FD280429B200C97886 /* PrayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983FB280429B200C97886 /* PrayerType.swift */; };
+		D7C983FE280429B200C97886 /* PrayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983FB280429B200C97886 /* PrayerType.swift */; };
+		D7DEC24E2807CD050003B83A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DEC24D2807CD050003B83A /* UIColor+Extension.swift */; };
+		D7DEC24F2807CD050003B83A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DEC24D2807CD050003B83A /* UIColor+Extension.swift */; };
+		D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DEC24D2807CD050003B83A /* UIColor+Extension.swift */; };
+		D7DFC206280808C200B68C25 /* ZonesTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC205280808C200B68C25 /* ZonesTableData.swift */; };
+		D7DFC207280808C200B68C25 /* ZonesTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC205280808C200B68C25 /* ZonesTableData.swift */; };
+		D7DFC208280808C200B68C25 /* ZonesTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC205280808C200B68C25 /* ZonesTableData.swift */; };
+		D7E9D0AC280588F400EF2CCD /* GradientCircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E9D0AB280588F400EF2CCD /* GradientCircleBorder.swift */; };
+		D7E9D0AD280588F400EF2CCD /* GradientCircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E9D0AB280588F400EF2CCD /* GradientCircleBorder.swift */; };
+		D7E9D0AE280588F400EF2CCD /* GradientCircleBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E9D0AB280588F400EF2CCD /* GradientCircleBorder.swift */; };
+		D7E9D0BC280592B100EF2CCD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B0280592B100EF2CCD /* Roboto-Bold.ttf */; };
+		D7E9D0BD280592B100EF2CCD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B0280592B100EF2CCD /* Roboto-Bold.ttf */; };
+		D7E9D0BE280592B200EF2CCD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B0280592B100EF2CCD /* Roboto-Bold.ttf */; };
+		D7E9D0BF280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B1280592B100EF2CCD /* Roboto-BoldItalic.ttf */; };
+		D7E9D0C0280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B1280592B100EF2CCD /* Roboto-BoldItalic.ttf */; };
+		D7E9D0C1280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B1280592B100EF2CCD /* Roboto-BoldItalic.ttf */; };
+		D7E9D0C2280592B200EF2CCD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B2280592B100EF2CCD /* Roboto-Light.ttf */; };
+		D7E9D0C3280592B200EF2CCD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B2280592B100EF2CCD /* Roboto-Light.ttf */; };
+		D7E9D0C4280592B200EF2CCD /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B2280592B100EF2CCD /* Roboto-Light.ttf */; };
+		D7E9D0C5280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B3280592B100EF2CCD /* Roboto-ThinItalic.ttf */; };
+		D7E9D0C6280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B3280592B100EF2CCD /* Roboto-ThinItalic.ttf */; };
+		D7E9D0C7280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B3280592B100EF2CCD /* Roboto-ThinItalic.ttf */; };
+		D7E9D0C8280592B200EF2CCD /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B4280592B100EF2CCD /* Roboto-Italic.ttf */; };
+		D7E9D0C9280592B200EF2CCD /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B4280592B100EF2CCD /* Roboto-Italic.ttf */; };
+		D7E9D0CA280592B200EF2CCD /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B4280592B100EF2CCD /* Roboto-Italic.ttf */; };
+		D7E9D0CB280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B5280592B100EF2CCD /* Roboto-MediumItalic.ttf */; };
+		D7E9D0CC280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B5280592B100EF2CCD /* Roboto-MediumItalic.ttf */; };
+		D7E9D0CD280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B5280592B100EF2CCD /* Roboto-MediumItalic.ttf */; };
+		D7E9D0CE280592B200EF2CCD /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B6280592B100EF2CCD /* Roboto-Thin.ttf */; };
+		D7E9D0CF280592B200EF2CCD /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B6280592B100EF2CCD /* Roboto-Thin.ttf */; };
+		D7E9D0D0280592B200EF2CCD /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B6280592B100EF2CCD /* Roboto-Thin.ttf */; };
+		D7E9D0D1280592B200EF2CCD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B7280592B100EF2CCD /* Roboto-Regular.ttf */; };
+		D7E9D0D2280592B200EF2CCD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B7280592B100EF2CCD /* Roboto-Regular.ttf */; };
+		D7E9D0D3280592B200EF2CCD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B7280592B100EF2CCD /* Roboto-Regular.ttf */; };
+		D7E9D0D4280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B8280592B100EF2CCD /* Roboto-BlackItalic.ttf */; };
+		D7E9D0D5280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B8280592B100EF2CCD /* Roboto-BlackItalic.ttf */; };
+		D7E9D0D6280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B8280592B100EF2CCD /* Roboto-BlackItalic.ttf */; };
+		D7E9D0D7280592B200EF2CCD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B9280592B100EF2CCD /* Roboto-Medium.ttf */; };
+		D7E9D0D8280592B200EF2CCD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B9280592B100EF2CCD /* Roboto-Medium.ttf */; };
+		D7E9D0D9280592B200EF2CCD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0B9280592B100EF2CCD /* Roboto-Medium.ttf */; };
+		D7E9D0DA280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BA280592B100EF2CCD /* Roboto-LightItalic.ttf */; };
+		D7E9D0DB280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BA280592B100EF2CCD /* Roboto-LightItalic.ttf */; };
+		D7E9D0DC280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BA280592B100EF2CCD /* Roboto-LightItalic.ttf */; };
+		D7E9D0DD280592B200EF2CCD /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BB280592B100EF2CCD /* Roboto-Black.ttf */; };
+		D7E9D0DE280592B200EF2CCD /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BB280592B100EF2CCD /* Roboto-Black.ttf */; };
+		D7E9D0DF280592B200EF2CCD /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E9D0BB280592B100EF2CCD /* Roboto-Black.ttf */; };
+		D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472827FD21BD009C95E4 /* TakwimSolatData.swift */; };
+		D7FE472A27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472827FD21BD009C95E4 /* TakwimSolatData.swift */; };
+		D7FE472B27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472827FD21BD009C95E4 /* TakwimSolatData.swift */; };
+		D7FE472D27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472C27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift */; };
+		D7FE472E27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472C27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift */; };
+		D7FE472F27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE472C27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift */; };
+		D7FE473227FD419E009C95E4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473027FD419E009C95E4 /* MainTabBarViewController.swift */; };
+		D7FE473327FD419E009C95E4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473027FD419E009C95E4 /* MainTabBarViewController.swift */; };
+		D7FE473427FD419E009C95E4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473027FD419E009C95E4 /* MainTabBarViewController.swift */; };
+		D7FE473527FD419E009C95E4 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473127FD419E009C95E4 /* MainTabBarViewController.xib */; };
+		D7FE473627FD419E009C95E4 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473127FD419E009C95E4 /* MainTabBarViewController.xib */; };
+		D7FE473727FD419E009C95E4 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473127FD419E009C95E4 /* MainTabBarViewController.xib */; };
+		D7FE473B27FD4356009C95E4 /* PrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473927FD4356009C95E4 /* PrayersViewController.swift */; };
+		D7FE473C27FD4356009C95E4 /* PrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473927FD4356009C95E4 /* PrayersViewController.swift */; };
+		D7FE473D27FD4356009C95E4 /* PrayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE473927FD4356009C95E4 /* PrayersViewController.swift */; };
+		D7FE473E27FD4356009C95E4 /* PrayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473A27FD4356009C95E4 /* PrayersViewController.xib */; };
+		D7FE473F27FD4356009C95E4 /* PrayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473A27FD4356009C95E4 /* PrayersViewController.xib */; };
+		D7FE474027FD4356009C95E4 /* PrayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE473A27FD4356009C95E4 /* PrayersViewController.xib */; };
+		D7FE474327FD4379009C95E4 /* NearMosquesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE474127FD4379009C95E4 /* NearMosquesViewController.swift */; };
+		D7FE474427FD4379009C95E4 /* NearMosquesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE474127FD4379009C95E4 /* NearMosquesViewController.swift */; };
+		D7FE474527FD4379009C95E4 /* NearMosquesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FE474127FD4379009C95E4 /* NearMosquesViewController.swift */; };
+		D7FE474627FD4379009C95E4 /* NearMosquesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE474227FD4379009C95E4 /* NearMosquesViewController.xib */; };
+		D7FE474727FD4379009C95E4 /* NearMosquesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE474227FD4379009C95E4 /* NearMosquesViewController.xib */; };
+		D7FE474827FD4379009C95E4 /* NearMosquesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FE474227FD4379009C95E4 /* NearMosquesViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D782FC7727FC29B400486774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D782FC5527FC29AF00486774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D782FC5C27FC29AF00486774;
+			remoteInfo = MuslimPrayerApp;
+		};
+		D782FC8127FC29B400486774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D782FC5527FC29AF00486774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D782FC5C27FC29AF00486774;
+			remoteInfo = MuslimPrayerApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0234463D8F1E2BA24F162078 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerApp-MuslimPrayerAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerApp-MuslimPrayerAppUITests/Pods-MuslimPrayerApp-MuslimPrayerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F00F2F1D5047EC2B12AE2E0 /* Pods_MuslimPrayerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuslimPrayerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBEF9DD59097D409EECA5CD /* Pods-MuslimPrayerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerAppTests/Pods-MuslimPrayerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5693B5AE68E84F64D5C90FA2 /* Pods-MuslimPrayerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerApp.debug.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerApp/Pods-MuslimPrayerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		60A180FDF5632E781FE1237D /* Pods-MuslimPrayerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerApp.release.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerApp/Pods-MuslimPrayerApp.release.xcconfig"; sourceTree = "<group>"; };
+		8E984A1145D7B227408AF31D /* Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9252FBC837F0DC07215AA975 /* Pods-MuslimPrayerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerAppTests.release.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerAppTests/Pods-MuslimPrayerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		9ABBD030642CCB44A772FC54 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimPrayerApp-MuslimPrayerAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuslimPrayerApp-MuslimPrayerAppUITests/Pods-MuslimPrayerApp-MuslimPrayerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBCD77E36F61E190DC65A098 /* Pods_MuslimPrayerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuslimPrayerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D700A18627FC5242006BFF53 /* BGImageByPrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGImageByPrayerTime.swift; sourceTree = "<group>"; };
+		D700A18A27FC52D0006BFF53 /* TarikhTakwim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarikhTakwim.swift; sourceTree = "<group>"; };
+		D70737AE27FD7655000188BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTableViewCell.swift; sourceTree = "<group>"; };
+		D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneTableViewCell.xib; sourceTree = "<group>"; };
+		D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueTableViewCell.swift; sourceTree = "<group>"; };
+		D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MosqueTableViewCell.xib; sourceTree = "<group>"; };
+		D74F934828078C000018B537 /* azan_full.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = azan_full.mp3; path = ../../../Azan/azan_full.mp3; sourceTree = "<group>"; };
+		D74F934928078C000018B537 /* azan_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = azan_short.mp3; path = ../../../Azan/azan_short.mp3; sourceTree = "<group>"; };
+		D74F935128078C3E0018B537 /* PushService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushService.swift; sourceTree = "<group>"; };
+		D74F93552807AE7E0018B537 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D74F93572807AF6B0018B537 /* sample.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sample.wav; path = ../../../Azan/sample.wav; sourceTree = "<group>"; };
+		D7626015280974B400EE2702 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		D762601A280978BB00EE2702 /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
+		D762601F28097AF600EE2702 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D762602028097AF600EE2702 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimPrayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D782FC6027FC29AF00486774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D782FC6227FC29AF00486774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D782FC6A27FC29B000486774 /* MuslimPrayerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MuslimPrayerApp.xcdatamodel; sourceTree = "<group>"; };
+		D782FC6F27FC29B300486774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D782FC7127FC29B300486774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D782FC7627FC29B400486774 /* MuslimPrayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppTests.swift; sourceTree = "<group>"; };
+		D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITests.swift; sourceTree = "<group>"; };
+		D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D782FC9D27FC315100486774 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D782FCA127FC38C500486774 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D782FCA527FC3DF300486774 /* RXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXApiService.swift; sourceTree = "<group>"; };
+		D782FCA927FC40A600486774 /* ESolatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESolatViewModel.swift; sourceTree = "<group>"; };
+		D782FCAE27FC467B00486774 /* SirimTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirimTime.swift; sourceTree = "<group>"; };
+		D782FCB227FC46C900486774 /* TakwimSolat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakwimSolat.swift; sourceTree = "<group>"; };
+		D782FCB727FC46F200486774 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D782FCBB27FC4D5600486774 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		D7900520280912D000AE5BCC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D7900524280929E700AE5BCC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneTableViewHeaderCell.xib; sourceTree = "<group>"; };
+		D7C983CF2802869400C97886 /* ZonesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesViewController.swift; sourceTree = "<group>"; };
+		D7C983D02802869400C97886 /* ZonesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZonesViewController.xib; sourceTree = "<group>"; };
+		D7C983D82803D0D000C97886 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		D7C983DD2803E53200C97886 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
+		D7C983E12803E5F400C97886 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		D7C983E52803E82800C97886 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D7C983E92804010E00C97886 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
+		D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTableViewCell.xib; sourceTree = "<group>"; };
+		D7C983FB280429B200C97886 /* PrayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerType.swift; sourceTree = "<group>"; };
+		D7DEC24D2807CD050003B83A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D7DFC205280808C200B68C25 /* ZonesTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesTableData.swift; sourceTree = "<group>"; };
+		D7E9D0AB280588F400EF2CCD /* GradientCircleBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircleBorder.swift; sourceTree = "<group>"; };
+		D7E9D0B0280592B100EF2CCD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		D7E9D0B1280592B100EF2CCD /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D7E9D0B2280592B100EF2CCD /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		D7E9D0B3280592B100EF2CCD /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		D7E9D0B4280592B100EF2CCD /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		D7E9D0B5280592B100EF2CCD /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D7E9D0B6280592B100EF2CCD /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		D7E9D0B7280592B100EF2CCD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		D7E9D0B8280592B100EF2CCD /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D7E9D0B9280592B100EF2CCD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		D7E9D0BA280592B100EF2CCD /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		D7E9D0BB280592B100EF2CCD /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		D7FE472827FD21BD009C95E4 /* TakwimSolatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakwimSolatData.swift; sourceTree = "<group>"; };
+		D7FE472C27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGImageByPrayerTimeData.swift; sourceTree = "<group>"; };
+		D7FE473027FD419E009C95E4 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		D7FE473127FD419E009C95E4 /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarViewController.xib; sourceTree = "<group>"; };
+		D7FE473927FD4356009C95E4 /* PrayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersViewController.swift; sourceTree = "<group>"; };
+		D7FE473A27FD4356009C95E4 /* PrayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayersViewController.xib; sourceTree = "<group>"; };
+		D7FE474127FD4379009C95E4 /* NearMosquesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesViewController.swift; sourceTree = "<group>"; };
+		D7FE474227FD4379009C95E4 /* NearMosquesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearMosquesViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D782FC5A27FC29AF00486774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819ABE6C9B31604E6E5FBA2A /* Pods_MuslimPrayerApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7327FC29B400486774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077089AA0943B5913954A74E /* Pods_MuslimPrayerAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7D27FC29B400486774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0926637F996841E8BD0455B4 /* Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BE6AE1CB5F572865614447F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5693B5AE68E84F64D5C90FA2 /* Pods-MuslimPrayerApp.debug.xcconfig */,
+				60A180FDF5632E781FE1237D /* Pods-MuslimPrayerApp.release.xcconfig */,
+				9ABBD030642CCB44A772FC54 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.debug.xcconfig */,
+				0234463D8F1E2BA24F162078 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.release.xcconfig */,
+				4DBEF9DD59097D409EECA5CD /* Pods-MuslimPrayerAppTests.debug.xcconfig */,
+				9252FBC837F0DC07215AA975 /* Pods-MuslimPrayerAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D727D382280525BE009BF7A3 /* NearMosques */ = {
+			isa = PBXGroup;
+			children = (
+				D727D38328052BB8009BF7A3 /* Cell */,
+				D7FE474127FD4379009C95E4 /* NearMosquesViewController.swift */,
+				D7FE474227FD4379009C95E4 /* NearMosquesViewController.xib */,
+			);
+			path = NearMosques;
+			sourceTree = "<group>";
+		};
+		D727D38328052BB8009BF7A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */,
+				D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D74F934728078BDD0018B537 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				D74F93572807AF6B0018B537 /* sample.wav */,
+				D74F934928078C000018B537 /* azan_short.mp3 */,
+				D74F934828078C000018B537 /* azan_full.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		D74F935028078C260018B537 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D782FC6027FC29AF00486774 /* AppDelegate.swift */,
+				D74F935128078C3E0018B537 /* PushService.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D76260192809789D00EE2702 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D762601A280978BB00EE2702 /* SettingsHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D762601E28097ABF00EE2702 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				D762601F28097AF600EE2702 /* SettingsViewController.swift */,
+				D762602028097AF600EE2702 /* SettingsViewController.xib */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		D782FC5427FC29AF00486774 = {
+			isa = PBXGroup;
+			children = (
+				D782FC5F27FC29AF00486774 /* MuslimPrayerApp */,
+				D782FC7927FC29B400486774 /* MuslimPrayerAppTests */,
+				D782FC8327FC29B400486774 /* MuslimPrayerAppUITests */,
+				D782FC5E27FC29AF00486774 /* Products */,
+				9BE6AE1CB5F572865614447F /* Pods */,
+				E088B8BDB1259F6CA5CCD7D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D782FC5E27FC29AF00486774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */,
+				D782FC7627FC29B400486774 /* MuslimPrayerAppTests.xctest */,
+				D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D782FC5F27FC29AF00486774 /* MuslimPrayerApp */ = {
+			isa = PBXGroup;
+			children = (
+				D76260192809789D00EE2702 /* Helper */,
+				D74F935028078C260018B537 /* AppDelegate */,
+				D74F934728078BDD0018B537 /* audio */,
+				D7E9D0AF2805914000EF2CCD /* Fonts */,
+				D7C983D72803D0B300C97886 /* Extensions */,
+				D7C983DC2803E48E00C97886 /* Cache */,
+				D70737AE27FD7655000188BB /* Assets.xcassets */,
+				D782FCB627FC46E500486774 /* Shared */,
+				D782FC9727FC2DCE00486774 /* Network */,
+				D782FC9327FC2D8E00486774 /* Model */,
+				D782FC9427FC2D9800486774 /* View */,
+				D782FC9527FC2DA100486774 /* ViewModel */,
+				D782FC9627FC2DA800486774 /* Coordinator */,
+				D782FC6227FC29AF00486774 /* SceneDelegate.swift */,
+				D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */,
+				D782FC7127FC29B300486774 /* Info.plist */,
+				D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */,
+				D7626015280974B400EE2702 /* Settings.bundle */,
+			);
+			path = MuslimPrayerApp;
+			sourceTree = "<group>";
+		};
+		D782FC7927FC29B400486774 /* MuslimPrayerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */,
+			);
+			path = MuslimPrayerAppTests;
+			sourceTree = "<group>";
+		};
+		D782FC8327FC29B400486774 /* MuslimPrayerAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */,
+				D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */,
+			);
+			path = MuslimPrayerAppUITests;
+			sourceTree = "<group>";
+		};
+		D782FC9327FC2D8E00486774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE472C27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift */,
+				D7FE472827FD21BD009C95E4 /* TakwimSolatData.swift */,
+				D7DFC205280808C200B68C25 /* ZonesTableData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D782FC9427FC2D9800486774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D762601E28097ABF00EE2702 /* AppSettings */,
+				D7DFC2002807FFF200B68C25 /* Main */,
+				D7C983ED28041C5C00C97886 /* Prayers */,
+				D727D382280525BE009BF7A3 /* NearMosques */,
+				D78D13162805D68D00CAD93F /* ZonesPopover */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D782FC9527FC2DA100486774 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D782FCA927FC40A600486774 /* ESolatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D782FC9627FC2DA800486774 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D782FC9727FC2DCE00486774 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D782FCAD27FC466F00486774 /* Entity */,
+				D782FC9827FC30AD00486774 /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D782FC9827FC30AD00486774 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D782FC9D27FC315100486774 /* APIService.swift */,
+				D782FCA127FC38C500486774 /* APIRequest.swift */,
+				D782FCA527FC3DF300486774 /* RXApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D782FCAD27FC466F00486774 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D782FCAE27FC467B00486774 /* SirimTime.swift */,
+				D782FCB227FC46C900486774 /* TakwimSolat.swift */,
+				D782FCBB27FC4D5600486774 /* LocationData.swift */,
+				D700A18627FC5242006BFF53 /* BGImageByPrayerTime.swift */,
+				D700A18A27FC52D0006BFF53 /* TarikhTakwim.swift */,
+				D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D782FCB627FC46E500486774 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D782FCB727FC46F200486774 /* Utils.swift */,
+				D7C983FB280429B200C97886 /* PrayerType.swift */,
+				D7E9D0AB280588F400EF2CCD /* GradientCircleBorder.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D78D13162805D68D00CAD93F /* ZonesPopover */ = {
+			isa = PBXGroup;
+			children = (
+				D78D13172805D6A100CAD93F /* Cell */,
+				D7C983CF2802869400C97886 /* ZonesViewController.swift */,
+				D7C983D02802869400C97886 /* ZonesViewController.xib */,
+			);
+			path = ZonesPopover;
+			sourceTree = "<group>";
+		};
+		D78D13172805D6A100CAD93F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */,
+				D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */,
+				D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */,
+				D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D7C983D72803D0B300C97886 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7C983D82803D0D000C97886 /* UIImageView+Extension.swift */,
+				D7C983E52803E82800C97886 /* UIImage+Extension.swift */,
+				D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */,
+				D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */,
+				D7DEC24D2807CD050003B83A /* UIColor+Extension.swift */,
+				D7900520280912D000AE5BCC /* UIView+Extension.swift */,
+				D7900524280929E700AE5BCC /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7C983DC2803E48E00C97886 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				D7C983DD2803E53200C97886 /* ImageCacheType.swift */,
+				D7C983E12803E5F400C97886 /* ImageCache.swift */,
+				D7C983E92804010E00C97886 /* ImageLoader.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		D7C983ED28041C5C00C97886 /* Prayers */ = {
+			isa = PBXGroup;
+			children = (
+				D7C983EE28041C6C00C97886 /* Cell */,
+				D7FE473927FD4356009C95E4 /* PrayersViewController.swift */,
+				D7FE473A27FD4356009C95E4 /* PrayersViewController.xib */,
+			);
+			path = Prayers;
+			sourceTree = "<group>";
+		};
+		D7C983EE28041C6C00C97886 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */,
+				D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D7DFC2002807FFF200B68C25 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D7FE473027FD419E009C95E4 /* MainTabBarViewController.swift */,
+				D7FE473127FD419E009C95E4 /* MainTabBarViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D7E9D0AF2805914000EF2CCD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7E9D0BB280592B100EF2CCD /* Roboto-Black.ttf */,
+				D7E9D0B8280592B100EF2CCD /* Roboto-BlackItalic.ttf */,
+				D7E9D0B0280592B100EF2CCD /* Roboto-Bold.ttf */,
+				D7E9D0B1280592B100EF2CCD /* Roboto-BoldItalic.ttf */,
+				D7E9D0B4280592B100EF2CCD /* Roboto-Italic.ttf */,
+				D7E9D0B2280592B100EF2CCD /* Roboto-Light.ttf */,
+				D7E9D0BA280592B100EF2CCD /* Roboto-LightItalic.ttf */,
+				D7E9D0B9280592B100EF2CCD /* Roboto-Medium.ttf */,
+				D7E9D0B5280592B100EF2CCD /* Roboto-MediumItalic.ttf */,
+				D7E9D0B7280592B100EF2CCD /* Roboto-Regular.ttf */,
+				D7E9D0B6280592B100EF2CCD /* Roboto-Thin.ttf */,
+				D7E9D0B3280592B100EF2CCD /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E088B8BDB1259F6CA5CCD7D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D74F93552807AE7E0018B537 /* AVFoundation.framework */,
+				CBCD77E36F61E190DC65A098 /* Pods_MuslimPrayerApp.framework */,
+				8E984A1145D7B227408AF31D /* Pods_MuslimPrayerApp_MuslimPrayerAppUITests.framework */,
+				1F00F2F1D5047EC2B12AE2E0 /* Pods_MuslimPrayerAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D782FC5C27FC29AF00486774 /* MuslimPrayerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D782FC8A27FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerApp" */;
+			buildPhases = (
+				FC45F53040834548ACFAA131 /* [CP] Check Pods Manifest.lock */,
+				D782FC5927FC29AF00486774 /* Sources */,
+				D782FC5A27FC29AF00486774 /* Frameworks */,
+				D782FC5B27FC29AF00486774 /* Resources */,
+				EF1438475C7E09EBFC7A3EE0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuslimPrayerApp;
+			productName = MuslimPrayerApp;
+			productReference = D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D782FC7527FC29B400486774 /* MuslimPrayerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D782FC8D27FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerAppTests" */;
+			buildPhases = (
+				5F8521EB8C3CF411B3F0BBEC /* [CP] Check Pods Manifest.lock */,
+				D782FC7227FC29B400486774 /* Sources */,
+				D782FC7327FC29B400486774 /* Frameworks */,
+				D782FC7427FC29B400486774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D782FC7827FC29B400486774 /* PBXTargetDependency */,
+			);
+			name = MuslimPrayerAppTests;
+			productName = MuslimPrayerAppTests;
+			productReference = D782FC7627FC29B400486774 /* MuslimPrayerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D782FC7F27FC29B400486774 /* MuslimPrayerAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D782FC9027FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerAppUITests" */;
+			buildPhases = (
+				CCE63237BF59FAE2F31CF47B /* [CP] Check Pods Manifest.lock */,
+				D782FC7C27FC29B400486774 /* Sources */,
+				D782FC7D27FC29B400486774 /* Frameworks */,
+				D782FC7E27FC29B400486774 /* Resources */,
+				52157A55638BF28F606F202E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D782FC8227FC29B400486774 /* PBXTargetDependency */,
+			);
+			name = MuslimPrayerAppUITests;
+			productName = MuslimPrayerAppUITests;
+			productReference = D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D782FC5527FC29AF00486774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D782FC5C27FC29AF00486774 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D782FC7527FC29B400486774 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D782FC5C27FC29AF00486774;
+					};
+					D782FC7F27FC29B400486774 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D782FC5C27FC29AF00486774;
+					};
+				};
+			};
+			buildConfigurationList = D782FC5827FC29AF00486774 /* Build configuration list for PBXProject "MuslimPrayerApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D782FC5427FC29AF00486774;
+			productRefGroup = D782FC5E27FC29AF00486774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D782FC5C27FC29AF00486774 /* MuslimPrayerApp */,
+				D782FC7527FC29B400486774 /* MuslimPrayerAppTests */,
+				D782FC7F27FC29B400486774 /* MuslimPrayerAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D782FC5B27FC29AF00486774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74F934A28078C000018B537 /* azan_full.mp3 in Resources */,
+				D7E9D0CB280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */,
+				D7626016280974B400EE2702 /* Settings.bundle in Resources */,
+				D7E9D0C5280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */,
+				D782FC7027FC29B300486774 /* LaunchScreen.storyboard in Resources */,
+				D74F93582807AF6B0018B537 /* sample.wav in Resources */,
+				D7FE473E27FD4356009C95E4 /* PrayersViewController.xib in Resources */,
+				D7E9D0BC280592B100EF2CCD /* Roboto-Bold.ttf in Resources */,
+				D7FE473527FD419E009C95E4 /* MainTabBarViewController.xib in Resources */,
+				D7E9D0C8280592B200EF2CCD /* Roboto-Italic.ttf in Resources */,
+				D7E9D0D4280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */,
+				D7E9D0C2280592B200EF2CCD /* Roboto-Light.ttf in Resources */,
+				D7E9D0CE280592B200EF2CCD /* Roboto-Thin.ttf in Resources */,
+				D7E9D0BF280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */,
+				D7FE474627FD4379009C95E4 /* NearMosquesViewController.xib in Resources */,
+				D7E9D0DA280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */,
+				D7C983D42802869500C97886 /* ZonesViewController.xib in Resources */,
+				D7C983CC280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */,
+				D70737AF27FD7655000188BB /* Assets.xcassets in Resources */,
+				D762602428097AF600EE2702 /* SettingsViewController.xib in Resources */,
+				D7E9D0D1280592B200EF2CCD /* Roboto-Regular.ttf in Resources */,
+				D7E9D0D7280592B200EF2CCD /* Roboto-Medium.ttf in Resources */,
+				D727D38928052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */,
+				D7C983F828041CB300C97886 /* PrayerTableViewCell.xib in Resources */,
+				D7E9D0DD280592B200EF2CCD /* Roboto-Black.ttf in Resources */,
+				D74F934D28078C000018B537 /* azan_short.mp3 in Resources */,
+				D70737C227FEA999000188BB /* ZoneTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7427FC29B400486774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E9D0CF280592B200EF2CCD /* Roboto-Thin.ttf in Resources */,
+				D74F93592807AF6B0018B537 /* sample.wav in Resources */,
+				D74F934B28078C000018B537 /* azan_full.mp3 in Resources */,
+				D7FE473627FD419E009C95E4 /* MainTabBarViewController.xib in Resources */,
+				D7E9D0DB280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */,
+				D7E9D0CC280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */,
+				D7E9D0C0280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */,
+				D7E9D0C3280592B200EF2CCD /* Roboto-Light.ttf in Resources */,
+				D7C983D52802869500C97886 /* ZonesViewController.xib in Resources */,
+				D762602528097AF600EE2702 /* SettingsViewController.xib in Resources */,
+				D7E9D0BD280592B100EF2CCD /* Roboto-Bold.ttf in Resources */,
+				D70737C327FEA999000188BB /* ZoneTableViewCell.xib in Resources */,
+				D74F934E28078C000018B537 /* azan_short.mp3 in Resources */,
+				D7C983CD280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */,
+				D7E9D0D8280592B200EF2CCD /* Roboto-Medium.ttf in Resources */,
+				D7E9D0DE280592B200EF2CCD /* Roboto-Black.ttf in Resources */,
+				D727D38A28052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */,
+				D7626017280974B400EE2702 /* Settings.bundle in Resources */,
+				D7FE474727FD4379009C95E4 /* NearMosquesViewController.xib in Resources */,
+				D7C983F928041CB300C97886 /* PrayerTableViewCell.xib in Resources */,
+				D7E9D0D5280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */,
+				D7E9D0C9280592B200EF2CCD /* Roboto-Italic.ttf in Resources */,
+				D7E9D0D2280592B200EF2CCD /* Roboto-Regular.ttf in Resources */,
+				D7FE473F27FD4356009C95E4 /* PrayersViewController.xib in Resources */,
+				D7E9D0C6280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7E27FC29B400486774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7E9D0D0280592B200EF2CCD /* Roboto-Thin.ttf in Resources */,
+				D74F935A2807AF6B0018B537 /* sample.wav in Resources */,
+				D74F934C28078C000018B537 /* azan_full.mp3 in Resources */,
+				D7FE473727FD419E009C95E4 /* MainTabBarViewController.xib in Resources */,
+				D7E9D0DC280592B200EF2CCD /* Roboto-LightItalic.ttf in Resources */,
+				D7E9D0CD280592B200EF2CCD /* Roboto-MediumItalic.ttf in Resources */,
+				D7E9D0C1280592B200EF2CCD /* Roboto-BoldItalic.ttf in Resources */,
+				D7E9D0C4280592B200EF2CCD /* Roboto-Light.ttf in Resources */,
+				D7C983D62802869500C97886 /* ZonesViewController.xib in Resources */,
+				D762602628097AF600EE2702 /* SettingsViewController.xib in Resources */,
+				D7E9D0BE280592B200EF2CCD /* Roboto-Bold.ttf in Resources */,
+				D70737C427FEA999000188BB /* ZoneTableViewCell.xib in Resources */,
+				D74F934F28078C000018B537 /* azan_short.mp3 in Resources */,
+				D7C983CE280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */,
+				D7E9D0D9280592B200EF2CCD /* Roboto-Medium.ttf in Resources */,
+				D7E9D0DF280592B200EF2CCD /* Roboto-Black.ttf in Resources */,
+				D727D38B28052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */,
+				D7626018280974B400EE2702 /* Settings.bundle in Resources */,
+				D7FE474827FD4379009C95E4 /* NearMosquesViewController.xib in Resources */,
+				D7C983FA28041CB300C97886 /* PrayerTableViewCell.xib in Resources */,
+				D7E9D0D6280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */,
+				D7E9D0CA280592B200EF2CCD /* Roboto-Italic.ttf in Resources */,
+				D7E9D0D3280592B200EF2CCD /* Roboto-Regular.ttf in Resources */,
+				D7FE474027FD4356009C95E4 /* PrayersViewController.xib in Resources */,
+				D7E9D0C7280592B200EF2CCD /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52157A55638BF28F606F202E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp-MuslimPrayerAppUITests/Pods-MuslimPrayerApp-MuslimPrayerAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp-MuslimPrayerAppUITests/Pods-MuslimPrayerApp-MuslimPrayerAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp-MuslimPrayerAppUITests/Pods-MuslimPrayerApp-MuslimPrayerAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F8521EB8C3CF411B3F0BBEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuslimPrayerAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCE63237BF59FAE2F31CF47B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuslimPrayerApp-MuslimPrayerAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1438475C7E09EBFC7A3EE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp/Pods-MuslimPrayerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp/Pods-MuslimPrayerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerApp/Pods-MuslimPrayerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC45F53040834548ACFAA131 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuslimPrayerApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D782FC5927FC29AF00486774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7FE474327FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
+				D7C983D12802869400C97886 /* ZonesViewController.swift in Sources */,
+				D727D38628052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
+				D7DEC24E2807CD050003B83A /* UIColor+Extension.swift in Sources */,
+				D7C983EA2804010E00C97886 /* ImageLoader.swift in Sources */,
+				D7BE9DF227FD0CA900F81968 /* BaseResponse.swift in Sources */,
+				D782FCBC27FC4D5600486774 /* LocationData.swift in Sources */,
+				D700A18B27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */,
+				D7C983FC280429B200C97886 /* PrayerType.swift in Sources */,
+				D7C983DE2803E53200C97886 /* ImageCacheType.swift in Sources */,
+				D7FE473B27FD4356009C95E4 /* PrayersViewController.swift in Sources */,
+				D7FE473227FD419E009C95E4 /* MainTabBarViewController.swift in Sources */,
+				D7C983C8280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */,
+				D782FCB327FC46C900486774 /* TakwimSolat.swift in Sources */,
+				D7C983F528041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
+				D7C983D92803D0D000C97886 /* UIImageView+Extension.swift in Sources */,
+				D7C983E22803E5F400C97886 /* ImageCache.swift in Sources */,
+				D78D13192805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
+				D782FCA227FC38C500486774 /* APIRequest.swift in Sources */,
+				D762601B280978BB00EE2702 /* SettingsHelper.swift in Sources */,
+				D782FC6127FC29AF00486774 /* AppDelegate.swift in Sources */,
+				D7C983E62803E82800C97886 /* UIImage+Extension.swift in Sources */,
+				D782FC6327FC29AF00486774 /* SceneDelegate.swift in Sources */,
+				D762602128097AF600EE2702 /* SettingsViewController.swift in Sources */,
+				D7900525280929E700AE5BCC /* String+Extension.swift in Sources */,
+				D7FE472D27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
+				D76EF2A22804A6FF0074ACB1 /* Date+Extension.swift in Sources */,
+				D700A18727FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
+				D782FCAA27FC40A600486774 /* ESolatViewModel.swift in Sources */,
+				D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
+				D782FC9E27FC315100486774 /* APIService.swift in Sources */,
+				D782FCB827FC46F200486774 /* Utils.swift in Sources */,
+				D7E9D0AC280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
+				D7900521280912D000AE5BCC /* UIView+Extension.swift in Sources */,
+				D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */,
+				D782FCA627FC3DF300486774 /* RXApiService.swift in Sources */,
+				D782FCAF27FC467B00486774 /* SirimTime.swift in Sources */,
+				D74F935228078C3E0018B537 /* PushService.swift in Sources */,
+				D7DFC206280808C200B68C25 /* ZonesTableData.swift in Sources */,
+				D70737BF27FEA999000188BB /* ZoneTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7227FC29B400486774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7FE473327FD419E009C95E4 /* MainTabBarViewController.swift in Sources */,
+				D782FCBD27FC4D5600486774 /* LocationData.swift in Sources */,
+				D782FC7B27FC29B400486774 /* MuslimPrayerAppTests.swift in Sources */,
+				D7C983DA2803D0D000C97886 /* UIImageView+Extension.swift in Sources */,
+				D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */,
+				D762602228097AF600EE2702 /* SettingsViewController.swift in Sources */,
+				D7C983EB2804010E00C97886 /* ImageLoader.swift in Sources */,
+				D782FC9F27FC315100486774 /* APIService.swift in Sources */,
+				D7BE9DF327FD0CA900F81968 /* BaseResponse.swift in Sources */,
+				D7900522280912D000AE5BCC /* UIView+Extension.swift in Sources */,
+				D74F935328078C3E0018B537 /* PushService.swift in Sources */,
+				D782FCA727FC3DF300486774 /* RXApiService.swift in Sources */,
+				D7C983DF2803E53200C97886 /* ImageCacheType.swift in Sources */,
+				D78D131A2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
+				D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
+				D782FCA327FC38C500486774 /* APIRequest.swift in Sources */,
+				D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
+				D7C983E32803E5F400C97886 /* ImageCache.swift in Sources */,
+				D7FE474427FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
+				D70737C027FEA999000188BB /* ZoneTableViewCell.swift in Sources */,
+				D7C983E72803E82800C97886 /* UIImage+Extension.swift in Sources */,
+				D700A18827FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
+				D7E9D0AD280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
+				D7DEC24F2807CD050003B83A /* UIColor+Extension.swift in Sources */,
+				D782FCAB27FC40A600486774 /* ESolatViewModel.swift in Sources */,
+				D700A18C27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */,
+				D7FE472E27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
+				D7FE473C27FD4356009C95E4 /* PrayersViewController.swift in Sources */,
+				D7C983FD280429B200C97886 /* PrayerType.swift in Sources */,
+				D7900526280929E700AE5BCC /* String+Extension.swift in Sources */,
+				D762601C280978BB00EE2702 /* SettingsHelper.swift in Sources */,
+				D782FCB427FC46C900486774 /* TakwimSolat.swift in Sources */,
+				D7C983C9280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */,
+				D782FCB027FC467B00486774 /* SirimTime.swift in Sources */,
+				D7DFC207280808C200B68C25 /* ZonesTableData.swift in Sources */,
+				D782FCB927FC46F200486774 /* Utils.swift in Sources */,
+				D7C983D22802869500C97886 /* ZonesViewController.swift in Sources */,
+				D7FE472A27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D782FC7C27FC29B400486774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78D131B2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
+				D7C983CA280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */,
+				D7FE473D27FD4356009C95E4 /* PrayersViewController.swift in Sources */,
+				D7C983F728041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
+				D7DFC208280808C200B68C25 /* ZonesTableData.swift in Sources */,
+				D782FCAC27FC40A600486774 /* ESolatViewModel.swift in Sources */,
+				D700A18D27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */,
+				D700A18927FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
+				D7E9D0AE280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
+				D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */,
+				D74F935428078C3E0018B537 /* PushService.swift in Sources */,
+				D7FE472B27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
+				D7FE472F27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
+				D7C983E02803E53200C97886 /* ImageCacheType.swift in Sources */,
+				D782FCBA27FC46F200486774 /* Utils.swift in Sources */,
+				D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */,
+				D782FCB127FC467B00486774 /* SirimTime.swift in Sources */,
+				D7C983FE280429B200C97886 /* PrayerType.swift in Sources */,
+				D762601D280978BB00EE2702 /* SettingsHelper.swift in Sources */,
+				D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */,
+				D782FCBE27FC4D5600486774 /* LocationData.swift in Sources */,
+				D70737C127FEA999000188BB /* ZoneTableViewCell.swift in Sources */,
+				D7FE473427FD419E009C95E4 /* MainTabBarViewController.swift in Sources */,
+				D762602328097AF600EE2702 /* SettingsViewController.swift in Sources */,
+				D727D38828052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
+				D7C983EC2804010E00C97886 /* ImageLoader.swift in Sources */,
+				D7C983E42803E5F400C97886 /* ImageCache.swift in Sources */,
+				D782FCA827FC3DF300486774 /* RXApiService.swift in Sources */,
+				D782FCB527FC46C900486774 /* TakwimSolat.swift in Sources */,
+				D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */,
+				D7C983D32802869500C97886 /* ZonesViewController.swift in Sources */,
+				D7C983DB2803D0D000C97886 /* UIImageView+Extension.swift in Sources */,
+				D7900523280912D000AE5BCC /* UIView+Extension.swift in Sources */,
+				D7C983E82803E82800C97886 /* UIImage+Extension.swift in Sources */,
+				D7FE474527FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
+				D782FCA027FC315100486774 /* APIService.swift in Sources */,
+				D7900527280929E700AE5BCC /* String+Extension.swift in Sources */,
+				D782FCA427FC38C500486774 /* APIRequest.swift in Sources */,
+				D7BE9DF427FD0CA900F81968 /* BaseResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D782FC7827FC29B400486774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D782FC5C27FC29AF00486774 /* MuslimPrayerApp */;
+			targetProxy = D782FC7727FC29B400486774 /* PBXContainerItemProxy */;
+		};
+		D782FC8227FC29B400486774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D782FC5C27FC29AF00486774 /* MuslimPrayerApp */;
+			targetProxy = D782FC8127FC29B400486774 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D782FC6F27FC29B300486774 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D782FC8827FC29B400486774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D782FC8927FC29B400486774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D782FC8B27FC29B400486774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5693B5AE68E84F64D5C90FA2 /* Pods-MuslimPrayerApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MuslimPrayerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D782FC8C27FC29B400486774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A180FDF5632E781FE1237D /* Pods-MuslimPrayerApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MuslimPrayerApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D782FC8E27FC29B400486774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DBEF9DD59097D409EECA5CD /* Pods-MuslimPrayerAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuslimPrayerApp.app/MuslimPrayerApp";
+			};
+			name = Debug;
+		};
+		D782FC8F27FC29B400486774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9252FBC837F0DC07215AA975 /* Pods-MuslimPrayerAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuslimPrayerApp.app/MuslimPrayerApp";
+			};
+			name = Release;
+		};
+		D782FC9127FC29B400486774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABBD030642CCB44A772FC54 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuslimPrayerApp;
+			};
+			name = Debug;
+		};
+		D782FC9227FC29B400486774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0234463D8F1E2BA24F162078 /* Pods-MuslimPrayerApp-MuslimPrayerAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UX8FAP5WYC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sha.MuslimPrayerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuslimPrayerApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D782FC5827FC29AF00486774 /* Build configuration list for PBXProject "MuslimPrayerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D782FC8827FC29B400486774 /* Debug */,
+				D782FC8927FC29B400486774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D782FC8A27FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D782FC8B27FC29B400486774 /* Debug */,
+				D782FC8C27FC29B400486774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D782FC8D27FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D782FC8E27FC29B400486774 /* Debug */,
+				D782FC8F27FC29B400486774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D782FC9027FC29B400486774 /* Build configuration list for PBXNativeTarget "MuslimPrayerAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D782FC9127FC29B400486774 /* Debug */,
+				D782FC9227FC29B400486774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D782FC6A27FC29B000486774 /* MuslimPrayerApp.xcdatamodel */,
+			);
+			currentVersion = D782FC6A27FC29B000486774 /* MuslimPrayerApp.xcdatamodel */;
+			path = MuslimPrayerApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D782FC5527FC29AF00486774 /* Project object */;
+}
