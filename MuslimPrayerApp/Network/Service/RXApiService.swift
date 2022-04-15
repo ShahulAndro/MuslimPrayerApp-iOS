@@ -33,7 +33,7 @@ private enum APIError: Error {
 struct RXApiService {
     let disposeBag = DisposeBag()
     
-    func fetch<T: Codable>(apiRequest: APIRequest)-> Observable<T> {
+    func performRequest<T: Codable>(apiRequest: APIRequest)-> Observable<T> {
         let request = apiRequest.request()
         return URLSession.shared.rx.response(request: request)
             .map { result -> Data in

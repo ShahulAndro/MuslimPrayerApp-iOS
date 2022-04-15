@@ -56,7 +56,7 @@ extension ESolatViewModel {
     func fetchSirimTime() {
         let apiRequest = APIRequest(path: APIRequest.pathSirimTime)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (serverTime: SirimTime) in
                 print(serverTime.date ?? "")
                 print(serverTime.serverTimestamp ?? "")
@@ -88,7 +88,7 @@ extension ESolatViewModel {
         
         let apiRequest = APIRequest(path: APIRequest.pathTakwimSolat, queryParameterItems: queryParameterItems)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (solatData: TakwimSolatData) in
                 if solatData.prayerTime != nil && date.isEmpty {
                     self.takwimSolatData.onNext(solatData)
@@ -121,7 +121,7 @@ extension ESolatViewModel {
         
         let apiRequest = APIRequest(method: RequestType.POST, path: APIRequest.pathTakwimSolat, queryParameterItems: queryParameterItems, requestPayload: requestPayloadParameters)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (solatData: TakwimSolatData) in
                 if solatData.prayerTime != nil {
                     self.takwimSolatDataByPeriod.onNext(solatData)
@@ -143,7 +143,7 @@ extension ESolatViewModel {
         queryParameterItems["datetype"] = "miladi"
         let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (tarikhTakwim: TarikhTakwim) in
                 if let takwim = tarikhTakwim.takwim {
                     print(takwim.keys)
@@ -167,7 +167,7 @@ extension ESolatViewModel {
         queryParameterItems["hijri"] = "1443-09-01"
         let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (tarikhTakwim: TarikhTakwim) in
                 if let takwim = tarikhTakwim.takwim {
                     print(takwim.keys)
@@ -189,7 +189,7 @@ extension ESolatViewModel {
         queryParameterItems["praytime"] = prayterType
         let apiRequest = APIRequest(path: APIRequest.pathBgImageByPrayertime, queryParameterItems: queryParameterItems)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (data: BGImageByPrayerTimeData) in
 //                self.bgImagePrayerData.onNext(data)
                 
@@ -213,7 +213,7 @@ extension ESolatViewModel {
         queryParameterItems["dist"] = dist
         let apiRequest = APIRequest(path: APIRequest.pathNearestMosque, queryParameterItems: queryParameterItems)
         
-        rxApiService!.fetch(apiRequest: apiRequest).subscribe(
+        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (mosqueLocations: MosqueLocations) in
                 if let locationData = mosqueLocations.locationData {
                     self.locationData.onNext(locationData.sorted(by: { $0.distance  < $1.distance }))
