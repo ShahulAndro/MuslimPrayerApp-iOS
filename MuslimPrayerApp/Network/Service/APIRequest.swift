@@ -30,7 +30,6 @@ enum RequestType: String {
 
 struct APIRequest {
 
-
     static let baseUrl = "https://www.e-solat.gov.my"
     static let masjidImagesBaseUrl = "https://masjid.islam.gov.my/images/masjid/"
     static let apiURL = "https://www.e-solat.gov.my/index.php?r=esolatApi/"
@@ -40,17 +39,12 @@ struct APIRequest {
     static let pathBgImageByPrayertime = "BgImageByPrayertime"
     static let pathNearestMosque = "nearestMosque"
     
-    var parameters: [String: String] = [:]
-    
-    var queryParameterItems: [String: String] = [:]
-    
-    var method: RequestType = RequestType.GET
-    
-    var path: String = ""
-    
-    var requestPayload: [String: String] = [:]
-    
+    private var path: String = ""
+    private var method: RequestType = RequestType.GET
     private let boundary: String = UUID().uuidString
+    private var parameters: [String: String] = [:]
+    private var queryParameterItems: [String: String] = [:]
+    private var requestPayload: [String: String] = [:]
     private var httpBody = NSMutableData()
     
     init(method: RequestType = RequestType.GET, path: String = "", queryParameterItems: [String: String] = [:], parameters: [String: String] = [:], requestPayload: [String: String] = [:]) {
@@ -61,28 +55,9 @@ struct APIRequest {
         self.requestPayload = requestPayload
     }
     
-    func addTextFields() {
-        httpBody.append(textFormFields().data(using: .utf8)!)
-    }
-    
-    private func textFormFields() -> String {
-        var fieldString = "Content-Type: multipart/form-data; boundary=------\(boundary)\r\n"
-        fieldString += "\r\n"
-        for (key, value) in requestPayload {
-            fieldString += "------\(boundary)\r\n"
-            fieldString += "Content-Disposition: form-data; name=\"\(key)\"\r\n"
-            fieldString += "\r\n"
-            fieldString += "\(value)\r\n"
-        }
-        fieldString += "------\(boundary)--\r\n"
-
-        return fieldString
-    }
-    
     func getPostString() -> String {
         var data = [String]()
-        for(key, value) in requestPayload
-        {
+        for(key, value) in requestPayload {
             data.append(key + "=\(value)")
         }
         return data.map { String($0) }.joined(separator: "&")
@@ -90,7 +65,6 @@ struct APIRequest {
     
     func request() -> URLRequest {
         var urlString = "\(APIRequest.apiURL)\(path)"
-        //Append parameters if any
         queryParameterItems.forEach({key, value in
             urlString.append("&\(key)=\(value)")
         })
@@ -100,12 +74,9 @@ struct APIRequest {
         request.httpMethod = method.rawValue
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        if !requestPayload.isEmpty && method == RequestType.POST {
-//            addTextFields()
-//            request.httpBody = httpBody as Data
+        if method == RequestType.POST && !requestPayload.isEmpty {
             let postString = self.getPostString()
             request.httpBody = postString.data(using: .utf8)
-
         } else {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         }

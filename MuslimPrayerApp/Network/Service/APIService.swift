@@ -23,9 +23,7 @@
 
 import Foundation
 
-protocol APIServiceProtocol {
-    
-}
+protocol APIServiceProtocol {}
 
 struct APIService: APIServiceProtocol {
     

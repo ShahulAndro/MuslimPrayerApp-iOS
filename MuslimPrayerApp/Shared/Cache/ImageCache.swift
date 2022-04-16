@@ -45,7 +45,7 @@ final class ImageCache {
         let countLimit: Int
         let memoryLimit: Int
         
-        static let defaultConfig = Config(countLimit: 100, memoryLimit: 1024 * 1024 * 100) //100MB
+        static let defaultConfig = Config(countLimit: 100, memoryLimit: 1024 * 1024 * 100)
     }
     
     init(config: Config = Config.defaultConfig) {
@@ -72,7 +72,6 @@ extension ImageCache: ImageCacheType {
     }
     
     func insertImage(_ image: UIImage?, for url: URL) {
-        
         guard let image = image else {
             removeImage(for: url)
             return
@@ -84,7 +83,6 @@ extension ImageCache: ImageCacheType {
         
         imageCache.setObject(decodedImage, forKey: url as AnyObject)
         decodedImageCache.setObject(image as AnyObject, forKey: url as AnyObject)
-
     }
     
     func removeImage(for url: URL) {

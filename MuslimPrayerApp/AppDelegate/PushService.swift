@@ -93,7 +93,7 @@ extension AppDelegate {
         let content = UNMutableNotificationContent()
         content.title = "Prayer"
         content.subtitle = "\(prayerType) - \(prayerTime)"
-        content.body = "Tap to listen full Azan"
+        content.body = "View prayers times, Tap for full Azan."
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "azan_short.mp3"))
         
         let dateFormatter = DateFormatter()
@@ -103,7 +103,7 @@ extension AppDelegate {
         let dateComponents = (!dateString.isEmpty && !Utils.isToday(dateString)) ? calendar.dateComponents([.day, .hour, .minute, .second], from: dateFormatter.date(from: prayerTime)!) : calendar.dateComponents([.hour, .minute, .second], from: dateFormatter.date(from: prayerTime)!)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
-        let request = UNNotificationRequest(identifier: "Azan", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: prayerType, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
             if let error = error {
@@ -135,12 +135,7 @@ extension AppDelegate {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
 
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
             audioPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-
-            /* iOS 10 and earlier require the following line:
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
-
             guard let player = audioPlayer else { return }
 
             player.play()
