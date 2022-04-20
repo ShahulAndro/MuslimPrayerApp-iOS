@@ -78,5 +78,5 @@ struct LocationData: Codable {
     var img_descr: String?
     var kelas_takmir: String?
     var id_masjid: String?
-    var distance: String
+    var distance: String?
 }

@@ -1,0 +1,21 @@
+{
+    "prayerTime": [{
+        "hijri": "1443-08-26",
+        "date": "29-Mar-2022",
+        "day": "Tuesday",
+        "imsak": "05:57:00",
+        "fajr": "06:07:00",
+        "syuruk": "07:13:00",
+        "dhuhr": "13:21:00",
+        "asr": "16:21:00",
+        "maghrib": "19:24:00",
+        "isha": "20:33:00"
+    }],
+    "status": "OK!",
+    "serverTime": "2022-03-29 11:04:27",
+    "periodType": "today",
+    "lang": "en_uk",
+    "zone": "WLY01",
+    "bearing": "292&#176; 31&#8242; 16&#8243;"
+}
+

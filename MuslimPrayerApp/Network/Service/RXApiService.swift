@@ -25,13 +25,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-private enum APIError: Error {
+enum APIError: Error {
     case invalidResponse(URLResponse?)
     case invalidJSON(Error)
+    case genericError(Error)
 }
 
-struct RXApiService {
-    let disposeBag = DisposeBag()
+struct RXApiService: APIServiceProtocol {
+    var disposeBag = DisposeBag()
     
     func performRequest<T: Codable>(apiRequest: APIRequest)-> Observable<T> {
         let request = apiRequest.request()

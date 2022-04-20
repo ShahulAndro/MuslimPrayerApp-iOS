@@ -53,6 +53,8 @@
 		D762602428097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
 		D762602528097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
 		D762602628097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
+		D76AADAD280F9407001AA5A0 /* NearMosquesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADAC280F9407001AA5A0 /* NearMosquesViewControllerTests.swift */; };
+		D76AADAF280F9484001AA5A0 /* ZonesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADAE280F9484001AA5A0 /* ZonesViewControllerTests.swift */; };
 		D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
@@ -63,7 +65,6 @@
 		D782FC6327FC29AF00486774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
 		D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */; };
 		D782FC7027FC29B300486774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */; };
-		D782FC7B27FC29B400486774 /* MuslimPrayerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */; };
 		D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */; };
 		D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */; };
 		D782FC9E27FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
@@ -99,6 +100,22 @@
 		D7900525280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
 		D7900526280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
 		D7900527280929E700AE5BCC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900524280929E700AE5BCC /* String+Extension.swift */; };
+		D7AF5A8F280E591A00F47AB3 /* takwimsolat.json in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5A8E280E591900F47AB3 /* takwimsolat.json */; };
+		D7AF5A91280E597E00F47AB3 /* BgImageByPrayertime.json in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5A90280E597E00F47AB3 /* BgImageByPrayertime.json */; };
+		D7AF5A93280E59D900F47AB3 /* nearestmosques.json in Resources */ = {isa = PBXBuildFile; fileRef = D7AF5A92280E59D900F47AB3 /* nearestmosques.json */; };
+		D7AF5A9A280EA26E00F47AB3 /* PrayersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF5A99280EA26E00F47AB3 /* PrayersViewControllerTests.swift */; };
+		D7BE6E2A280AAC4900BCE693 /* ESolatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E29280AAC4900BCE693 /* ESolatViewModelTests.swift */; };
+		D7BE6E2D280AB20800BCE693 /* MockRXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E2C280AB20800BCE693 /* MockRXApiService.swift */; };
+		D7BE6E2F280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */; };
+		D7BE6E30280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */; };
+		D7BE6E31280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */; };
+		D7BE6E32280ABF1300BCE693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6027FC29AF00486774 /* AppDelegate.swift */; };
+		D7BE6E33280ABF1400BCE693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6027FC29AF00486774 /* AppDelegate.swift */; };
+		D7BE6E34280ABF1700BCE693 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
+		D7BE6E35280ABF1800BCE693 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
+		D7BE6E38280AC0B100BCE693 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E37280AC0B100BCE693 /* DataManager.swift */; };
+		D7BE6E39280AC0B100BCE693 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E37280AC0B100BCE693 /* DataManager.swift */; };
+		D7BE6E3A280AC0B100BCE693 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE6E37280AC0B100BCE693 /* DataManager.swift */; };
 		D7BE9DF227FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
 		D7BE9DF327FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
 		D7BE9DF427FD0CA900F81968 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */; };
@@ -252,6 +269,8 @@
 		D762601A280978BB00EE2702 /* SettingsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 		D762601F28097AF600EE2702 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D762602028097AF600EE2702 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		D76AADAC280F9407001AA5A0 /* NearMosquesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesViewControllerTests.swift; sourceTree = "<group>"; };
+		D76AADAE280F9484001AA5A0 /* ZonesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesViewControllerTests.swift; sourceTree = "<group>"; };
 		D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESolatViewModel+Extension.swift"; sourceTree = "<group>"; };
 		D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimPrayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,7 +280,6 @@
 		D782FC6F27FC29B300486774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D782FC7127FC29B300486774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D782FC7627FC29B400486774 /* MuslimPrayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppTests.swift; sourceTree = "<group>"; };
 		D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITests.swift; sourceTree = "<group>"; };
 		D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -276,6 +294,14 @@
 		D78D13182805E3BC00CAD93F /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		D7900520280912D000AE5BCC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D7900524280929E700AE5BCC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D7AF5A8E280E591900F47AB3 /* takwimsolat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = takwimsolat.json; sourceTree = "<group>"; };
+		D7AF5A90280E597E00F47AB3 /* BgImageByPrayertime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BgImageByPrayertime.json; sourceTree = "<group>"; };
+		D7AF5A92280E59D900F47AB3 /* nearestmosques.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nearestmosques.json; sourceTree = "<group>"; };
+		D7AF5A99280EA26E00F47AB3 /* PrayersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersViewControllerTests.swift; sourceTree = "<group>"; };
+		D7BE6E29280AAC4900BCE693 /* ESolatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESolatViewModelTests.swift; sourceTree = "<group>"; };
+		D7BE6E2C280AB20800BCE693 /* MockRXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRXApiService.swift; sourceTree = "<group>"; };
+		D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		D7BE6E37280AC0B100BCE693 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D7BE9DF127FD0CA900F81968 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		D7C983C7280280E500C97886 /* ZoneTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTableViewHeaderCell.swift; sourceTree = "<group>"; };
 		D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneTableViewHeaderCell.xib; sourceTree = "<group>"; };
@@ -457,7 +483,9 @@
 		D782FC7927FC29B400486774 /* MuslimPrayerAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D782FC7A27FC29B400486774 /* MuslimPrayerAppTests.swift */,
+				D7BE6E36280AC07B00BCE693 /* Data */,
+				D7BE6E2B280AB1E200BCE693 /* Mock */,
+				D7BE6E28280AAC2A00BCE693 /* Tests */,
 			);
 			path = MuslimPrayerAppTests;
 			sourceTree = "<group>";
@@ -524,6 +552,7 @@
 				D782FC9D27FC315100486774 /* APIService.swift */,
 				D782FCA127FC38C500486774 /* APIRequest.swift */,
 				D782FCA527FC3DF300486774 /* RXApiService.swift */,
+				D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -573,6 +602,44 @@
 				D7C983CB280280F000C97886 /* ZoneTableViewHeaderCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D7AF5A8D280E488B00F47AB3 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF5A92280E59D900F47AB3 /* nearestmosques.json */,
+				D7AF5A90280E597E00F47AB3 /* BgImageByPrayertime.json */,
+				D7AF5A8E280E591900F47AB3 /* takwimsolat.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		D7BE6E28280AAC2A00BCE693 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE6E29280AAC4900BCE693 /* ESolatViewModelTests.swift */,
+				D7AF5A99280EA26E00F47AB3 /* PrayersViewControllerTests.swift */,
+				D76AADAC280F9407001AA5A0 /* NearMosquesViewControllerTests.swift */,
+				D76AADAE280F9484001AA5A0 /* ZonesViewControllerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D7BE6E2B280AB1E200BCE693 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE6E2C280AB20800BCE693 /* MockRXApiService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		D7BE6E36280AC07B00BCE693 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF5A8D280E488B00F47AB3 /* Json */,
+				D7BE6E37280AC0B100BCE693 /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D7C983D72803D0B300C97886 /* Extensions */ = {
@@ -687,6 +754,8 @@
 				D782FC7227FC29B400486774 /* Sources */,
 				D782FC7327FC29B400486774 /* Frameworks */,
 				D782FC7427FC29B400486774 /* Resources */,
+				D85537CF601227F2A468F0C7 /* [CP] Embed Pods Frameworks */,
+				D7AF5A98280E8FCE00F47AB3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -810,16 +879,19 @@
 				D7E9D0C3280592B200EF2CCD /* Roboto-Light.ttf in Resources */,
 				D7C983D52802869500C97886 /* ZonesViewController.xib in Resources */,
 				D762602528097AF600EE2702 /* SettingsViewController.xib in Resources */,
+				D7AF5A93280E59D900F47AB3 /* nearestmosques.json in Resources */,
 				D7E9D0BD280592B100EF2CCD /* Roboto-Bold.ttf in Resources */,
 				D70737C327FEA999000188BB /* ZoneTableViewCell.xib in Resources */,
 				D74F934E28078C000018B537 /* azan_short.mp3 in Resources */,
 				D7C983CD280280F000C97886 /* ZoneTableViewHeaderCell.xib in Resources */,
+				D7AF5A91280E597E00F47AB3 /* BgImageByPrayertime.json in Resources */,
 				D7E9D0D8280592B200EF2CCD /* Roboto-Medium.ttf in Resources */,
 				D7E9D0DE280592B200EF2CCD /* Roboto-Black.ttf in Resources */,
 				D727D38A28052C75009BF7A3 /* MosqueTableViewCell.xib in Resources */,
 				D7626017280974B400EE2702 /* Settings.bundle in Resources */,
 				D7FE474727FD4379009C95E4 /* NearMosquesViewController.xib in Resources */,
 				D7C983F928041CB300C97886 /* PrayerTableViewCell.xib in Resources */,
+				D7AF5A8F280E591A00F47AB3 /* takwimsolat.json in Resources */,
 				D7E9D0D5280592B200EF2CCD /* Roboto-BlackItalic.ttf in Resources */,
 				D7E9D0C9280592B200EF2CCD /* Roboto-Italic.ttf in Resources */,
 				D7E9D0D2280592B200EF2CCD /* Roboto-Regular.ttf in Resources */,
@@ -924,6 +996,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D7AF5A98280E8FCE00F47AB3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/FileName1.swift\" \\\n\"${INPUT_DIR}/FileName2.swift\" \\\n\"${INPUT_DIR}/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
+		D85537CF601227F2A468F0C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerAppTests/Pods-MuslimPrayerAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerAppTests/Pods-MuslimPrayerAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuslimPrayerAppTests/Pods-MuslimPrayerAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EF1438475C7E09EBFC7A3EE0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1002,10 +1108,12 @@
 				D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
 				D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FC9E27FC315100486774 /* APIService.swift in Sources */,
+				D7BE6E38280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D782FCB827FC46F200486774 /* Utils.swift in Sources */,
 				D7E9D0AC280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
 				D7900521280912D000AE5BCC /* UIView+Extension.swift in Sources */,
 				D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */,
+				D7BE6E2F280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */,
 				D782FCA627FC3DF300486774 /* RXApiService.swift in Sources */,
 				D782FCAF27FC467B00486774 /* SirimTime.swift in Sources */,
 				D74F935228078C3E0018B537 /* PushService.swift in Sources */,
@@ -1018,10 +1126,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BE6E32280ABF1300BCE693 /* AppDelegate.swift in Sources */,
 				D7FE473327FD419E009C95E4 /* MainTabBarViewController.swift in Sources */,
+				D76AADAD280F9407001AA5A0 /* NearMosquesViewControllerTests.swift in Sources */,
 				D782FCBD27FC4D5600486774 /* LocationData.swift in Sources */,
-				D782FC7B27FC29B400486774 /* MuslimPrayerAppTests.swift in Sources */,
 				D7C983DA2803D0D000C97886 /* UIImageView+Extension.swift in Sources */,
+				D7BE6E39280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */,
 				D762602228097AF600EE2702 /* SettingsViewController.swift in Sources */,
 				D7C983EB2804010E00C97886 /* ImageLoader.swift in Sources */,
@@ -1032,10 +1142,12 @@
 				D782FCA727FC3DF300486774 /* RXApiService.swift in Sources */,
 				D7C983DF2803E53200C97886 /* ImageCacheType.swift in Sources */,
 				D78D131A2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
+				D7BE6E2D280AB20800BCE693 /* MockRXApiService.swift in Sources */,
 				D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
 				D782FCA327FC38C500486774 /* APIRequest.swift in Sources */,
 				D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
+				D7BE6E34280ABF1700BCE693 /* SceneDelegate.swift in Sources */,
 				D7C983E32803E5F400C97886 /* ImageCache.swift in Sources */,
 				D7FE474427FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
 				D70737C027FEA999000188BB /* ZoneTableViewCell.swift in Sources */,
@@ -1048,6 +1160,7 @@
 				D7FE472E27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
 				D7FE473C27FD4356009C95E4 /* PrayersViewController.swift in Sources */,
 				D7C983FD280429B200C97886 /* PrayerType.swift in Sources */,
+				D7AF5A9A280EA26E00F47AB3 /* PrayersViewControllerTests.swift in Sources */,
 				D7900526280929E700AE5BCC /* String+Extension.swift in Sources */,
 				D762601C280978BB00EE2702 /* SettingsHelper.swift in Sources */,
 				D782FCB427FC46C900486774 /* TakwimSolat.swift in Sources */,
@@ -1057,6 +1170,9 @@
 				D782FCB927FC46F200486774 /* Utils.swift in Sources */,
 				D7C983D22802869500C97886 /* ZonesViewController.swift in Sources */,
 				D7FE472A27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
+				D7BE6E2A280AAC4900BCE693 /* ESolatViewModelTests.swift in Sources */,
+				D76AADAF280F9484001AA5A0 /* ZonesViewControllerTests.swift in Sources */,
+				D7BE6E30280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,7 +1183,9 @@
 				D78D131B2805E3BC00CAD93F /* UILabel+Extension.swift in Sources */,
 				D7C983CA280280E500C97886 /* ZoneTableViewHeaderCell.swift in Sources */,
 				D7FE473D27FD4356009C95E4 /* PrayersViewController.swift in Sources */,
+				D7BE6E35280ABF1800BCE693 /* SceneDelegate.swift in Sources */,
 				D7C983F728041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
+				D7BE6E31280ABA4000BCE693 /* APIServiceProtocol.swift in Sources */,
 				D7DFC208280808C200B68C25 /* ZonesTableData.swift in Sources */,
 				D782FCAC27FC40A600486774 /* ESolatViewModel.swift in Sources */,
 				D700A18D27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */,
@@ -1081,6 +1199,7 @@
 				D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FCBA27FC46F200486774 /* Utils.swift in Sources */,
 				D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */,
+				D7BE6E33280ABF1400BCE693 /* AppDelegate.swift in Sources */,
 				D782FCB127FC467B00486774 /* SirimTime.swift in Sources */,
 				D7C983FE280429B200C97886 /* PrayerType.swift in Sources */,
 				D762601D280978BB00EE2702 /* SettingsHelper.swift in Sources */,
@@ -1102,6 +1221,7 @@
 				D7FE474527FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
 				D782FCA027FC315100486774 /* APIService.swift in Sources */,
 				D7900527280929E700AE5BCC /* String+Extension.swift in Sources */,
+				D7BE6E3A280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D782FCA427FC38C500486774 /* APIRequest.swift in Sources */,
 				D7BE9DF427FD0CA900F81968 /* BaseResponse.swift in Sources */,
 			);
@@ -1261,8 +1381,11 @@
 				DEVELOPMENT_TEAM = UX8FAP5WYC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MuslimPrayerApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is used to get find nearest mosques";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to get find nearest mosques";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1275,7 +1398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1290,8 +1413,11 @@
 				DEVELOPMENT_TEAM = UX8FAP5WYC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MuslimPrayerApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is used to get find nearest mosques";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is used to get find nearest mosques";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1304,7 +1430,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

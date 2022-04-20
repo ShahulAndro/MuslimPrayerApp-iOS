@@ -38,7 +38,7 @@ class ESolatViewModel {
     
     
     private var useRxToDownloadImage = false
-    private var rxApiService: RXApiService?
+    private var rxApiService: APIServiceProtocol?
     private let disposeBag = DisposeBag()
     
     var currentZone = "WLY01"
@@ -47,7 +47,7 @@ class ESolatViewModel {
     var images: [UIImage] = []
     let imageLoader = ImageLoader()
     
-    init(rxApiService: RXApiService = RXApiService()) {
+    init(rxApiService: APIServiceProtocol = RXApiService()) {
         self.rxApiService = rxApiService
     }
     
@@ -210,7 +210,7 @@ extension ESolatViewModel {
         rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
             onNext: { (mosqueLocations: MosqueLocations) in
                 if let locationData = mosqueLocations.locationData {
-                    self.locationData.onNext(locationData.sorted(by: { $0.distance  < $1.distance }))
+                    self.locationData.onNext(locationData.sorted(by: { $0.distance ?? "0"  < $1.distance ?? "0" }))
                 }
             }, onError: { error in
                 print(error)

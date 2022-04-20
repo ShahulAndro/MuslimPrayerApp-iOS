@@ -59,7 +59,7 @@ class PrayersViewController: UIViewController {
     private var countDownToDate: Date?
     private var countDownTimer: Timer?
     private let disposeBag = DisposeBag()
-    private var eSolatViewModel = ESolatViewModel()
+    var eSolatViewModel = ESolatViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,9 +23,7 @@
 
 import Foundation
 
-protocol APIServiceProtocol {}
-
-struct APIService: APIServiceProtocol {
+struct APIService {
     
     func dataRequest<T: Codable>(url: String, objectType: T.Type, completion: @escaping (T?, Error?)-> Void) {
         let dataURL = URL(string: url)!
