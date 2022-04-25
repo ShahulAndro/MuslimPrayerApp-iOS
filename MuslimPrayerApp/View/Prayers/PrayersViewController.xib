@@ -35,6 +35,7 @@
                 <outlet property="previousButton" destination="Md3-A8-FMt" id="ZKg-p7-Sye"/>
                 <outlet property="rootContentView" destination="RQv-dS-O77" id="6kP-y7-QjD"/>
                 <outlet property="secLabel" destination="4vZ-7O-IVH" id="XX7-o7-ctA"/>
+                <outlet property="selectZoneButton" destination="OhU-hz-4cy" id="Wnm-Yb-0Dz"/>
                 <outlet property="settingsImageView" destination="gD8-gR-dc5" id="NUH-z1-CbY"/>
                 <outlet property="timeRemainingForPrayerView" destination="4p1-ep-rUe" id="3us-Bi-X71"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

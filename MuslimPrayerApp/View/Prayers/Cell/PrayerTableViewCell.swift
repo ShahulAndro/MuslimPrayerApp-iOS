@@ -31,6 +31,7 @@ class PrayerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        prayerTypeLabel.accessibilityIdentifier = "prayerTypeLabel"
         prayerTypeLabel.textColor = UIColor(hexString: "#FCB314")
     }
 

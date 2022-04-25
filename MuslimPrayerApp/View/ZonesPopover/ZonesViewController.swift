@@ -34,6 +34,7 @@ class ZonesViewController: UIViewController {
     
     @IBOutlet weak var chooseZonePlaceHolderLabel: UILabel!
     @IBOutlet weak var zoneTableView: UITableView!
+    @IBOutlet weak var cancelButton: UIButton!
     
     private let disposeBag = DisposeBag()
     private let viewModel = ESolatViewModel()
@@ -56,6 +57,7 @@ class ZonesViewController: UIViewController {
         super.viewDidLoad()
         
         initCommon()
+        setAccessvilityIdentifierForUITesting()
         setupBindings()
         viewModel.fetchZoneTableData()
     }
@@ -114,4 +116,17 @@ extension ZonesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 25
     }
+}
+
+
+//MARK: - Set AccessibilityIdentifierfor UITesting
+
+extension ZonesViewController {
+    
+    func setAccessvilityIdentifierForUITesting() {
+        chooseZonePlaceHolderLabel.accessibilityIdentifier = "chooseZonePlaceHolderLabel"
+        zoneTableView.accessibilityIdentifier = "zoneTableView"
+        cancelButton.accessibilityIdentifier = "cancelButton"
+    }
+    
 }

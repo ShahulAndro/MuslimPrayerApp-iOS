@@ -13,16 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 //
-//  PrayerType.swift
-//  MuslimPrayerApp
+//  NearMosquesScreenTests.swift
+//  MuslimPrayerAppUITests
 //
-//  Created by Shahul Hamed Shaik on 11/04/2022.
+//  Created by Shahul Hamed Shaik (HLB) on 20/04/2022.
 //
 
-import Foundation
+import XCTest
 
-enum PrayerType: String, CaseIterable {
-    case Imsak, Fajr, Syuruk, Dhuhr, Asar, Maghrib, Isha
+class NearMosquesScreenTests: BaseXCTestCase {
+    
+    func testNearMosquesScreen() throws {
+        let tabBarScreen = MainTabBarViewScreen(app: app)
+        tabBarScreen.tapFindMosquesTabItem().waitFor(seconds: 10)
+        
+        let nearMosquesScreen = NearMosquesScreen(app: app)
+        XCTAssertTrue(nearMosquesScreen.verifyPageLoad())
+    }
+    
 }

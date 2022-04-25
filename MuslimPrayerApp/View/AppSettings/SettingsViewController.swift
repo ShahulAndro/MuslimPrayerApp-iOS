@@ -35,16 +35,18 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var asarSwitch: UISwitch!
     @IBOutlet weak var magribSwitch: UISwitch!
     @IBOutlet weak var ishaSwitch: UISwitch!
+    @IBOutlet weak var cancelButton: UIButton!
     
     private var isUpdateFromApp = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setAccessvilityIdentifierForUITesting()
+        
         UserDefaults.standard.register(defaults: [String: Any]())
         NotificationCenter.default.addObserver(self, selector: #selector(SettingsViewController.onValueChanged), name: UserDefaults.didChangeNotification, object: nil)
         updateValues()
-        
     }
 
     @IBAction func tapOnCancel(_ sender: Any) {
@@ -88,5 +90,25 @@ class SettingsViewController: UIViewController {
         ishaSwitch.isOn = UserDefaults.standard.bool(forKey: "isha_notification")
     }
         
+    
+}
+
+
+//MARK: - Set AccessibilityIdentifierfor UITesting
+
+extension SettingsViewController {
+    
+    func setAccessvilityIdentifierForUITesting() {
+        mainStackView.accessibilityIdentifier = "mainStackView"
+        muteAllSwitch.accessibilityIdentifier = "muteAllSwitch"
+        imsakSwitch.accessibilityIdentifier = "imsakSwitch"
+        fajrSwitch.accessibilityIdentifier = "fajrSwitch"
+        syurukSwitch.accessibilityIdentifier = "syurukSwitch"
+        dhuhrSwitch.accessibilityIdentifier = "dhuhrSwitch"
+        asarSwitch.accessibilityIdentifier = "asarSwitch"
+        magribSwitch.accessibilityIdentifier = "magribSwitch"
+        ishaSwitch.accessibilityIdentifier = "ishaSwitch"
+        cancelButton.accessibilityIdentifier = "cancelButton"
+    }
     
 }

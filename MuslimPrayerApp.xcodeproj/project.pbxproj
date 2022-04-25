@@ -23,6 +23,9 @@
 		D70737C227FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
 		D70737C327FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
 		D70737C427FEA999000188BB /* ZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */; };
+		D70B39222813E6B20028B391 /* BaseXCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B39212813E6B20028B391 /* BaseXCTestCase.swift */; };
+		D70B39272813EF550028B391 /* XCUIElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B39262813EF550028B391 /* XCUIElement+Extension.swift */; };
+		D70B39292813FC9C0028B391 /* MainTabBarViewScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70B39282813FC9C0028B391 /* MainTabBarViewScreenTests.swift */; };
 		D727D38628052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
 		D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
 		D727D38828052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */; };
@@ -55,12 +58,21 @@
 		D762602628097AF600EE2702 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D762602028097AF600EE2702 /* SettingsViewController.xib */; };
 		D76AADAD280F9407001AA5A0 /* NearMosquesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADAC280F9407001AA5A0 /* NearMosquesViewControllerTests.swift */; };
 		D76AADAF280F9484001AA5A0 /* ZonesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADAE280F9484001AA5A0 /* ZonesViewControllerTests.swift */; };
+		D76AADB32810120F001AA5A0 /* PrayersViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADB22810120F001AA5A0 /* PrayersViewScreen.swift */; };
+		D76AADB52810123A001AA5A0 /* ZonesPopupListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADB42810123A001AA5A0 /* ZonesPopupListScreen.swift */; };
+		D76AADB72810126A001AA5A0 /* NearMosquesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADB62810126A001AA5A0 /* NearMosquesScreen.swift */; };
+		D76AADB92810129B001AA5A0 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADB82810129B001AA5A0 /* SettingsScreen.swift */; };
+		D76AADBB281012CA001AA5A0 /* PrayersViewScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADBA281012CA001AA5A0 /* PrayersViewScreenTests.swift */; };
+		D76AADBD281012DC001AA5A0 /* ZonesListScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADBC281012DC001AA5A0 /* ZonesListScreenTests.swift */; };
+		D76AADBF281012F1001AA5A0 /* NearMosquesScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADBE281012F1001AA5A0 /* NearMosquesScreenTests.swift */; };
+		D76AADC128101301001AA5A0 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADC028101301001AA5A0 /* SettingsScreenTests.swift */; };
 		D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76EF2A22804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
+		D77CAE3A2811480A005C6AB4 /* MainTabBarViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CAE392811480A005C6AB4 /* MainTabBarViewScreen.swift */; };
 		D782FC6127FC29AF00486774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6027FC29AF00486774 /* AppDelegate.swift */; };
 		D782FC6327FC29AF00486774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
 		D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */; };
@@ -258,6 +270,9 @@
 		D70737AE27FD7655000188BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D70737BD27FEA999000188BB /* ZoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneTableViewCell.swift; sourceTree = "<group>"; };
 		D70737BE27FEA999000188BB /* ZoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZoneTableViewCell.xib; sourceTree = "<group>"; };
+		D70B39212813E6B20028B391 /* BaseXCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXCTestCase.swift; sourceTree = "<group>"; };
+		D70B39262813EF550028B391 /* XCUIElement+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extension.swift"; sourceTree = "<group>"; };
+		D70B39282813FC9C0028B391 /* MainTabBarViewScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewScreenTests.swift; sourceTree = "<group>"; };
 		D727D38428052C75009BF7A3 /* MosqueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosqueTableViewCell.swift; sourceTree = "<group>"; };
 		D727D38528052C75009BF7A3 /* MosqueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MosqueTableViewCell.xib; sourceTree = "<group>"; };
 		D74F934828078C000018B537 /* azan_full.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = azan_full.mp3; path = ../../../Azan/azan_full.mp3; sourceTree = "<group>"; };
@@ -271,8 +286,17 @@
 		D762602028097AF600EE2702 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		D76AADAC280F9407001AA5A0 /* NearMosquesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesViewControllerTests.swift; sourceTree = "<group>"; };
 		D76AADAE280F9484001AA5A0 /* ZonesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesViewControllerTests.swift; sourceTree = "<group>"; };
+		D76AADB22810120F001AA5A0 /* PrayersViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersViewScreen.swift; sourceTree = "<group>"; };
+		D76AADB42810123A001AA5A0 /* ZonesPopupListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesPopupListScreen.swift; sourceTree = "<group>"; };
+		D76AADB62810126A001AA5A0 /* NearMosquesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesScreen.swift; sourceTree = "<group>"; };
+		D76AADB82810129B001AA5A0 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		D76AADBA281012CA001AA5A0 /* PrayersViewScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersViewScreenTests.swift; sourceTree = "<group>"; };
+		D76AADBC281012DC001AA5A0 /* ZonesListScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesListScreenTests.swift; sourceTree = "<group>"; };
+		D76AADBE281012F1001AA5A0 /* NearMosquesScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesScreenTests.swift; sourceTree = "<group>"; };
+		D76AADC028101301001AA5A0 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
 		D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESolatViewModel+Extension.swift"; sourceTree = "<group>"; };
 		D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		D77CAE392811480A005C6AB4 /* MainTabBarViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewScreen.swift; sourceTree = "<group>"; };
 		D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimPrayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782FC6027FC29AF00486774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D782FC6227FC29AF00486774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -381,6 +405,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D70B39252813EF3C0028B391 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D70B39262813EF550028B391 /* XCUIElement+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D727D382280525BE009BF7A3 /* NearMosques */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +467,31 @@
 				D762602028097AF600EE2702 /* SettingsViewController.xib */,
 			);
 			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		D76AADB0281011C8001AA5A0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D70B39212813E6B20028B391 /* BaseXCTestCase.swift */,
+				D76AADBA281012CA001AA5A0 /* PrayersViewScreenTests.swift */,
+				D76AADBC281012DC001AA5A0 /* ZonesListScreenTests.swift */,
+				D76AADBE281012F1001AA5A0 /* NearMosquesScreenTests.swift */,
+				D76AADC028101301001AA5A0 /* SettingsScreenTests.swift */,
+				D70B39282813FC9C0028B391 /* MainTabBarViewScreenTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D76AADB1281011D0001AA5A0 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				D76AADB22810120F001AA5A0 /* PrayersViewScreen.swift */,
+				D76AADB42810123A001AA5A0 /* ZonesPopupListScreen.swift */,
+				D76AADB62810126A001AA5A0 /* NearMosquesScreen.swift */,
+				D76AADB82810129B001AA5A0 /* SettingsScreen.swift */,
+				D77CAE392811480A005C6AB4 /* MainTabBarViewScreen.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		D782FC5427FC29AF00486774 = {
@@ -493,6 +550,9 @@
 		D782FC8327FC29B400486774 /* MuslimPrayerAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D70B39252813EF3C0028B391 /* Extension */,
+				D76AADB1281011D0001AA5A0 /* Pages */,
+				D76AADB0281011C8001AA5A0 /* Tests */,
 				D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */,
 				D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */,
 			);
@@ -755,7 +815,6 @@
 				D782FC7327FC29B400486774 /* Frameworks */,
 				D782FC7427FC29B400486774 /* Resources */,
 				D85537CF601227F2A468F0C7 /* [CP] Embed Pods Frameworks */,
-				D7AF5A98280E8FCE00F47AB3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -996,23 +1055,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D7AF5A98280E8FCE00F47AB3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/FileName1.swift\" \\\n\"${INPUT_DIR}/FileName2.swift\" \\\n\"${INPUT_DIR}/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
-		};
 		D85537CF601227F2A468F0C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1196,18 +1238,26 @@
 				D7FE472B27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
 				D7FE472F27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
 				D7C983E02803E53200C97886 /* ImageCacheType.swift in Sources */,
+				D76AADB92810129B001AA5A0 /* SettingsScreen.swift in Sources */,
+				D76AADB72810126A001AA5A0 /* NearMosquesScreen.swift in Sources */,
 				D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FCBA27FC46F200486774 /* Utils.swift in Sources */,
+				D76AADBF281012F1001AA5A0 /* NearMosquesScreenTests.swift in Sources */,
 				D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */,
 				D7BE6E33280ABF1400BCE693 /* AppDelegate.swift in Sources */,
 				D782FCB127FC467B00486774 /* SirimTime.swift in Sources */,
 				D7C983FE280429B200C97886 /* PrayerType.swift in Sources */,
+				D76AADB32810120F001AA5A0 /* PrayersViewScreen.swift in Sources */,
+				D70B39272813EF550028B391 /* XCUIElement+Extension.swift in Sources */,
+				D76AADBD281012DC001AA5A0 /* ZonesListScreenTests.swift in Sources */,
 				D762601D280978BB00EE2702 /* SettingsHelper.swift in Sources */,
+				D77CAE3A2811480A005C6AB4 /* MainTabBarViewScreen.swift in Sources */,
 				D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */,
 				D782FCBE27FC4D5600486774 /* LocationData.swift in Sources */,
 				D70737C127FEA999000188BB /* ZoneTableViewCell.swift in Sources */,
 				D7FE473427FD419E009C95E4 /* MainTabBarViewController.swift in Sources */,
 				D762602328097AF600EE2702 /* SettingsViewController.swift in Sources */,
+				D76AADBB281012CA001AA5A0 /* PrayersViewScreenTests.swift in Sources */,
 				D727D38828052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
 				D7C983EC2804010E00C97886 /* ImageLoader.swift in Sources */,
 				D7C983E42803E5F400C97886 /* ImageCache.swift in Sources */,
@@ -1220,7 +1270,11 @@
 				D7C983E82803E82800C97886 /* UIImage+Extension.swift in Sources */,
 				D7FE474527FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
 				D782FCA027FC315100486774 /* APIService.swift in Sources */,
+				D76AADB52810123A001AA5A0 /* ZonesPopupListScreen.swift in Sources */,
+				D70B39292813FC9C0028B391 /* MainTabBarViewScreenTests.swift in Sources */,
 				D7900527280929E700AE5BCC /* String+Extension.swift in Sources */,
+				D70B39222813E6B20028B391 /* BaseXCTestCase.swift in Sources */,
+				D76AADC128101301001AA5A0 /* SettingsScreenTests.swift in Sources */,
 				D7BE6E3A280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D782FCA427FC38C500486774 /* APIRequest.swift in Sources */,
 				D7BE9DF427FD0CA900F81968 /* BaseResponse.swift in Sources */,

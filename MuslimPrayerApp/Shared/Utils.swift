@@ -83,6 +83,17 @@ struct Utils {
         return false
     }
     
+    static func isDateInTomorrowWithYYYYMMDD(_ dateString: String)-> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = dateFormatter.date(from: dateString)
+        if let date = currentDate {
+            return Calendar.current.isDateInTomorrow(date)
+        }
+        
+        return false
+    }
+    
     static func getNearestPrayerWith(_ prayerTime: TakwimSolat)-> (prayerType: String, prayerTime: String) {
         let imsakTimes = Utils.getDateComponentsFrom(timein24: prayerTime.imsak ?? "")
         let fajrTimes = Utils.getDateComponentsFrom(timein24: prayerTime.fajr ?? "")

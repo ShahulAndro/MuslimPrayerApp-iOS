@@ -77,6 +77,6 @@ class MosqueTableViewCell: UITableViewCell {
         } else {
             faxLabel.isHidden = true
         }
-        distanceLabel.text = "Distance: \(location.distance)kms"
+        distanceLabel.text = "Distance: \(location.distance) kms"
     }
 }

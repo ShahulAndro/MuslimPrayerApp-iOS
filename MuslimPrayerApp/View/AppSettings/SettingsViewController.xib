@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="MuslimPrayerApp" customModuleProvider="target">
             <connections>
                 <outlet property="asarSwitch" destination="9GE-Bj-gga" id="cFX-G4-br7"/>
+                <outlet property="cancelButton" destination="NuC-TC-tZY" id="DfH-rl-1Pm"/>
                 <outlet property="dhuhrSwitch" destination="K3Y-jY-AbU" id="0VC-ih-feq"/>
                 <outlet property="fajrSwitch" destination="iKT-yp-CHH" id="OGF-Zn-0EC"/>
                 <outlet property="imsakSwitch" destination="Dnz-dB-kyj" id="yBv-ed-Cys"/>

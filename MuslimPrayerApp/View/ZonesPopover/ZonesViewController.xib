@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZonesViewController" customModule="MuslimPrayerApp" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="Q4h-MS-rcF" id="lEb-b2-mny"/>
                 <outlet property="chooseZonePlaceHolderLabel" destination="EYV-Zc-PKK" id="viX-Zf-oXQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="q4J-XD-vgP"/>
                 <outlet property="zoneTableView" destination="kIp-a4-llh" id="N9t-kY-jCe"/>

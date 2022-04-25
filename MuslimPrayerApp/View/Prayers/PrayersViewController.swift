@@ -43,6 +43,7 @@ class PrayersViewController: UIViewController {
     @IBOutlet weak var prayerTypeLabel: UILabel!
     @IBOutlet weak var prayerTimeLabel: UILabel!
     @IBOutlet weak var timeRemainingForPrayerView: UIView!
+    @IBOutlet weak var selectZoneButton: UIButton!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minsLabel: UILabel!
     @IBOutlet weak var secLabel: UILabel!
@@ -65,6 +66,7 @@ class PrayersViewController: UIViewController {
         super.viewDidLoad()
         
         initCommon()
+        setAccessvilityIdentifierForUITesting()
         setupBindings()
         eSolatViewModel.fetchTakwimSolat()
         
@@ -164,6 +166,8 @@ extension PrayersViewController {
                 self?.prayerTypeLabel.text = prayerType
                 self?.prayerTimeLabel.text = prayerTime
                 
+                self?.eSolatViewModel.currentPrayer = (prayerType, prayerTime)
+                
                 //TODO: Notification
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.scheduleLocalNotification(prayerType: prayerType, prayerTime: prayerTime)
@@ -240,6 +244,8 @@ extension PrayersViewController {
             
             eSolatViewModel.currentDisplayDate = prayerTime.date ?? ""
             
+            eSolatViewModel.currentPrayer = (nearPrayer.prayerType, nearPrayer.prayerTime)
+            
             if nearPrayer.prayerTime.isEmpty && nearPrayer.prayerType.isEmpty {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd-MMM-yyyy"
@@ -296,6 +302,10 @@ extension PrayersViewController {
         let timeComponents = nextPrayerTime.components(separatedBy: ":")
         let calendar = Calendar.current
         var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        if Utils.isDateInTomorrowWithYYYYMMDD(dateString) {
+            components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date.dayAfter)
+        }
+        
         components.hour = Int(timeComponents[0])
         components.minute = Int(timeComponents[1])
         components.second = Int(timeComponents[2])
@@ -329,7 +339,49 @@ extension PrayersViewController {
         if hours <= 0 && mins <= 0 && secs <= 0 {
             countDownTimer?.invalidate()
             isCountdownTimerInvalidate = true
-            eSolatViewModel.fetchTakwimSolat()
+            if let currentPrayer = eSolatViewModel.currentPrayer, currentPrayer.name == PrayerType.Isha.rawValue || (currentPrayer.name.isEmpty && currentPrayer.time.isEmpty) {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd-MMM-yyyy"
+                var date = dateFormatter.string(from: Date())
+                if  !eSolatViewModel.currentDisplayDate.isEmpty {
+                    date = eSolatViewModel.currentDisplayDate
+                }
+                eSolatViewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
+            } else {
+                eSolatViewModel.fetchTakwimSolat()
+            }
         }
     }
+}
+
+//MARK: - Set AccessibilityIdentifierfor UITesting
+
+extension PrayersViewController {
+    
+    func setAccessvilityIdentifierForUITesting() {
+        rootContentView.accessibilityIdentifier = "rootContentView"
+        headerView.accessibilityIdentifier = "headerView"
+        prayerBGImageView.accessibilityIdentifier = "prayerBGImageView"
+        settingsImageView.accessibilityIdentifier = "settingsImageView"
+        headerStackView.accessibilityIdentifier = "headerStackView"
+        eDateLabel.accessibilityIdentifier = "eDateLabel"
+        iDateLabel.accessibilityIdentifier = "iDateLabel"
+        nextPrayerTimeLabel.accessibilityIdentifier = "nextPrayerTimeLabel"
+        prayerTypeLabel.accessibilityIdentifier = "prayerTypeLabel"
+        prayerTimeLabel.accessibilityIdentifier = "prayerTimeLabel"
+        timeRemainingForPrayerView.accessibilityIdentifier = "timeRemainingForPrayerView"
+        hoursLabel.accessibilityIdentifier = "hoursLabel"
+        minsLabel.accessibilityIdentifier = "minsLabel"
+        secLabel.accessibilityIdentifier = "secLabel"
+        zoneLabel.accessibilityIdentifier = "zoneLabel"
+        selectZoneButton.accessibilityIdentifier = "selectZoneButton"
+        prayerDateSelectionView.accessibilityIdentifier = "prayerDateSelectionView"
+        previousButton.accessibilityIdentifier = "previousButton"
+        islamicDateLabel.accessibilityIdentifier = "islamicDateLabel"
+        nextButton.accessibilityIdentifier = "nextButton"
+        prayerView.accessibilityIdentifier = "prayerView"
+        prayerTableView.accessibilityIdentifier = "prayerTableView"
+        loadingIndicator.accessibilityIdentifier = "loadingIndicator"
+    }
+    
 }

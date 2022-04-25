@@ -44,6 +44,7 @@ class ESolatViewModel {
     var currentZone = "WLY01"
     var currentDisplayDate = ""
     var currentSelectePrayerTimeInTable = ""
+    var currentPrayer: (name: String, time: String)?
     var images: [UIImage] = []
     let imageLoader = ImageLoader()
     

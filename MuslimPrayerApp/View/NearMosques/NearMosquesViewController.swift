@@ -37,6 +37,7 @@ class NearMosquesViewController: UIViewController {
         super.viewDidLoad()
         
         initCommon()
+        setAccessvilityIdentifierForUITesting()
         setupBindings()
     }
 
@@ -131,6 +132,17 @@ extension NearMosquesViewController {
         default:
             locationManager.requestAlwaysAuthorization()
         }
+    }
+    
+}
+
+
+//MARK: - Set AccessibilityIdentifierfor UITesting
+
+extension NearMosquesViewController {
+    
+    func setAccessvilityIdentifierForUITesting() {
+        mosquesTableView.accessibilityIdentifier = "mosquesTableView"
     }
     
 }
