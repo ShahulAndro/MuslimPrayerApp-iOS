@@ -54,21 +54,21 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func isToggleSwitchOn(_ sender: Any) {
-        guard let tag = (sender as? UISwitch)?.tag else {
+        guard let toggleSwitch = (sender as? UISwitch) else {
             return
         }
         
         isUpdateFromApp = true
         
-        switch tag {
-        case 1: UserDefaults.standard.set(true, forKey: "mute_all_notifications"); isUpdateFromApp = false
-        case 2: UserDefaults.standard.set(true, forKey: "imsak_notification"); isUpdateFromApp = false
-        case 3: UserDefaults.standard.set(true, forKey: "fajr_notification"); isUpdateFromApp = false
-        case 4: UserDefaults.standard.set(true, forKey: "syuruk_notification"); isUpdateFromApp = false
-        case 5: UserDefaults.standard.set(true, forKey: "dhuhr_notification"); isUpdateFromApp = false
-        case 6: UserDefaults.standard.set(true, forKey: "asar_notification"); isUpdateFromApp = false
-        case 7: UserDefaults.standard.set(true, forKey: "magrib_notification"); isUpdateFromApp = false
-        case 8: UserDefaults.standard.set(true, forKey: "isha_notification"); isUpdateFromApp = false
+        switch toggleSwitch.tag {
+        case 1: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "mute_all_notifications"); isUpdateFromApp = false
+        case 2: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "imsak_notification"); isUpdateFromApp = false
+        case 3: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "fajr_notification"); isUpdateFromApp = false
+        case 4: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "syuruk_notification"); isUpdateFromApp = false
+        case 5: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "dhuhr_notification"); isUpdateFromApp = false
+        case 6: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "asar_notification"); isUpdateFromApp = false
+        case 7: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "magrib_notification"); isUpdateFromApp = false
+        case 8: UserDefaults.standard.set(toggleSwitch.isOn, forKey: "isha_notification"); isUpdateFromApp = false
         default: print("Nothing found to update")
         }
     }

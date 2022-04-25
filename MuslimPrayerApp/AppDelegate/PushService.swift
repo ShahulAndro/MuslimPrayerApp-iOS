@@ -31,6 +31,17 @@ import AVFoundation
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        if SettingsHelper.mutaAllNotification {
+            return
+        }
+        
+        let userInfo = notification.request.content.userInfo
+        if let prayerType = userInfo["prayerType"] as? String, !SettingsHelper.isAllowedNotification(prayerType) {
+            return
+        }
+        
+        
         completionHandler([.alert, .badge, .sound])
     }
     
@@ -95,6 +106,7 @@ extension AppDelegate {
         content.subtitle = "\(prayerType) - \(prayerTime)"
         content.body = "View prayers times, Tap for full Azan."
         content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "azan_short.mp3"))
+        content.userInfo = ["prayerType": prayerType, "prayerTime": prayerTime]
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"

@@ -55,12 +55,17 @@ class SettingsScreen {
         cancelButton.tap()
     }
     
+    func waitFor(seconds: Int) {
+        _ = app.waitForExistence(timeout: TimeInterval(seconds))
+    }
+    
     func getMuteAllSwitchCurrentValue()-> Bool {
         return muteAllSwitch.switchCurrentValue
     }
     
-    func tapOnMuteAllSwitch() {
+    func tapOnMuteAllSwitch()-> Self {
         muteAllSwitch.tap()
+        return self
     }
     
     func veryMuteAllSwitchChange(_ value: Bool)-> Bool {
@@ -71,8 +76,9 @@ class SettingsScreen {
         return imsakSwitch.switchCurrentValue
     }
     
-    func tapOnImsakSwitch() {
+    func tapOnImsakSwitch()-> Self {
         imsakSwitch.tap()
+        return self
     }
     
     func veryImsakSwitchChange(_ value: Bool)-> Bool {
@@ -83,8 +89,9 @@ class SettingsScreen {
         return fajrSwitch.switchCurrentValue
     }
     
-    func tapOnFajrSwitch() {
+    func tapOnFajrSwitch()-> Self {
         fajrSwitch.tap()
+        return self
     }
     
     func veryFajrSwitchChange(_ value: Bool)-> Bool {
@@ -95,8 +102,9 @@ class SettingsScreen {
         return syurukSwitch.switchCurrentValue
     }
     
-    func tapOnSyurukSwitch() {
+    func tapOnSyurukSwitch()-> Self {
         syurukSwitch.tap()
+        return self
     }
     
     func verySyurukSwitchChange(_ value: Bool)-> Bool {
@@ -107,8 +115,9 @@ class SettingsScreen {
         return dhuhrSwitch.switchCurrentValue
     }
     
-    func tapOnDhuhrSwitch() {
+    func tapOnDhuhrSwitch()-> Self {
         dhuhrSwitch.tap()
+        return self
     }
     
     func veryDhuhrSwitchChange(_ value: Bool)-> Bool {
@@ -119,8 +128,9 @@ class SettingsScreen {
         return asarSwitch.switchCurrentValue
     }
     
-    func tapOnAsarSwitch() {
+    func tapOnAsarSwitch()-> Self {
         asarSwitch.tap()
+        return self
     }
     
     func veryAsarSwitchChange(_ value: Bool)-> Bool {
@@ -131,8 +141,9 @@ class SettingsScreen {
         return magribSwitch.switchCurrentValue
     }
     
-    func tapOnMagribSwitch() {
+    func tapOnMagribSwitch()-> Self {
         magribSwitch.tap()
+        return self
     }
     
     func veryMagribSwitchChange(_ value: Bool)-> Bool {
@@ -143,8 +154,9 @@ class SettingsScreen {
         return ishaSwitch.switchCurrentValue
     }
     
-    func tapOnIshaSwitch() {
+    func tapOnIshaSwitch()-> Self {
         ishaSwitch.tap()
+        return self
     }
     
     func veryIshaSwitchChange(_ value: Bool)-> Bool {

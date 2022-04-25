@@ -44,31 +44,31 @@ class SettingsScreenTests: BaseXCTestCase {
         XCTAssertTrue(settings.verifySettingsPageLoad())
         
         let asarSwitchValue = settings.getAsarSwitchCurrentValue()
-        settings.tapOnAsarSwitch()
+        settings.tapOnAsarSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryAsarSwitchChange(asarSwitchValue))
         
         let fajrSwitchValue = settings.getFajrSwitchCurrentValue()
-        settings.tapOnFajrSwitch()
+        settings.tapOnFajrSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryFajrSwitchChange(fajrSwitchValue))
         
         let ishaSwitchValue = settings.getIshaSwitchCurrentValue()
-        settings.tapOnIshaSwitch()
+        settings.tapOnIshaSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryIshaSwitchChange(ishaSwitchValue))
         
         let dhuhrSwitchValue = settings.getDhuhrSwitchCurrentValue()
-        settings.tapOnDhuhrSwitch()
+        settings.tapOnDhuhrSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryDhuhrSwitchChange(dhuhrSwitchValue))
         
         let imsakSwitchValue = settings.getImsakSwitchCurrentValue()
-        settings.tapOnImsakSwitch()
+        settings.tapOnImsakSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryImsakSwitchChange(imsakSwitchValue))
         
         let magribSwitchValue = settings.getMagribSwitchCurrentValue()
-        settings.tapOnMagribSwitch()
+        settings.tapOnMagribSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryMagribSwitchChange(magribSwitchValue))
         
         let syurukSwitchValue = settings.getSyurukSwitchCurrentValue()
-        settings.tapOnSyurukSwitch()
+        settings.tapOnSyurukSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.verySyurukSwitchChange(syurukSwitchValue))
     }
     
@@ -82,31 +82,31 @@ class SettingsScreenTests: BaseXCTestCase {
         XCTAssertTrue(settings.verifySettingsPageLoad())
         
         let asarSwitchValue = settings.getAsarSwitchCurrentValue()
-        settings.tapOnAsarSwitch()
+        settings.tapOnAsarSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryAsarSwitchChange(asarSwitchValue))
         
         let fajrSwitchValue = settings.getFajrSwitchCurrentValue()
-        settings.tapOnFajrSwitch()
+        settings.tapOnFajrSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryFajrSwitchChange(fajrSwitchValue))
         
         let ishaSwitchValue = settings.getIshaSwitchCurrentValue()
-        settings.tapOnIshaSwitch()
+        settings.tapOnIshaSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryIshaSwitchChange(ishaSwitchValue))
         
         let dhuhrSwitchValue = settings.getDhuhrSwitchCurrentValue()
-        settings.tapOnDhuhrSwitch()
+        settings.tapOnDhuhrSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryDhuhrSwitchChange(dhuhrSwitchValue))
         
         let imsakSwitchValue = settings.getImsakSwitchCurrentValue()
-        settings.tapOnImsakSwitch()
+        settings.tapOnImsakSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryImsakSwitchChange(imsakSwitchValue))
         
         let magribSwitchValue = settings.getMagribSwitchCurrentValue()
-        settings.tapOnMagribSwitch()
+        settings.tapOnMagribSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.veryMagribSwitchChange(magribSwitchValue))
         
         let syurukSwitchValue = settings.getSyurukSwitchCurrentValue()
-        settings.tapOnSyurukSwitch()
+        settings.tapOnSyurukSwitch().waitFor(seconds: 3)
         XCTAssertTrue(settings.verySyurukSwitchChange(syurukSwitchValue))
         
         settings.tapOnCancel()

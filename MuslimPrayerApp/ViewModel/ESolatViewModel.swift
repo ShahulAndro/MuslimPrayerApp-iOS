@@ -54,6 +54,8 @@ class ESolatViewModel {
     
 }
 
+//MARK: - API calls
+
 extension ESolatViewModel {
     
     func fetchSirimTime() {
@@ -252,6 +254,9 @@ extension ESolatViewModel {
         }).disposed(by: disposeBag)
     }
 }
+
+
+//MARK: - without API calls
 
 extension ESolatViewModel {
     

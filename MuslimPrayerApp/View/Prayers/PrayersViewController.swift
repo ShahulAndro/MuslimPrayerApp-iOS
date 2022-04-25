@@ -19,6 +19,7 @@
 //  MuslimPrayerApp
 //
 //  Created by Shahul Hamed Shaik on 06/04/2022.
+//  Copyright 2022 Shahul Hameed Shaik
 //
 
 import UIKit
