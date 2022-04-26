@@ -62,7 +62,7 @@ class PrayersViewControllerTests: XCTestCase {
     }
     
     func testViewModelInit() throws {
-        XCTAssertNotNil(vc.eSolatViewModel, "ESolatViewModel is not initialized")
+        XCTAssertNotNil(vc.viewModel, "ESolatViewModel is not initialized")
     }
 
 }

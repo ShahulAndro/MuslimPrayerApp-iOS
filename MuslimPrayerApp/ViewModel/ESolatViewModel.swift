@@ -30,15 +30,12 @@ class ESolatViewModel {
     public let takwimSolatData : PublishSubject<TakwimSolatData> = PublishSubject()
     public let showTomorrowPrayerTime : PublishSubject<(prayerType: String, prayerTime: String, dateString: String)> = PublishSubject()
     public let takwimSolatDataByPeriod : PublishSubject<TakwimSolatData> = PublishSubject()
-    public let bgImagePrayerData: PublishSubject<BGImageByPrayerTimeData> = PublishSubject()
     public let bgImagePrayerImages: PublishSubject<[UIImage]> = PublishSubject()
-    public let prayerTimes: PublishSubject<[(name: String, time: String)]> = PublishSubject()
     public let locationData : PublishSubject<[LocationData]> = PublishSubject()
+    public let prayerTimes: PublishSubject<[(name: String, time: String)]> = PublishSubject()
     public let zoneTableDataPublish : PublishSubject<[ZoneSectionData]> = PublishSubject()
     public let loadingIndicatorPublish = PublishSubject<Void>()
     
-    
-    private var useRxToDownloadImage = false
     private var rxApiService: APIServiceProtocol?
     private let disposeBag = DisposeBag()
     
@@ -46,7 +43,6 @@ class ESolatViewModel {
     var currentDisplayDate = ""
     var currentSelectePrayerTimeInTable = ""
     var currentPrayer: (name: String, time: String)?
-    var images: [UIImage] = []
     
     init(rxApiService: APIServiceProtocol = RXApiService()) {
         self.rxApiService = rxApiService
@@ -57,24 +53,6 @@ class ESolatViewModel {
 //MARK: - API calls
 
 extension ESolatViewModel {
-    
-    func fetchSirimTime() {
-        let apiRequest = APIRequest(path: APIRequest.pathSirimTime)
-        
-        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
-            onNext: { (serverTime: SirimTime) in
-                print(serverTime.date ?? "")
-                print(serverTime.serverTimestamp ?? "")
-            }, onError: { error in
-                print(error)
-            },
-            onCompleted: {
-                print("onCompleted")
-            },
-            onDisposed: {
-                print("onDisposed")
-            }).disposed(by: rxApiService!.disposeBag)
-    }
     
     func fetchTakwimSolat(period: String = "today", zone: String = "WLY01", date: String = "") {
         var queryParameterItems = [String: String]()
@@ -165,30 +143,6 @@ extension ESolatViewModel {
             }).disposed(by: rxApiService!.disposeBag)
     }
     
-    func fetchTarikhTakwimHijri() {
-        var queryParameterItems = [String: String]()
-        queryParameterItems["period"] = "month"
-        queryParameterItems["datetype"] = "hijri"
-        queryParameterItems["hijri"] = "1443-09-01"
-        let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
-        
-        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
-            onNext: { (tarikhTakwim: TarikhTakwim) in
-                if let takwim = tarikhTakwim.takwim {
-                    print(takwim.keys)
-                    print(takwim.values)
-                }
-            }, onError: { error in
-                print(error)
-            },
-            onCompleted: {
-                print("onCompleted")
-            },
-            onDisposed: {
-                print("onDisposed")
-            }).disposed(by: rxApiService!.disposeBag)
-    }
-    
     func fetchBGImageByPrayerTime(prayterType: String = "Zohor") {
         var queryParameterItems = [String: String]()
         queryParameterItems["praytime"] = prayterType
@@ -228,7 +182,8 @@ extension ESolatViewModel {
     }
     
     func combineAllImagesRequestWithRxZip(data: BGImageByPrayerTimeData) {
-        if getBGPrayerImagesFromImageCache(data: data).count > 0 {
+        let images = getBGPrayerImagesFromImageCache(data: data)
+        if images.count > 0 {
             self.bgImagePrayerImages.onNext(images)
             return
         }
