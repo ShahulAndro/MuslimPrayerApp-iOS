@@ -35,6 +35,7 @@ class ESolatViewModel {
     public let prayerTimes: PublishSubject<[(name: String, time: String)]> = PublishSubject()
     public let locationData : PublishSubject<[LocationData]> = PublishSubject()
     public let zoneTableDataPublish : PublishSubject<[ZoneSectionData]> = PublishSubject()
+    public let loadingIndicatorPublish = PublishSubject<Void>()
     
     
     private var useRxToDownloadImage = false
@@ -46,7 +47,6 @@ class ESolatViewModel {
     var currentSelectePrayerTimeInTable = ""
     var currentPrayer: (name: String, time: String)?
     var images: [UIImage] = []
-    let imageLoader = ImageLoader()
     
     init(rxApiService: APIServiceProtocol = RXApiService()) {
         self.rxApiService = rxApiService
@@ -214,6 +214,7 @@ extension ESolatViewModel {
             onNext: { (mosqueLocations: MosqueLocations) in
                 if let locationData = mosqueLocations.locationData {
                     self.locationData.onNext(locationData.sorted(by: { $0.distance ?? "0"  < $1.distance ?? "0" }))
+                    self.loadingIndicatorPublish.onNext(())
                 }
             }, onError: { error in
                 print(error)
@@ -227,16 +228,25 @@ extension ESolatViewModel {
     }
     
     func combineAllImagesRequestWithRxZip(data: BGImageByPrayerTimeData) {
-        let imageRequestObservables = requestURLs(data: data)
+        if getBGPrayerImagesFromImageCache(data: data).count > 0 {
+            self.bgImagePrayerImages.onNext(images)
+            return
+        }
         
+        let imageRequestObservables = requestURLs(data: data)
         Observable
             .zip(imageRequestObservables)
             .observe(on:MainScheduler.instance)
             .subscribe(onNext: { (responseArray) in
+                let imageCache = ImageCache()
                 var images = [UIImage]()
                 for response in responseArray {
                     if let image = UIImage(data: response.data) {
                         images.append(image)
+                        if let url = response.response.url, imageCache.image(for: url) == nil {
+//                            imageCache.insertImage(image, for: url) //TODO: Check already available image
+                        }
+                        
                     }
                 }
                 
@@ -297,6 +307,42 @@ extension ESolatViewModel {
         }
         
         return imageRequestObservables
+    }
+    
+    func getBGPrayerImagesFromImageCache(data: BGImageByPrayerTimeData)-> [UIImage] {
+        let imageCache = ImageCache()
+        var images = [UIImage]()
+        if let bgImage1 =  data.data?.bg_images1?.escapedStringForURL, !bgImage1.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage1)") {
+            if let image = imageCache[url] {
+                images.append(image)
+            }
+        }
+        
+        if let bgImage2 =  data.data?.bg_images2?.escapedStringForURL, !bgImage2.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage2)") {
+            if let image = imageCache[url] {
+                images.append(image)
+            }
+        }
+        
+        if let bgImage3 =  data.data?.bg_images3?.escapedStringForURL, !bgImage3.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage3)") {
+            if let image = imageCache[url] {
+                images.append(image)
+            }
+        }
+        
+        if let bgImage4 =  data.data?.bg_images4?.escapedStringForURL, !bgImage4.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage4)") {
+            if let image = imageCache[url] {
+                images.append(image)
+            }
+        }
+        
+        if let bgImage5 =  data.data?.bg_images5?.escapedStringForURL, !bgImage5.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage5)") {
+            if let image = imageCache[url] {
+                images.append(image)
+            }
+        }
+        
+        return images
     }
     
 }

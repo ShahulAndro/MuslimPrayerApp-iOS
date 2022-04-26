@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NearMosquesViewController" customModule="MuslimPrayerApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="3Tc-p2-Qei" id="HHP-4C-nAX"/>
                 <outlet property="mosquesTableView" destination="dgw-NT-xiU" id="QHh-0Z-nAI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,14 +25,19 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-p2-Qei">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="dgw-NT-xiU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Tw-y6-uKc"/>
+                <constraint firstItem="3Tc-p2-Qei" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerYWithinMargins" id="9sT-Be-2CH"/>
                 <constraint firstItem="dgw-NT-xiU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FTG-du-us9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dgw-NT-xiU" secondAttribute="bottom" id="LVD-wF-FOi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dgw-NT-xiU" secondAttribute="trailing" id="OnS-oz-Xfl"/>
+                <constraint firstItem="3Tc-p2-Qei" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerXWithinMargins" id="ZOP-wh-qPt"/>
             </constraints>
             <point key="canvasLocation" x="139" y="59"/>
         </view>

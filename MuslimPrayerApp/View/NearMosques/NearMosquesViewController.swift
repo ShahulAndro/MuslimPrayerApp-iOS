@@ -28,6 +28,7 @@ import RxSwift
 class NearMosquesViewController: UIViewController {
     
     @IBOutlet weak var mosquesTableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     private let locationManager = CLLocationManager()
     private let disposeBag = DisposeBag()
@@ -51,6 +52,9 @@ class NearMosquesViewController: UIViewController {
 extension NearMosquesViewController {
     
     private func initCommon() {
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
+        
         mosquesTableView.backgroundColor = UIColor(hexString: "#212121").withAlphaComponent(0.5)
         
         locationManager.requestWhenInUseAuthorization()
@@ -121,6 +125,14 @@ extension NearMosquesViewController {
             .bind(to: mosquesTableView.rx.items(cellIdentifier: "mosqueCell", cellType: MosqueTableViewCell.self)) { (row, locationData, cell) in
                 cell.updateCell(location: locationData)
             }.disposed(by: disposeBag)
+        
+        viewModel
+            .loadingIndicatorPublish
+            .bind(onNext: { [weak self] (hide) in
+                self?.activityIndicatorView.isHidden = true
+                self?.activityIndicatorView.stopAnimating()
+            })
+            .disposed(by: disposeBag)
     }
     
     func checkAndRequestLocationAuthrosiationIfRequired() {

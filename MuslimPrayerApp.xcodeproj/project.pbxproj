@@ -173,9 +173,6 @@
 		D7C983E62803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
 		D7C983E72803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
 		D7C983E82803E82800C97886 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E52803E82800C97886 /* UIImage+Extension.swift */; };
-		D7C983EA2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
-		D7C983EB2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
-		D7C983EC2804010E00C97886 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983E92804010E00C97886 /* ImageLoader.swift */; };
 		D7C983F528041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
 		D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
 		D7C983F728041CB300C97886 /* PrayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */; };
@@ -359,7 +356,6 @@
 		D7C983DD2803E53200C97886 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
 		D7C983E12803E5F400C97886 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		D7C983E52803E82800C97886 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		D7C983E92804010E00C97886 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		D7C983F328041CB300C97886 /* PrayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTableViewCell.swift; sourceTree = "<group>"; };
 		D7C983F428041CB300C97886 /* PrayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTableViewCell.xib; sourceTree = "<group>"; };
 		D7C983FB280429B200C97886 /* PrayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerType.swift; sourceTree = "<group>"; };
@@ -751,7 +747,6 @@
 			children = (
 				D7C983DD2803E53200C97886 /* ImageCacheType.swift */,
 				D7C983E12803E5F400C97886 /* ImageCache.swift */,
-				D7C983E92804010E00C97886 /* ImageLoader.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -1153,7 +1148,6 @@
 				D727D38628052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
 				D7496F522817AC0000A1111D /* PrayersViewCoordinator.swift in Sources */,
 				D7DEC24E2807CD050003B83A /* UIColor+Extension.swift in Sources */,
-				D7C983EA2804010E00C97886 /* ImageLoader.swift in Sources */,
 				D7BE9DF227FD0CA900F81968 /* BaseResponse.swift in Sources */,
 				D782FCBC27FC4D5600486774 /* LocationData.swift in Sources */,
 				D700A18B27FC52D0006BFF53 /* TarikhTakwim.swift in Sources */,
@@ -1212,7 +1206,6 @@
 				D7BE6E39280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */,
 				D762602228097AF600EE2702 /* SettingsViewController.swift in Sources */,
-				D7C983EB2804010E00C97886 /* ImageLoader.swift in Sources */,
 				D782FC9F27FC315100486774 /* APIService.swift in Sources */,
 				D7BE9DF327FD0CA900F81968 /* BaseResponse.swift in Sources */,
 				D7900522280912D000AE5BCC /* UIView+Extension.swift in Sources */,
@@ -1303,7 +1296,6 @@
 				D762602328097AF600EE2702 /* SettingsViewController.swift in Sources */,
 				D76AADBB281012CA001AA5A0 /* PrayersViewScreenTests.swift in Sources */,
 				D727D38828052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
-				D7C983EC2804010E00C97886 /* ImageLoader.swift in Sources */,
 				D7C983E42803E5F400C97886 /* ImageCache.swift in Sources */,
 				D782FCA827FC3DF300486774 /* RXApiService.swift in Sources */,
 				D782FCB527FC46C900486774 /* TakwimSolat.swift in Sources */,
