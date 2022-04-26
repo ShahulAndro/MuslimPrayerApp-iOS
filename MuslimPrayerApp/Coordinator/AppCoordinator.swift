@@ -15,33 +15,27 @@
  */
 
 //
-//  BaseXCTestCase.swift
-//  MuslimPrayerAppUITests
+//  AppCoordinator.swift
+//  MuslimPrayerApp
 //
-//  Created by Shahul Hamed Shaik on 23/04/2022.
+//  Created by Shahul Hamed Shaik on 26/04/2022.
 //
 
 import Foundation
-import XCTest
+import UIKit
 
-class BaseXCTestCase: XCTestCase {
+class AppCoordinator: Coordinator {
     
-    var app: XCUIApplication!
-    let device = XCUIDevice.shared
-
-    override func setUp() {
-        super.setUp()
-        
-        app = XCUIApplication()
-        app.launch()
-        
-        device.orientation = .portrait
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        
-        app.terminate()
+    private let window: UIWindow
+    
+    init(window: UIWindow) {
+        self.window = window
     }
     
+    func start() {
+        let tabBarViewController = MainTabBarViewCoordinator(window: window)
+        tabBarViewController.start()
+        
+        window.makeKeyAndVisible()
+    }
 }

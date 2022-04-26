@@ -18,7 +18,7 @@
 //  MockRXApiService.swift
 //  MuslimPrayerAppTests
 //
-//  Created by Shahul Hamed Shaik (HLB) on 16/04/2022.
+//  Created by Shahul Hamed Shaik on 16/04/2022.
 //
 
 import Foundation

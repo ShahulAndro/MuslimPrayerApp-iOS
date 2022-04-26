@@ -34,13 +34,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let window = UIWindow(windowScene: windowScene)
+        self.window = UIWindow(windowScene: windowScene)
         
-        let tabBarViewController = MainTabBarViewController()
-        
-        window.rootViewController = tabBarViewController
-        self.window = window
-        window.makeKeyAndVisible()
+        let appCoordinator = AppCoordinator(window: window!)
+        appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

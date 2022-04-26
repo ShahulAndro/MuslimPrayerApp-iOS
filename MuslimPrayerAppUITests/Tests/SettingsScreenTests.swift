@@ -17,7 +17,7 @@
 //  SettingsScreenTests.swift
 //  MuslimPrayerAppUITests
 //
-//  Created by Shahul Hamed Shaik (HLB) on 20/04/2022.
+//  Created by Shahul Hamed Shaik on 20/04/2022.
 //
 
 import XCTest
@@ -121,7 +121,6 @@ class SettingsScreenTests: BaseXCTestCase {
         XCTAssertTrue(settings.veryIshaSwitchChange(ishaSwitchValue))
         XCTAssertTrue(settings.veryDhuhrSwitchChange(dhuhrSwitchValue))
         XCTAssertTrue(settings.veryImsakSwitchChange(imsakSwitchValue))
-        XCTAssertTrue(settings.veryMagribSwitchChange(magribSwitchValue))
         XCTAssertTrue(settings.veryMagribSwitchChange(magribSwitchValue))
         XCTAssertTrue(settings.verySyurukSwitchChange(syurukSwitchValue))
     }

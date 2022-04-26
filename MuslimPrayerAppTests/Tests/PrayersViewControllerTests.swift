@@ -17,7 +17,7 @@
 //  PrayersViewControllerTests.swift
 //  MuslimPrayerAppTests
 //
-//  Created by Shahul Hamed Shaik (HLB) on 19/04/2022.
+//  Created by Shahul Hamed Shaik on 19/04/2022.
 //
 
 import XCTest

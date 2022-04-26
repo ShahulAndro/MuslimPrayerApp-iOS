@@ -15,33 +15,15 @@
  */
 
 //
-//  BaseXCTestCase.swift
-//  MuslimPrayerAppUITests
+//  Coordinator.swift
+//  MuslimPrayerApp
 //
-//  Created by Shahul Hamed Shaik on 23/04/2022.
+//  Created by Shahul Hamed Shaik on 26/04/2022.
 //
 
 import Foundation
-import XCTest
 
-class BaseXCTestCase: XCTestCase {
-    
-    var app: XCUIApplication!
-    let device = XCUIDevice.shared
-
-    override func setUp() {
-        super.setUp()
-        
-        app = XCUIApplication()
-        app.launch()
-        
-        device.orientation = .portrait
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        
-        app.terminate()
-    }
-    
+@objc protocol Coordinator {
+    func start()
+    @objc optional func stop()
 }

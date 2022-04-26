@@ -61,7 +61,8 @@ class PrayersViewController: UIViewController {
     private var countDownToDate: Date?
     private var countDownTimer: Timer?
     private let disposeBag = DisposeBag()
-    var eSolatViewModel = ESolatViewModel()
+    var viewModel: ESolatViewModel!
+    var coordinator: PrayersViewCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +70,7 @@ class PrayersViewController: UIViewController {
         initCommon()
         setAccessvilityIdentifierForUITesting()
         setupBindings()
-        eSolatViewModel.fetchTakwimSolat()
+        viewModel.fetchTakwimSolat()
         
         let tapGesture = UITapGestureRecognizer(target:self, action:#selector((tapOnSettings)))
         settingsImageView.isUserInteractionEnabled = true
@@ -79,32 +80,27 @@ class PrayersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if !eSolatViewModel.currentDisplayDate.isEmpty && !Utils.isToday(eSolatViewModel.currentDisplayDate) {
-            eSolatViewModel.fetchTakwimSolat()
+        if !viewModel.currentDisplayDate.isEmpty && !Utils.isToday(viewModel.currentDisplayDate) {
+            viewModel.fetchTakwimSolat()
         }
     }
     
     
     @IBAction func tapOnPreviousButton(_ sender: Any) {
-        eSolatViewModel.fetchTakwimSolatByPeriod(type: .Previous)
+        viewModel.fetchTakwimSolatByPeriod(type: .Previous)
     }
     
     
     @IBAction func tapOnNextButton(_ sender: Any) {
-        eSolatViewModel.fetchTakwimSolatByPeriod(type: .Next)
+        viewModel.fetchTakwimSolatByPeriod(type: .Next)
     }
     
     @IBAction func tapOnSelectZone(_ sender: Any) {
-        let vc = ZonesViewController()
-        vc.modalPresentationStyle = .popover
-        vc.delegate = self
-        present(vc, animated: true, completion: nil)
+        coordinator.showZones()
     }
     
     @objc func tapOnSettings() {
-        let vc = SettingsViewController()
-        vc.modalPresentationStyle = .popover
-        present(vc, animated: true, completion: nil)
+        coordinator.showSettings()
     }
     
 }
@@ -137,11 +133,11 @@ extension PrayersViewController {
 
 //MARK: - ZonesListTableViewControllerProtocol
 
-extension PrayersViewController: ZonesViewControllerDelegate {
+extension PrayersViewController {
     
     func onDidSelect(row: (key: String, value: String)) {
-        eSolatViewModel.currentZone = row.key
-        eSolatViewModel.fetchTakwimSolat(zone: row.key)
+        viewModel.currentZone = row.key
+        viewModel.fetchTakwimSolat(zone: row.key)
     }
     
 }
@@ -153,7 +149,7 @@ extension PrayersViewController {
     func setupBindings() {
         
         //Update the PrayerHeaderView
-        eSolatViewModel
+        viewModel
             .takwimSolatData
             .bind(onNext: {[weak self] (takwimSolatData) in
                 self?.updateTakwimSolat(takwimSolatData)
@@ -161,44 +157,44 @@ extension PrayersViewController {
             .disposed(by: disposeBag)
         
         //Update Tomorrow prayer type and time after Isha for today
-        eSolatViewModel
+        viewModel
             .showTomorrowPrayerTime
             .bind(onNext: {[weak self] (prayerType, prayerTime, date) in
                 self?.prayerTypeLabel.text = prayerType
                 self?.prayerTimeLabel.text = prayerTime
                 
-                self?.eSolatViewModel.currentPrayer = (prayerType, prayerTime)
+                self?.viewModel.currentPrayer = (prayerType, prayerTime)
                 
                 //TODO: Notification
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.scheduleLocalNotification(prayerType: prayerType, prayerTime: prayerTime)
                 
                 if let type = Utils.prayerNames[prayerType] {
-                    self?.eSolatViewModel.fetchBGImageByPrayerTime(prayterType: type)
+                    self?.viewModel.fetchBGImageByPrayerTime(prayterType: type)
                 }
                 
                 if !prayerTime.isEmpty {
                     self?.startTimerForNotifyPrayerTime(nextPrayerTime: prayerTime, dateString: date)
-                    self?.eSolatViewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[prayerType]!)
+                    self?.viewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[prayerType]!)
                 }
             })
             .disposed(by: disposeBag)
         
         // Update TableView with Prayer Times, next and previous views
-        eSolatViewModel
+        viewModel
             .takwimSolatDataByPeriod
             .bind(onNext: { [weak self] (takwimSolatData) in
                 if let prayerTime = takwimSolatData.prayerTime?.first {
-                    self?.eSolatViewModel.currentSelectePrayerTimeInTable = prayerTime.date ?? ""
+                    self?.viewModel.currentSelectePrayerTimeInTable = prayerTime.date ?? ""
                     self?.islamicDateLabel.text = "\(prayerTime.date ?? "")\n\(prayerTime.day ?? "")"
-                    if let prayerTimes = self?.eSolatViewModel.getPrayerTimeList(prayerTime) {
-                        self?.eSolatViewModel.prayerTimes.onNext(prayerTimes)
+                    if let prayerTimes = self?.viewModel.getPrayerTimeList(prayerTime) {
+                        self?.viewModel.prayerTimes.onNext(prayerTimes)
                     }
                 }
             })
             .disposed(by: disposeBag)
         
-        eSolatViewModel
+        viewModel
             .prayerTimes
             .bind(to: prayerTableView.rx.items(cellIdentifier: "prayerTimeCell", cellType: PrayerTableViewCell.self)) {  (row,prayer,cell) in
                 cell.update(prayerType: prayer.name, prayerTime: prayer.time)
@@ -206,7 +202,7 @@ extension PrayersViewController {
             .disposed(by: disposeBag)
         
         //To load bg images for prayer and zone
-        eSolatViewModel
+        viewModel
             .bgImagePrayerData
             .bind(onNext: {[weak self] (bgImageData) in
                 self?.loadBackGroundImagesForPrayer(bgImageData: bgImageData)
@@ -214,7 +210,7 @@ extension PrayersViewController {
             .disposed(by: disposeBag)
         
         //To animate bg images for prayer
-        eSolatViewModel
+        viewModel
             .bgImagePrayerImages
             .observe(on: MainScheduler.instance)
             .bind(onNext: {[weak self] (images) in
@@ -243,18 +239,18 @@ extension PrayersViewController {
             nextPrayerTimeLabel.text = "Next Prayer Time"
             let nearPrayer = Utils.getNearestPrayerWith(prayerTime)
             
-            eSolatViewModel.currentDisplayDate = prayerTime.date ?? ""
+            viewModel.currentDisplayDate = prayerTime.date ?? ""
             
-            eSolatViewModel.currentPrayer = (nearPrayer.prayerType, nearPrayer.prayerTime)
+            viewModel.currentPrayer = (nearPrayer.prayerType, nearPrayer.prayerTime)
             
             if nearPrayer.prayerTime.isEmpty && nearPrayer.prayerType.isEmpty {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd-MMM-yyyy"
                 var date = dateFormatter.string(from: Date())
-                if  !eSolatViewModel.currentDisplayDate.isEmpty {
-                    date = eSolatViewModel.currentDisplayDate
+                if  !viewModel.currentDisplayDate.isEmpty {
+                    date = viewModel.currentDisplayDate
                 }
-                eSolatViewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
+                viewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
             } else {
                 prayerTypeLabel.text = nearPrayer.prayerType
                 prayerTimeLabel.text = nearPrayer.prayerTime
@@ -272,12 +268,12 @@ extension PrayersViewController {
             
             if !nearPrayer.prayerTime.isEmpty {
                 startTimerForNotifyPrayerTime(nextPrayerTime: nearPrayer.prayerTime)
-                eSolatViewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[nearPrayer.prayerType]!)
+                viewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[nearPrayer.prayerType]!)
             }
             
-            eSolatViewModel.prayerTimes.onNext(eSolatViewModel.getPrayerTimeList(prayerTime))
+            viewModel.prayerTimes.onNext(viewModel.getPrayerTimeList(prayerTime))
             
-            eSolatViewModel.currentSelectePrayerTimeInTable = prayerTime.date ?? ""
+            viewModel.currentSelectePrayerTimeInTable = prayerTime.date ?? ""
         }
     }
     
@@ -340,16 +336,16 @@ extension PrayersViewController {
         if hours <= 0 && mins <= 0 && secs <= 0 {
             countDownTimer?.invalidate()
             isCountdownTimerInvalidate = true
-            if let currentPrayer = eSolatViewModel.currentPrayer, currentPrayer.name == PrayerType.Isha.rawValue || (currentPrayer.name.isEmpty && currentPrayer.time.isEmpty) {
+            if let currentPrayer = viewModel.currentPrayer, currentPrayer.name == PrayerType.Isha.rawValue || (currentPrayer.name.isEmpty && currentPrayer.time.isEmpty) {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd-MMM-yyyy"
                 var date = dateFormatter.string(from: Date())
-                if  !eSolatViewModel.currentDisplayDate.isEmpty {
-                    date = eSolatViewModel.currentDisplayDate
+                if  !viewModel.currentDisplayDate.isEmpty {
+                    date = viewModel.currentDisplayDate
                 }
-                eSolatViewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
+                viewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
             } else {
-                eSolatViewModel.fetchTakwimSolat()
+                viewModel.fetchTakwimSolat()
             }
         }
     }

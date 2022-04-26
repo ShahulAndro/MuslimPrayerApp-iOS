@@ -37,8 +37,8 @@ class ZonesViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     private let disposeBag = DisposeBag()
-    private let viewModel = ESolatViewModel()
-    var delegate: ZonesViewControllerDelegate?
+    var viewModel: ESolatViewModel!
+    var coordinator: ZonesViewCoordinator!
     
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<ZoneSectionData>(configureCell: configureCell, titleForHeaderInSection: titleForHeaderInSection)
     
@@ -51,7 +51,7 @@ class ZonesViewController: UIViewController {
     private lazy var titleForHeaderInSection: RxTableViewSectionedReloadDataSource<ZoneSectionData>.TitleForHeaderInSection = { [weak self] (dataSource, indexPath) in
         return dataSource.sectionModels[indexPath].header
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ class ZonesViewController: UIViewController {
     }
     
     @IBAction func tapOnCancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        coordinator.stop()
     }
     
 }
@@ -84,8 +84,8 @@ extension ZonesViewController {
             .modelSelected(ZoneData.self)
             .subscribe(onNext: { item in
                 print("itemSelected: \(String(describing: item.description))")
-                self.delegate?.onDidSelect(row: (item.key ?? "", item.description ?? ""))
-                self.dismiss(animated: true, completion: nil)
+                self.coordinator.onDidSelect(row: (item.key ?? "", item.description ?? ""))
+                self.coordinator.stop()
             }).disposed(by: disposeBag)
     }
     

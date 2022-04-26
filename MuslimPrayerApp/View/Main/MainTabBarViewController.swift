@@ -27,28 +27,6 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initCommon()
     }
 
-}
-
-
-extension MainTabBarViewController {
-    
-    private func initCommon() {
-        let prayersViewController = PrayersViewController()
-        prayersViewController.tabBarItem.title = "Prayers"
-        prayersViewController.tabBarItem.accessibilityIdentifier = "Prayers"
-        prayersViewController.tabBarItem.image = UIImage(systemName: "p.square.fill")
-        prayersViewController.tabBarItem.selectedImage = UIImage(systemName: "p.square")
-        
-        let nearMosquesViewController = NearMosquesViewController()
-        nearMosquesViewController.tabBarItem.title = "Find Mosques"
-        nearMosquesViewController.tabBarItem.accessibilityIdentifier = "FindMosques"
-        nearMosquesViewController.tabBarItem.image = UIImage(systemName: "f.square.fill")
-        nearMosquesViewController.tabBarItem.selectedImage = UIImage(systemName: "f.square")
-        
-        self.viewControllers = [prayersViewController, nearMosquesViewController]
-    }
 }

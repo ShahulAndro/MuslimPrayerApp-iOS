@@ -30,8 +30,10 @@ class NearMosquesViewController: UIViewController {
     @IBOutlet weak var mosquesTableView: UITableView!
     
     private let locationManager = CLLocationManager()
-    private let viewModel = ESolatViewModel()
     private let disposeBag = DisposeBag()
+    
+    var viewModel: ESolatViewModel!
+    weak var coordinator: NearMosquesViewCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -38,6 +38,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     private var isUpdateFromApp = false
+    var coordinator: SettingsViewCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func tapOnCancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        coordinator.stop()
     }
     
     @IBAction func isToggleSwitchOn(_ sender: Any) {
