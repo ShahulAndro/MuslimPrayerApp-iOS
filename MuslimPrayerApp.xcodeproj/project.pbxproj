@@ -87,9 +87,6 @@
 		D76AADBD281012DC001AA5A0 /* ZonesListScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADBC281012DC001AA5A0 /* ZonesListScreenTests.swift */; };
 		D76AADBF281012F1001AA5A0 /* NearMosquesScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADBE281012F1001AA5A0 /* NearMosquesScreenTests.swift */; };
 		D76AADC128101301001AA5A0 /* SettingsScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76AADC028101301001AA5A0 /* SettingsScreenTests.swift */; };
-		D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
-		D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
-		D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */; };
 		D76EF2A22804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
 		D76EF2A42804A7000074ACB1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */; };
@@ -322,7 +319,6 @@
 		D76AADBC281012DC001AA5A0 /* ZonesListScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZonesListScreenTests.swift; sourceTree = "<group>"; };
 		D76AADBE281012F1001AA5A0 /* NearMosquesScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMosquesScreenTests.swift; sourceTree = "<group>"; };
 		D76AADC028101301001AA5A0 /* SettingsScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenTests.swift; sourceTree = "<group>"; };
-		D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESolatViewModel+Extension.swift"; sourceTree = "<group>"; };
 		D76EF2A12804A6FF0074ACB1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D77CAE392811480A005C6AB4 /* MainTabBarViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewScreen.swift; sourceTree = "<group>"; };
 		D782FC5D27FC29AF00486774 /* MuslimPrayerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimPrayerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -613,7 +609,6 @@
 			isa = PBXGroup;
 			children = (
 				D782FCA927FC40A600486774 /* ESolatViewModel.swift */,
-				D76D73A2280A0EAE00F69F1D /* ESolatViewModel+Extension.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1188,7 +1183,6 @@
 				D700A18727FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
 				D782FCAA27FC40A600486774 /* ESolatViewModel.swift in Sources */,
 				D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
-				D76D73A3280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FC9E27FC315100486774 /* APIService.swift in Sources */,
 				D7BE6E38280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D782FCB827FC46F200486774 /* Utils.swift in Sources */,
@@ -1230,7 +1224,6 @@
 				D7496F6B2817B72400A1111D /* Coordinator.swift in Sources */,
 				D7BE6E2D280AB20800BCE693 /* MockRXApiService.swift in Sources */,
 				D7496F532817AC0000A1111D /* PrayersViewCoordinator.swift in Sources */,
-				D76D73A4280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D7C983F628041CB300C97886 /* PrayerTableViewCell.swift in Sources */,
 				D782FCA327FC38C500486774 /* APIRequest.swift in Sources */,
 				D727D38728052C75009BF7A3 /* MosqueTableViewCell.swift in Sources */,
@@ -1291,7 +1284,6 @@
 				D7C983E02803E53200C97886 /* ImageCacheType.swift in Sources */,
 				D76AADB92810129B001AA5A0 /* SettingsScreen.swift in Sources */,
 				D76AADB72810126A001AA5A0 /* NearMosquesScreen.swift in Sources */,
-				D76D73A5280A0EAF00F69F1D /* ESolatViewModel+Extension.swift in Sources */,
 				D782FCBA27FC46F200486774 /* Utils.swift in Sources */,
 				D76AADBF281012F1001AA5A0 /* NearMosquesScreenTests.swift in Sources */,
 				D7DEC2502807CD050003B83A /* UIColor+Extension.swift in Sources */,
