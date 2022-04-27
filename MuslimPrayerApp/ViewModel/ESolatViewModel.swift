@@ -28,6 +28,7 @@ import RxCocoa
 class ESolatViewModel {
     
     public let takwimSolatData : PublishSubject<TakwimSolatData> = PublishSubject()
+    public let scheduleNotificationsWithSolatData : PublishSubject<TakwimSolat> = PublishSubject()
     public let showTomorrowPrayerTime : PublishSubject<(prayerType: String, prayerTime: String, dateString: String)> = PublishSubject()
     public let takwimSolatDataByPeriod : PublishSubject<TakwimSolatData> = PublishSubject()
     public let bgImagePrayerImages: PublishSubject<[UIImage]> = PublishSubject()
@@ -39,8 +40,6 @@ class ESolatViewModel {
     private var rxApiService: APIServiceProtocol?
     private let disposeBag = DisposeBag()
     
-    var currentZone = "WLY01"
-    var currentDisplayDate = ""
     var currentSelectePrayerTimeInTable = ""
     var currentPrayer: (name: String, time: String)?
     
@@ -54,16 +53,12 @@ class ESolatViewModel {
 
 extension ESolatViewModel {
     
-    func fetchTakwimSolat(period: String = "today", zone: String = "WLY01", date: String = "") {
+    func fetchTakwimSolat(period: String = "today", date: String = "") {
         var queryParameterItems = [String: String]()
         
         queryParameterItems["period"] = period
         
-        if currentZone.isEmpty {
-            queryParameterItems["zone"] = zone
-        } else {
-            queryParameterItems["zone"] = currentZone
-        }
+        queryParameterItems["zone"] = UserDefaultHelper.selectedZone() ?? "WLY01"
         
         if !date.isEmpty {
             queryParameterItems["date"] = date
@@ -81,6 +76,10 @@ extension ESolatViewModel {
                         self.showTomorrowPrayerTime.onNext(tomorrowData)
                     }
                 }
+                
+                if let solatInfo = solatData.prayerTime?.first {
+                    self.scheduleNotificationsWithSolatData.onNext(solatInfo)
+                }
             }, onError: { error in
                 print(error)
             },
@@ -96,7 +95,7 @@ extension ESolatViewModel {
     func fetchTakwimSolatByPeriod(period: String = "duration", type: PrayerTimeType) {
         var queryParameterItems = [String: String]()
         queryParameterItems["period"] = period
-        queryParameterItems["zone"] = currentZone
+        queryParameterItems["zone"] = UserDefaultHelper.selectedZone() ?? "WLY01"
         
         var requestPayloadParameters = [String: String]()
         requestPayloadParameters["datestart"] = Utils.getDateFormatForApiFromddMMMyyyy(dateString: currentSelectePrayerTimeInTable, type: type)

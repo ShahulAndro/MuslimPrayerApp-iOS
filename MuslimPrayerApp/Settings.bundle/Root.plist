@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>syuruk_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -24,7 +24,7 @@
 			<key>Key</key>
 			<string>dhuhr_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -34,7 +34,7 @@
 			<key>Key</key>
 			<string>asar_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -44,7 +44,7 @@
 			<key>Key</key>
 			<string>magrib_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -54,7 +54,7 @@
 			<key>Key</key>
 			<string>isha_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -64,7 +64,7 @@
 			<key>Key</key>
 			<string>fajr_notification</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -74,7 +74,7 @@
 			<key>Key</key>
 			<string>mute_all_notifications</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -84,15 +84,7 @@
 			<key>Key</key>
 			<string>imsak_notification</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<real>0</real>
 		</dict>
 	</array>
 </dict>

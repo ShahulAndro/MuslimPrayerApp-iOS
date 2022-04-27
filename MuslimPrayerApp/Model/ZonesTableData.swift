@@ -200,8 +200,12 @@ struct ZonesTableData {
         return sections
     }
     
-    static func zoneValue(by zoneKey: String)-> String? {
-        return zoneSections().map { $0.items }.joined().filter { $0.key == zoneKey }.first?.description
+    static func section(by zoneKey: String)-> String {
+        return zoneSections().filter { $0.items.contains(where: { $0.key == zoneKey }) }.first?.header ?? ""
+    }
+    
+    static func zoneValue(by zoneKey: String)-> String {
+        return zoneSections().map { $0.items }.joined().filter { $0.key == zoneKey }.first?.description ?? ""
     }
 }
 

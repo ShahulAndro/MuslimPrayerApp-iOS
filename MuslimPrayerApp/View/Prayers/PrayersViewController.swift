@@ -70,6 +70,7 @@ class PrayersViewController: UIViewController {
         initCommon()
         setAccessvilityIdentifierForUITesting()
         setupBindings()
+        
         viewModel.fetchTakwimSolat()
         
         let tapGesture = UITapGestureRecognizer(target:self, action:#selector((tapOnSettings)))
@@ -80,7 +81,7 @@ class PrayersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if !viewModel.currentDisplayDate.isEmpty && !Utils.isToday(viewModel.currentDisplayDate) {
+        if  let currentDisplayDate = UserDefaultHelper.currentDisplayDate(), !currentDisplayDate.isEmpty,  !Utils.isToday(currentDisplayDate) {
             viewModel.fetchTakwimSolat()
         }
     }
@@ -136,8 +137,8 @@ extension PrayersViewController {
 extension PrayersViewController {
     
     func onDidSelect(row: (key: String, value: String)) {
-        viewModel.currentZone = row.key
-        viewModel.fetchTakwimSolat(zone: row.key)
+        UserDefaultHelper.setSelectedZone(code: row.key, value: row.value)
+        viewModel.fetchTakwimSolat()
     }
     
 }
@@ -164,10 +165,6 @@ extension PrayersViewController {
                 self?.prayerTimeLabel.text = prayerTime
                 
                 self?.viewModel.currentPrayer = (prayerType, prayerTime)
-                
-                //TODO: Notification
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.scheduleLocalNotification(prayerType: prayerType, prayerTime: prayerTime)
                 
                 if let type = Utils.prayerNames[prayerType] {
                     self?.viewModel.fetchBGImageByPrayerTime(prayterType: type)
@@ -215,6 +212,14 @@ extension PrayersViewController {
                 self?.prayerBGImageView.tintColor = .green
             })
             .disposed(by: disposeBag)
+        
+        //Schedule Local Notifications
+        viewModel
+            .scheduleNotificationsWithSolatData
+            .bind(onNext: { (solatInfo) in
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.scheduleLocalNotifications(solatData: solatInfo)
+            }).disposed(by: disposeBag)
     }
     
 }
@@ -225,48 +230,49 @@ extension PrayersViewController {
 extension PrayersViewController {
     
     private func updateTakwimSolat(_ takwimSolatData: TakwimSolatData) {
-        if let prayerTime = takwimSolatData.prayerTime?.first {
+        if let prayerTimeInfo = takwimSolatData.prayerTime?.first {
             eDateLabel.text = Utils.getGregorianDate()
-            iDateLabel.text = Utils.getHijriDate(prayerTime.hijri ?? "")
+            iDateLabel.text = Utils.getHijriDate(prayerTimeInfo.hijri ?? "")
             nextPrayerTimeLabel.text = "Next Prayer Time"
-            let nearPrayer = Utils.getNearestPrayerWith(prayerTime)
             
-            viewModel.currentDisplayDate = prayerTime.date ?? ""
+            UserDefaultHelper.setCurrentDisplayDate(currentDisplayDate: prayerTimeInfo.date ?? "")
+            islamicDateLabel.text = "\(prayerTimeInfo.date ?? "")\n\(prayerTimeInfo.day ?? "")"
             
-            viewModel.currentPrayer = (nearPrayer.prayerType, nearPrayer.prayerTime)
-            
-            if nearPrayer.prayerTime.isEmpty && nearPrayer.prayerType.isEmpty {
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd-MMM-yyyy"
-                var date = dateFormatter.string(from: Date())
-                if  !viewModel.currentDisplayDate.isEmpty {
-                    date = viewModel.currentDisplayDate
-                }
-                viewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
-            } else {
-                prayerTypeLabel.text = nearPrayer.prayerType
-                prayerTimeLabel.text = nearPrayer.prayerTime
-                
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.scheduleLocalNotification(prayerType: nearPrayer.prayerType, prayerTime: nearPrayer.prayerTime)
-            }
-            
-            if let zoneKey = takwimSolatData.zone {
-                zoneLabel.text = ZonesTableData.zoneValue(by: zoneKey)
-//                zoneLabel.marquee()
-            }
-            
-            islamicDateLabel.text = "\(prayerTime.date ?? "")\n\(prayerTime.day ?? "")"
-            
-            if !nearPrayer.prayerTime.isEmpty {
-                startTimerForNotifyPrayerTime(nextPrayerTime: nearPrayer.prayerTime)
-                viewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[nearPrayer.prayerType]!)
-            }
-            
-            viewModel.prayerTimes.onNext(viewModel.getPrayerTimeList(prayerTime))
-            
-            viewModel.currentSelectePrayerTimeInTable = prayerTime.date ?? ""
+            updateNearPrayerTime(solat: prayerTimeInfo)
+            loadPrayerTableView(solat: prayerTimeInfo)
         }
+        
+
+        if let zoneKey = takwimSolatData.zone {
+            zoneLabel.text = "\(ZonesTableData.zoneValue(by: zoneKey)), \(ZonesTableData.section(by: zoneKey))"
+//            zoneLabel.marquee()
+        }
+    }
+    
+    private func updateNearPrayerTime(solat: TakwimSolat) {
+        let nearPrayer = Utils.getNearestPrayerWith(solat)
+        viewModel.currentPrayer = (nearPrayer.prayerType, nearPrayer.prayerTime)
+        
+        if nearPrayer.prayerTime.isEmpty && nearPrayer.prayerType.isEmpty {
+            var date = Date().dateStringddMMMyyy
+            if  let currentDisplayDate = UserDefaultHelper.currentDisplayDate(), !currentDisplayDate.isEmpty {
+                date = currentDisplayDate
+            }
+            viewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
+        } else {
+            prayerTypeLabel.text = nearPrayer.prayerType
+            prayerTimeLabel.text = nearPrayer.prayerTime
+        }
+        
+        if !nearPrayer.prayerTime.isEmpty {
+            startTimerForNotifyPrayerTime(nextPrayerTime: nearPrayer.prayerTime)
+            viewModel.fetchBGImageByPrayerTime(prayterType: Utils.prayerNames[nearPrayer.prayerType]!)
+        }
+    }
+    
+    private func loadPrayerTableView(solat: TakwimSolat) {
+        viewModel.currentSelectePrayerTimeInTable = solat.date ?? ""
+        viewModel.prayerTimes.onNext(viewModel.getPrayerTimeList(solat))
     }
 }
 
@@ -322,8 +328,8 @@ extension PrayersViewController {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "dd-MMM-yyyy"
                 var date = dateFormatter.string(from: Date())
-                if  !viewModel.currentDisplayDate.isEmpty {
-                    date = viewModel.currentDisplayDate
+                if  let currentDisplayDate = UserDefaultHelper.currentDisplayDate(), !currentDisplayDate.isEmpty {
+                    date = currentDisplayDate
                 }
                 viewModel.fetchTakwimSolat(period: "date", date: Utils.getDateFormatForApiFromddMMMyyyy(dateString: date, type: .Next))
             } else {

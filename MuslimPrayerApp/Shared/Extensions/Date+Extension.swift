@@ -39,4 +39,11 @@ extension Date {
         return pastDate
     }
     
+    var dateStringddMMMyyy: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        let date = dateFormatter.string(from: Date())
+        return date
+    }
+    
 }

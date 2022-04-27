@@ -32,6 +32,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
+        if notification.request.identifier == "getLatestSolatInfo" {
+            viewModel.fetchTakwimSolat()
+            return
+        }
+        
         if SettingsHelper.mutaAllNotification {
             return
         }
@@ -97,8 +102,36 @@ extension AppDelegate {
         }
     }
     
-    func scheduleLocalNotification(prayerType: String, prayerTime: String, dateString: String = "") {
-        removeLocalNotification()
+    func scheduleLocalNotifications(solatData: TakwimSolat) {
+        removeAllPrayerPendingNotificationRequests()
+        
+        scheduleUserNotificationWithPrayerType(PrayerType.Imsak.rawValue, solatData.imsak, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Fajr.rawValue, solatData.fajr, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Syuruk.rawValue, solatData.syuruk, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Dhuhr.rawValue, solatData.dhuhr, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Asar.rawValue, solatData.asr, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Maghrib.rawValue, solatData.maghrib, solatData.date)
+        scheduleUserNotificationWithPrayerType(PrayerType.Isha.rawValue, solatData.isha, solatData.date)
+    }
+    
+    func removeAllPendingLocalNotifications() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
+    func removeAllPrayerPendingNotificationRequests() {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [PrayerType.Imsak.rawValue, PrayerType.Fajr.rawValue, PrayerType.Syuruk.rawValue, PrayerType.Dhuhr.rawValue, PrayerType.Asar.rawValue, PrayerType.Maghrib.rawValue, PrayerType.Isha.rawValue])
+    }
+    
+    func removeDailySchedulePendingNotificationRequests() {
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["getLatestSolatInfo"])
+    }
+    
+    func scheduleUserNotificationWithPrayerType(_ prayerType: String, _ prayerTime: String?, _ dateString: String?) {
+        
+        guard let prayerTime = prayerTime, let dateString = dateString else {
+            return
+        }
+
         
         let content = UNMutableNotificationContent()
         content.title = "Prayer"
@@ -123,8 +156,44 @@ extension AppDelegate {
         })
     }
     
-    func removeLocalNotification() {
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    func scheduleDialyNotificationToGetLatestPrayerData() {
+        removeDailySchedulePendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "ESolat"
+        content.body = ""
+        content.sound = nil
+        
+        var datComp = DateComponents()
+        datComp.hour = 00
+        datComp.minute = 01
+        let trigger = UNCalendarNotificationTrigger(dateMatching: datComp, repeats: true)
+        let request = UNNotificationRequest(identifier: "getLatestSolatInfo", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error : Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            
+            UserDefaultHelper.updateDalyNotificationScheudle(true)
+        }
+    }
+    
+}
+
+
+//MARK: - Viewmodel bindings
+
+extension AppDelegate {
+    
+    func setupBinding() {
+        viewModel
+            .takwimSolatData
+            .bind(onNext: {[weak self] (takwimSolatData) in
+                if let solatInfo = takwimSolatData.prayerTime?.first {
+                    self?.scheduleLocalNotifications(solatData: solatInfo)
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
 }

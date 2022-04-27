@@ -26,17 +26,26 @@ import UIKit
 import CoreData
 import UserNotifications
 import AVFoundation
+import RxSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var audioPlayer: AVAudioPlayer?
+    let viewModel = ESolatViewModel()
+    let disposeBag = DisposeBag()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UNUserNotificationCenter.current().delegate = self
         checkNotificationSettings()
+        if !UserDefaultHelper.dalyNotificationScheudle() {
+            setupBinding()
+            scheduleDialyNotificationToGetLatestPrayerData()
+        }
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) { }
 
     // MARK: UISceneSession Lifecycle
 
