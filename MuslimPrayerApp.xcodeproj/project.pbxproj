@@ -97,9 +97,6 @@
 		D782FC7027FC29B300486774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */; };
 		D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */; };
 		D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */; };
-		D782FC9E27FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
-		D782FC9F27FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
-		D782FCA027FC315100486774 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC9D27FC315100486774 /* APIService.swift */; };
 		D782FCA227FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
 		D782FCA327FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
 		D782FCA427FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
@@ -329,7 +326,6 @@
 		D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITests.swift; sourceTree = "<group>"; };
 		D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D782FC9D27FC315100486774 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D782FCA127FC38C500486774 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D782FCA527FC3DF300486774 /* RXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXApiService.swift; sourceTree = "<group>"; };
 		D782FCA927FC40A600486774 /* ESolatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESolatViewModel.swift; sourceTree = "<group>"; };
@@ -639,7 +635,6 @@
 		D782FC9827FC30AD00486774 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D782FC9D27FC315100486774 /* APIService.swift */,
 				D782FCA127FC38C500486774 /* APIRequest.swift */,
 				D782FCA527FC3DF300486774 /* RXApiService.swift */,
 				D7BE6E2E280ABA4000BCE693 /* APIServiceProtocol.swift */,
@@ -1189,7 +1184,6 @@
 				D700A18727FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
 				D782FCAA27FC40A600486774 /* ESolatViewModel.swift in Sources */,
 				D7FE472927FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
-				D782FC9E27FC315100486774 /* APIService.swift in Sources */,
 				D7BE6E38280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D782FCB827FC46F200486774 /* Utils.swift in Sources */,
 				D7E9D0AC280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
@@ -1219,7 +1213,6 @@
 				D7BE6E39280AC0B100BCE693 /* DataManager.swift in Sources */,
 				D76EF2A32804A6FF0074ACB1 /* Date+Extension.swift in Sources */,
 				D762602228097AF600EE2702 /* SettingsViewController.swift in Sources */,
-				D782FC9F27FC315100486774 /* APIService.swift in Sources */,
 				D7BE9DF327FD0CA900F81968 /* BaseResponse.swift in Sources */,
 				D7900522280912D000AE5BCC /* UIView+Extension.swift in Sources */,
 				D74F935328078C3E0018B537 /* PushService.swift in Sources */,
@@ -1317,7 +1310,6 @@
 				D7900523280912D000AE5BCC /* UIView+Extension.swift in Sources */,
 				D7C983E82803E82800C97886 /* UIImage+Extension.swift in Sources */,
 				D7FE474527FD4379009C95E4 /* NearMosquesViewController.swift in Sources */,
-				D782FCA027FC315100486774 /* APIService.swift in Sources */,
 				D7496F502817ABBB00A1111D /* MainTabBarViewCoordinator.swift in Sources */,
 				D76AADB52810123A001AA5A0 /* ZonesPopupListScreen.swift in Sources */,
 				D70B39292813FC9C0028B391 /* MainTabBarViewScreenTests.swift in Sources */,
