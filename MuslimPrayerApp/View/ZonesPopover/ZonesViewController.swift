@@ -37,6 +37,7 @@ class ZonesViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     private let disposeBag = DisposeBag()
+    
     var viewModel: ESolatViewModel!
     var coordinator: ZonesViewCoordinator!
     

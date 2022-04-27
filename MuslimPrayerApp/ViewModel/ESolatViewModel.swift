@@ -240,7 +240,7 @@ extension ESolatViewModel {
         return imageRequestObservables
     }
     
-    func getBGPrayerImagesFromImageCache(data: BGImageByPrayerTimeData)-> [UIImage] {
+    private func getBGPrayerImagesFromImageCache(data: BGImageByPrayerTimeData)-> [UIImage] {
         let imageCache = ImageCache()
         var images = [UIImage]()
         if let bgImage1 =  data.data?.bg_images1?.escapedStringForURL, !bgImage1.isEmpty, let url = URL(string: "\(String(describing: APIRequest.baseUrl))\(bgImage1)") {

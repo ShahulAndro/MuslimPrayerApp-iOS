@@ -25,13 +25,18 @@ import XCTest
 class ZonesViewControllerTests: XCTestCase {
     
     var vc: ZonesViewController!
+    var viewModel: ESolatViewModel!
 
     override func setUpWithError() throws {
         vc = ZonesViewController()
+        viewModel = ESolatViewModel()
+        vc.viewModel = viewModel
+        vc.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
         vc = nil
+        viewModel = nil
     }
 
     func testViewDidLoad() throws {

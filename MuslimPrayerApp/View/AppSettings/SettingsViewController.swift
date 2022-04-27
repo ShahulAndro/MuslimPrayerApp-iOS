@@ -26,7 +26,6 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var mainStackView: UIStackView!
-    
     @IBOutlet weak var muteAllSwitch: UISwitch!
     @IBOutlet weak var imsakSwitch: UISwitch!
     @IBOutlet weak var fajrSwitch: UISwitch!
@@ -38,6 +37,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     private var isUpdateFromApp = false
+    
     var coordinator: SettingsViewCoordinator!
     
     override func viewDidLoad() {

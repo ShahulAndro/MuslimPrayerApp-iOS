@@ -25,13 +25,18 @@ import XCTest
 class NearMosquesViewControllerTests: XCTestCase {
     
     var vc: NearMosquesViewController!
+    var viewModel: ESolatViewModel!
 
     override func setUpWithError() throws {
         vc = NearMosquesViewController()
+        viewModel = ESolatViewModel()
+        vc.viewModel = viewModel
+        vc.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
         vc = nil
+        viewModel = nil
     }
 
     func testViewDidLoad() throws {

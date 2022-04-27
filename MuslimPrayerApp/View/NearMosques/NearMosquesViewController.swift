@@ -74,11 +74,6 @@ extension NearMosquesViewController {
         mosquesTableView.rowHeight = UITableView.automaticDimension
         mosquesTableView.estimatedRowHeight = 120
         mosquesTableView.separatorStyle = .none
-        
-        
-//        mosquesTableView.rx
-//            .setDelegate(self)
-//            .disposed(by: disposeBag)
     }
 }
 

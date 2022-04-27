@@ -29,6 +29,7 @@ class PrayersViewControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         vc = PrayersViewController()
+        vc.viewModel = ESolatViewModel()
         vc.loadViewIfNeeded()
     }
 

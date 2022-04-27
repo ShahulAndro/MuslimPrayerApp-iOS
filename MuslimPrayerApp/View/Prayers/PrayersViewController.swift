@@ -32,8 +32,8 @@ enum PrayerTimeType {
 }
 
 class PrayersViewController: UIViewController {
-    @IBOutlet weak var rootContentView: UIView!
     
+    @IBOutlet weak var rootContentView: UIView!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var prayerBGImageView: UIImageView!
     @IBOutlet weak var settingsImageView: UIImageView!
@@ -62,6 +62,7 @@ class PrayersViewController: UIViewController {
     private var countDownToDate: Date?
     private var countDownTimer: Timer?
     private let disposeBag = DisposeBag()
+    
     var viewModel: ESolatViewModel!
     var coordinator: PrayersViewCoordinator!
     
