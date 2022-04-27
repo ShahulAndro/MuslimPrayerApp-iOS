@@ -56,6 +56,7 @@ class PrayersViewController: UIViewController {
     @IBOutlet weak var prayerView: UIView!
     @IBOutlet weak var prayerTableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var headerViewHeightConstraint: NSLayoutConstraint!
     
     private var isCountdownTimerInvalidate = false
     private var countDownToDate: Date?
@@ -68,6 +69,7 @@ class PrayersViewController: UIViewController {
         super.viewDidLoad()
         
         initCommon()
+        updateHeaderHeightConstraint()
         setAccessvilityIdentifierForUITesting()
         setupBindings()
         
@@ -337,6 +339,19 @@ extension PrayersViewController {
             }
         }
     }
+}
+
+//MARK: - Update Constraints
+
+extension PrayersViewController {
+    
+    func updateHeaderHeightConstraint() {
+        let screenMaxLength = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+        if UIDevice.current.userInterfaceIdiom == .phone && screenMaxLength == 667.0 || UIDevice.current.userInterfaceIdiom == .phone && screenMaxLength == 736.0 {
+            NSLayoutConstraint.setMultiplier(0.45, of: &headerViewHeightConstraint)
+        }
+    }
+    
 }
 
 //MARK: - Set AccessibilityIdentifierfor UITesting

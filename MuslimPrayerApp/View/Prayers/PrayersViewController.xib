@@ -19,6 +19,7 @@
                 <outlet property="eDateLabel" destination="ZxE-RY-Thl" id="uuE-bk-CHK"/>
                 <outlet property="headerStackView" destination="1ql-lP-Ndq" id="k0K-wp-6nO"/>
                 <outlet property="headerView" destination="4xn-1a-yyF" id="Prh-wm-FUe"/>
+                <outlet property="headerViewHeightConstraint" destination="Lcd-Nw-S34" id="Iwd-MR-9hq"/>
                 <outlet property="hoursLabel" destination="P6C-oI-deX" id="dmx-UK-ww0"/>
                 <outlet property="iDateLabel" destination="VTW-Ik-HDz" id="Ijq-iZ-aim"/>
                 <outlet property="islamicDateLabel" destination="hRz-Sw-ddp" id="Nbs-JJ-Uur"/>

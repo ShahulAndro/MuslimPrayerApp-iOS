@@ -45,6 +45,6 @@ struct UserDefaultHelper {
     }
     
     static func dalyNotificationScheudle()-> Bool {
-        return UserDefaults.standard.bool(forKey: UserDefaultKeys.dalyNotificationScheudle.rawValue) ?? false
+        return UserDefaults.standard.bool(forKey: UserDefaultKeys.dalyNotificationScheudle.rawValue)
     }
 }
