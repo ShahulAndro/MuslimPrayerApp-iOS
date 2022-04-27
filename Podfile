@@ -4,16 +4,12 @@
 def app_test
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'SwiftLint'
-  pod 'Kingfisher'
   pod 'RxDataSources'
 end
 
 def unit_testing
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'RxTest'
-  pod 'RxBlocking'
 end
 
 target 'MuslimPrayerApp' do

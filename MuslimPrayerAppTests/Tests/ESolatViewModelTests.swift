@@ -22,13 +22,11 @@
 
 import XCTest
 import RxSwift
-import RxTest
 
 class ESolatViewModelTests: XCTestCase {
 
     var disposeBag: DisposeBag?
     var viewModel: ESolatViewModel?
-    var testScheduler: TestScheduler?
     var rxApiService: MockRXApiService?
     
     override func setUp() {
@@ -36,14 +34,12 @@ class ESolatViewModelTests: XCTestCase {
         disposeBag = DisposeBag()
         rxApiService = MockRXApiService()
         viewModel = ESolatViewModel(rxApiService: rxApiService!)
-        testScheduler = TestScheduler(initialClock: 0)
     }
 
     override func tearDown() {
         disposeBag = nil
         rxApiService = nil
         viewModel = nil
-        testScheduler = nil
         super.tearDown()
         
     }

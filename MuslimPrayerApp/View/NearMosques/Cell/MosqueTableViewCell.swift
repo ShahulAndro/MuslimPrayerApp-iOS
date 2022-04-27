@@ -22,7 +22,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class MosqueTableViewCell: UITableViewCell {
     
