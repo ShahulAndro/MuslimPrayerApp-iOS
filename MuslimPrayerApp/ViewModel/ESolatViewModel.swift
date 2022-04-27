@@ -119,29 +119,6 @@ extension ESolatViewModel {
             }).disposed(by: rxApiService!.disposeBag)
     }
     
-    func fetchTarikhTakwim() {
-        var queryParameterItems = [String: String]()
-        queryParameterItems["period"] = "today"
-        queryParameterItems["datetype"] = "miladi"
-        let apiRequest = APIRequest(path: APIRequest.pathTarikhTakwim, queryParameterItems: queryParameterItems)
-        
-        rxApiService!.performRequest(apiRequest: apiRequest).subscribe(
-            onNext: { (tarikhTakwim: TarikhTakwim) in
-                if let takwim = tarikhTakwim.takwim {
-                    print(takwim.keys)
-                    print(takwim.values)
-                }
-            }, onError: { error in
-                print(error)
-            },
-            onCompleted: {
-                print("onCompleted")
-            },
-            onDisposed: {
-                print("onDisposed")
-            }).disposed(by: rxApiService!.disposeBag)
-    }
-    
     func fetchBGImageByPrayerTime(prayterType: String = "Zohor") {
         var queryParameterItems = [String: String]()
         queryParameterItems["praytime"] = prayterType

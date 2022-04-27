@@ -35,7 +35,6 @@ struct APIRequest {
     static let apiURL = "https://www.e-solat.gov.my/index.php?r=esolatApi/"
     static let pathSirimTime = "SirimTime"
     static let pathTakwimSolat = "TakwimSolat"
-    static let pathTarikhTakwim = "tarikhtakwim"
     static let pathBgImageByPrayertime = "BgImageByPrayertime"
     static let pathNearestMosque = "nearestMosque"
     
