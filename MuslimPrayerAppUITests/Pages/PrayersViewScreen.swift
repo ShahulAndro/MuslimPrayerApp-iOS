@@ -37,10 +37,6 @@ class PrayersViewScreen {
     let prayerTypeLabel: XCUIElement
     let prayerTimeLabel: XCUIElement
     let selectZoneButton: XCUIElement
-    let timeRemainingForPrayerView: XCUIElement
-    let hoursLabel: XCUIElement
-    let minsLabel: XCUIElement
-    let secLabel: XCUIElement
     let zoneLabel: XCUIElement
     let prayerDateSelectionView: XCUIElement
     let previousButton: XCUIElement
@@ -63,10 +59,6 @@ class PrayersViewScreen {
         self.prayerTypeLabel = app.staticTexts["prayerTypeLabel"]
         self.prayerTimeLabel = app.staticTexts["prayerTimeLabel"]
         self.selectZoneButton = app.buttons["selectZoneButton"]
-        self.timeRemainingForPrayerView = app.otherElements["timeRemainingForPrayerView"]
-        self.hoursLabel = app.staticTexts["hoursLabel"]
-        self.minsLabel = app.staticTexts["minsLabel"]
-        self.secLabel = app.staticTexts["secLabel"]
         self.zoneLabel = app.staticTexts["zoneLabel"]
         self.prayerDateSelectionView = app.otherElements["prayerDateSelectionView"]
         self.previousButton = app.buttons["previousButton"]
@@ -135,11 +127,7 @@ class PrayersViewScreen {
         && !eDateLabel.label.isEmpty
         && !iDateLabel.label.isEmpty
         && !nextPrayerTimeLabel.label.isEmpty
-        && !prayerTypeLabel.label.isEmpty
         && !prayerTimeLabel.label.isEmpty
-        && !hoursLabel.label.isEmpty
-        && !minsLabel.label.isEmpty
-        && !secLabel.label.isEmpty
         && zoneLabel.isEnabled && zoneLabel.isHittable
     }
     
@@ -155,10 +143,6 @@ class PrayersViewScreen {
         && nextPrayerTimeLabel.exists
         && prayerTypeLabel.exists
         && prayerTimeLabel.exists
-        && timeRemainingForPrayerView.exists
-        && hoursLabel.exists
-        && minsLabel.exists
-        && secLabel.exists
         && zoneLabel.exists
         && prayerDateSelectionView.exists
         && previousButton.exists

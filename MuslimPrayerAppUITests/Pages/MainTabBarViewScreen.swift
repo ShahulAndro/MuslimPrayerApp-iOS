@@ -53,7 +53,8 @@ class MainTabBarViewScreen {
     }
     
     func verifyPageLoad()-> Bool {
-        return prayerTabItem.exists
+        return prayerTabItem.waitForExistence(timeout: 10)
+        && prayerTabItem.exists
         && findMosquesTabItem.exists
     }
     
