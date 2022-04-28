@@ -80,7 +80,7 @@ extension NearMosquesViewController {
     
     private func showLocationUpdateAuthorisationStatusMessage() {
         mosquesTableView.isHidden = true
-        activityIndicatorView.isHidden = false
+        activityIndicatorView.isHidden = true
         messageLabel.isHidden = false
         messageLabel.text = "Location services are not enabled\nPlease update location settings to see Near Mosques"
     }
@@ -130,8 +130,11 @@ extension NearMosquesViewController: CLLocationManagerDelegate {
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
             
+            hideLocationUpdateAuthorisationStatusMessage()
+            
             activityIndicatorView.isHidden = false
             activityIndicatorView.startAnimating()
+            
             viewModel.fetchNearestMosques(lat: String(location.coordinate.latitude), long: String(location.coordinate.longitude))
         }
     }
