@@ -29,6 +29,7 @@ class NearMosquesViewController: UIViewController {
     
     @IBOutlet weak var mosquesTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var messageLabel: UILabel!
     
     private let locationManager = CLLocationManager()
     private let disposeBag = DisposeBag()
@@ -52,15 +53,14 @@ class NearMosquesViewController: UIViewController {
 extension NearMosquesViewController {
     
     private func initCommon() {
-        activityIndicatorView.isHidden = false
-        activityIndicatorView.startAnimating()
-        
+        activityIndicatorView.isHidden = true
         mosquesTableView.backgroundColor = UIColor(hexString: "#212121").withAlphaComponent(0.5)
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
+            locationManagerDidChangeAuthorization(status: locationAuthorizationStatus())
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
@@ -74,6 +74,42 @@ extension NearMosquesViewController {
         mosquesTableView.rowHeight = UITableView.automaticDimension
         mosquesTableView.estimatedRowHeight = 120
         mosquesTableView.separatorStyle = .none
+    }
+    
+    private func showLocationUpdateAuthorisationStatusMessage() {
+        mosquesTableView.isHidden = true
+        activityIndicatorView.isHidden = false
+        messageLabel.isHidden = false
+        messageLabel.text = "Location services are not enabled\nPlease update location settings to see Near Mosques"
+    }
+    
+    private func hideLocationUpdateAuthorisationStatusMessage() {
+        mosquesTableView.isHidden = false
+        messageLabel.isHidden = true
+    }
+    
+    private func locationManagerDidChangeAuthorization(status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways , .authorizedWhenInUse:
+            locationManager.requestLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+        case .denied , .restricted:
+            showLocationUpdateAuthorisationStatusMessage()
+        default:
+            print("Default")
+        }
+    }
+    
+    private func locationAuthorizationStatus() -> CLAuthorizationStatus {
+        var locationAuthorizationStatus : CLAuthorizationStatus
+        if #available(iOS 14.0, *) {
+            locationAuthorizationStatus =  locationManager.authorizationStatus
+        } else {
+            locationAuthorizationStatus = CLLocationManager.authorizationStatus()
+        }
+        return locationAuthorizationStatus
     }
 }
 
@@ -91,23 +127,21 @@ extension NearMosquesViewController: CLLocationManagerDelegate {
         
         if let location = locations.last {
             locationManager.stopUpdatingLocation()
+            
+            activityIndicatorView.isHidden = false
+            activityIndicatorView.startAnimating()
             viewModel.fetchNearestMosques(lat: String(location.coordinate.latitude), long: String(location.coordinate.longitude))
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        //TODO: show location error or alert
+        if let error = error as? CLError, error.code == .denied {
+            locationManager.stopMonitoringSignificantLocationChanges()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if #available(iOS 13.4, *) {
-            if status == .authorizedWhenInUse {
-                self.locationManager.requestAlwaysAuthorization()
-            }
-            self.locationManager.requestWhenInUseAuthorization()
-        } else {
-            self.locationManager.requestAlwaysAuthorization()
-        }
+        locationManagerDidChangeAuthorization(status: status)
     }
     
 }
@@ -126,6 +160,7 @@ extension NearMosquesViewController {
             .bind(onNext: { [weak self] (hide) in
                 self?.activityIndicatorView.isHidden = true
                 self?.activityIndicatorView.stopAnimating()
+                self?.hideLocationUpdateAuthorisationStatusMessage()
             })
             .disposed(by: disposeBag)
     }

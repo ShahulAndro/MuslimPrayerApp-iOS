@@ -29,60 +29,60 @@ struct SettingsHelper {
         return UserDefaults.standard.bool(forKey: "mute_all_notifications")
     }
     
-    static var imsakNotification: Bool {
+    static var muteImsakNotification: Bool {
         return UserDefaults.standard.bool(forKey: "imsak_notification")
     }
     
-    static var fajrNotification: Bool {
+    static var muteFajrNotification: Bool {
         return UserDefaults.standard.bool(forKey: "fajr_notification")
     }
     
-    static var syurukNotification: Bool {
+    static var muteSyurukNotification: Bool {
         return UserDefaults.standard.bool(forKey: "syuruk_notification")
     }
     
-    static var dhuhrNotification: Bool {
+    static var muteDhuhrNotification: Bool {
         return UserDefaults.standard.bool(forKey: "dhuhr_notification")
     }
     
-    static var asarNotification: Bool {
+    static var muteAsarNotification: Bool {
         return UserDefaults.standard.bool(forKey: "asar_notification")
     }
     
-    static var magaribNotification: Bool {
+    static var muteMagaribNotification: Bool {
         return UserDefaults.standard.bool(forKey: "magrib_notification")
     }
     
-    static var ishaNotification: Bool {
+    static var muteIshaNotification: Bool {
         return UserDefaults.standard.bool(forKey: "isha_notification")
     }
     
-    static func isAllowedNotification(_ prayerType: String)-> Bool {
-        if prayerType == PrayerType.Imsak.rawValue && imsakNotification {
+    static func muteNotificationFor(_ prayerType: String)-> Bool {
+        if prayerType == PrayerType.Imsak.rawValue && muteImsakNotification {
             return true
         }
         
-        if prayerType == PrayerType.Fajr.rawValue && fajrNotification {
+        if prayerType == PrayerType.Fajr.rawValue && muteFajrNotification {
             return true
         }
         
-        if prayerType == PrayerType.Syuruk.rawValue && syurukNotification {
+        if prayerType == PrayerType.Syuruk.rawValue && muteSyurukNotification {
             return true
         }
         
-        if prayerType == PrayerType.Dhuhr.rawValue && dhuhrNotification {
+        if prayerType == PrayerType.Dhuhr.rawValue && muteDhuhrNotification {
             return true
         }
         
-        if prayerType == PrayerType.Asar.rawValue && asarNotification {
+        if prayerType == PrayerType.Asar.rawValue && muteAsarNotification {
             return true
         }
         
-        if prayerType == PrayerType.Maghrib.rawValue && magaribNotification {
+        if prayerType == PrayerType.Maghrib.rawValue && muteMagaribNotification {
             return true
         }
         
-        if prayerType == PrayerType.Isha.rawValue && ishaNotification {
+        if prayerType == PrayerType.Isha.rawValue && muteIshaNotification {
             return true
         }
         

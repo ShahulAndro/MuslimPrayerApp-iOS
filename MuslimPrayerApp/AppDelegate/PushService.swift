@@ -42,7 +42,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
         
         let userInfo = notification.request.content.userInfo
-        if let prayerType = userInfo["prayerType"] as? String, !SettingsHelper.isAllowedNotification(prayerType) {
+        if let prayerType = userInfo["prayerType"] as? String, SettingsHelper.muteNotificationFor(prayerType) {
             return
         }
         

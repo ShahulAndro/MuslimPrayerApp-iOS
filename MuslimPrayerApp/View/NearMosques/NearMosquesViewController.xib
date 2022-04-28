@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NearMosquesViewController" customModule="MuslimPrayerApp" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="3Tc-p2-Qei" id="HHP-4C-nAX"/>
+                <outlet property="messageLabel" destination="RGf-45-8Dk" id="k21-dr-7fT"/>
                 <outlet property="mosquesTableView" destination="dgw-NT-xiU" id="QHh-0Z-nAI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -28,16 +29,26 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-p2-Qei">
                     <rect key="frame" x="197" y="443" width="20" height="20"/>
                 </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGf-45-8Dk" userLabel="messageLabel">
+                    <rect key="frame" x="16" y="453" width="382" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RGf-45-8Dk" secondAttribute="trailing" constant="16" id="0A1-jT-Ee1"/>
                 <constraint firstItem="dgw-NT-xiU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Tw-y6-uKc"/>
                 <constraint firstItem="3Tc-p2-Qei" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerYWithinMargins" id="9sT-Be-2CH"/>
                 <constraint firstItem="dgw-NT-xiU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FTG-du-us9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dgw-NT-xiU" secondAttribute="bottom" id="LVD-wF-FOi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dgw-NT-xiU" secondAttribute="trailing" id="OnS-oz-Xfl"/>
                 <constraint firstItem="3Tc-p2-Qei" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerXWithinMargins" id="ZOP-wh-qPt"/>
+                <constraint firstItem="RGf-45-8Dk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fSc-0W-A0B"/>
+                <constraint firstItem="RGf-45-8Dk" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="j2j-7V-Eoe"/>
+                <constraint firstItem="RGf-45-8Dk" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="rb2-Qa-8Jd"/>
             </constraints>
             <point key="canvasLocation" x="139" y="59"/>
         </view>
