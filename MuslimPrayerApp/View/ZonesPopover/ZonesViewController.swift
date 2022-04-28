@@ -20,6 +20,8 @@
 //
 //  Created by Shahul Hamed Shaik on 10/04/2022.
 //
+//  Copyright 2022 Shahul Hameed Shaik
+//
 
 import UIKit
 import RxSwift

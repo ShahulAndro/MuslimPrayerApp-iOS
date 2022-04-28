@@ -95,8 +95,6 @@
 		D782FC6327FC29AF00486774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6227FC29AF00486774 /* SceneDelegate.swift */; };
 		D782FC6B27FC29B000486774 /* MuslimPrayerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D782FC6927FC29B000486774 /* MuslimPrayerApp.xcdatamodeld */; };
 		D782FC7027FC29B300486774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D782FC6E27FC29B300486774 /* LaunchScreen.storyboard */; };
-		D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */; };
-		D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */; };
 		D782FCA227FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
 		D782FCA327FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
 		D782FCA427FC38C500486774 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D782FCA127FC38C500486774 /* APIRequest.swift */; };
@@ -324,8 +322,6 @@
 		D782FC7127FC29B300486774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D782FC7627FC29B400486774 /* MuslimPrayerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782FC8027FC29B400486774 /* MuslimPrayerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuslimPrayerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITests.swift; sourceTree = "<group>"; };
-		D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D782FCA127FC38C500486774 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D782FCA527FC3DF300486774 /* RXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXApiService.swift; sourceTree = "<group>"; };
 		D782FCA927FC40A600486774 /* ESolatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESolatViewModel.swift; sourceTree = "<group>"; };
@@ -573,8 +569,6 @@
 				D70B39252813EF3C0028B391 /* Extension */,
 				D76AADB1281011D0001AA5A0 /* Pages */,
 				D76AADB0281011C8001AA5A0 /* Tests */,
-				D782FC8427FC29B400486774 /* MuslimPrayerAppUITests.swift */,
-				D782FC8627FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift */,
 			);
 			path = MuslimPrayerAppUITests;
 			sourceTree = "<group>";
@@ -1274,7 +1268,6 @@
 				D782FCAC27FC40A600486774 /* ESolatViewModel.swift in Sources */,
 				D700A18927FC5242006BFF53 /* BGImageByPrayerTime.swift in Sources */,
 				D7E9D0AE280588F400EF2CCD /* GradientCircleBorder.swift in Sources */,
-				D782FC8727FC29B400486774 /* MuslimPrayerAppUITestsLaunchTests.swift in Sources */,
 				D74F935428078C3E0018B537 /* PushService.swift in Sources */,
 				D7FE472B27FD21BD009C95E4 /* TakwimSolatData.swift in Sources */,
 				D7FE472F27FD2A99009C95E4 /* BGImageByPrayerTimeData.swift in Sources */,
@@ -1302,7 +1295,6 @@
 				D7C983E42803E5F400C97886 /* ImageCache.swift in Sources */,
 				D782FCA827FC3DF300486774 /* RXApiService.swift in Sources */,
 				D782FCB527FC46C900486774 /* TakwimSolat.swift in Sources */,
-				D782FC8527FC29B400486774 /* MuslimPrayerAppUITests.swift in Sources */,
 				D7C983D32802869500C97886 /* ZonesViewController.swift in Sources */,
 				D7496F602817ACA800A1111D /* SettingsViewCoordinator.swift in Sources */,
 				D7496F6C2817B72400A1111D /* Coordinator.swift in Sources */,
