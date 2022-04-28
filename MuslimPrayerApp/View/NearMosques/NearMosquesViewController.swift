@@ -93,7 +93,7 @@ extension NearMosquesViewController {
     private func locationManagerDidChangeAuthorization(status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways , .authorizedWhenInUse:
-            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
             locationManager.requestAlwaysAuthorization()
